@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbBookName = new System.Windows.Forms.TextBox();
             this.cbSearchType = new System.Windows.Forms.ComboBox();
-            this.cbLanguage = new System.Windows.Forms.ComboBox();
-            this.lblLanguage = new System.Windows.Forms.Label();
-            this.lblGenre = new System.Windows.Forms.Label();
-            this.cbGenre = new System.Windows.Forms.ComboBox();
-            this.cbRate = new System.Windows.Forms.ComboBox();
-            this.lblRate = new System.Windows.Forms.Label();
+            this.cbBookLanguage = new System.Windows.Forms.ComboBox();
+            this.lblBookLanguage = new System.Windows.Forms.Label();
+            this.lblBookGenre = new System.Windows.Forms.Label();
+            this.cbBookGenre = new System.Windows.Forms.ComboBox();
+            this.cbBookRate = new System.Windows.Forms.ComboBox();
+            this.lblBookRate = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.cbRecord = new System.Windows.Forms.ComboBox();
-            this.lblRecord = new System.Windows.Forms.Label();
             this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -48,14 +46,16 @@
             this.chBookSign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookPublisher = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookPbDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbBookRecord = new System.Windows.Forms.ComboBox();
+            this.lblBookRecord = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbBookName
             // 
-            this.textBox1.Location = new System.Drawing.Point(235, 110);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 21);
-            this.textBox1.TabIndex = 0;
+            this.tbBookName.Location = new System.Drawing.Point(235, 110);
+            this.tbBookName.Name = "tbBookName";
+            this.tbBookName.Size = new System.Drawing.Size(280, 21);
+            this.tbBookName.TabIndex = 0;
             // 
             // cbSearchType
             // 
@@ -68,10 +68,10 @@
             this.cbSearchType.Size = new System.Drawing.Size(100, 20);
             this.cbSearchType.TabIndex = 2;
             // 
-            // cbLanguage
+            // cbBookLanguage
             // 
-            this.cbLanguage.FormattingEnabled = true;
-            this.cbLanguage.Items.AddRange(new object[] {
+            this.cbBookLanguage.FormattingEnabled = true;
+            this.cbBookLanguage.Items.AddRange(new object[] {
             "전체",
             "한국어",
             "영어",
@@ -79,35 +79,35 @@
             "중국어",
             "?",
             "??"});
-            this.cbLanguage.Location = new System.Drawing.Point(94, 59);
-            this.cbLanguage.Name = "cbLanguage";
-            this.cbLanguage.Size = new System.Drawing.Size(100, 20);
-            this.cbLanguage.TabIndex = 4;
+            this.cbBookLanguage.Location = new System.Drawing.Point(94, 59);
+            this.cbBookLanguage.Name = "cbBookLanguage";
+            this.cbBookLanguage.Size = new System.Drawing.Size(100, 20);
+            this.cbBookLanguage.TabIndex = 4;
             // 
-            // lblLanguage
+            // lblBookLanguage
             // 
-            this.lblLanguage.AutoSize = true;
-            this.lblLanguage.ForeColor = System.Drawing.Color.White;
-            this.lblLanguage.Location = new System.Drawing.Point(23, 62);
-            this.lblLanguage.Name = "lblLanguage";
-            this.lblLanguage.Size = new System.Drawing.Size(29, 12);
-            this.lblLanguage.TabIndex = 7;
-            this.lblLanguage.Text = "언어";
+            this.lblBookLanguage.AutoSize = true;
+            this.lblBookLanguage.ForeColor = System.Drawing.Color.White;
+            this.lblBookLanguage.Location = new System.Drawing.Point(23, 62);
+            this.lblBookLanguage.Name = "lblBookLanguage";
+            this.lblBookLanguage.Size = new System.Drawing.Size(29, 12);
+            this.lblBookLanguage.TabIndex = 7;
+            this.lblBookLanguage.Text = "언어";
             // 
-            // lblGenre
+            // lblBookGenre
             // 
-            this.lblGenre.AutoSize = true;
-            this.lblGenre.ForeColor = System.Drawing.Color.White;
-            this.lblGenre.Location = new System.Drawing.Point(23, 88);
-            this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(53, 12);
-            this.lblGenre.TabIndex = 7;
-            this.lblGenre.Text = "별차기호";
+            this.lblBookGenre.AutoSize = true;
+            this.lblBookGenre.ForeColor = System.Drawing.Color.White;
+            this.lblBookGenre.Location = new System.Drawing.Point(23, 88);
+            this.lblBookGenre.Name = "lblBookGenre";
+            this.lblBookGenre.Size = new System.Drawing.Size(53, 12);
+            this.lblBookGenre.TabIndex = 7;
+            this.lblBookGenre.Text = "별차기호";
             // 
-            // cbGenre
+            // cbBookGenre
             // 
-            this.cbGenre.FormattingEnabled = true;
-            this.cbGenre.Items.AddRange(new object[] {
+            this.cbBookGenre.FormattingEnabled = true;
+            this.cbBookGenre.Items.AddRange(new object[] {
             "전체",
             "SF",
             "학원",
@@ -120,43 +120,44 @@
             "액션",
             "실물자료",
             "스포츠"});
-            this.cbGenre.Location = new System.Drawing.Point(94, 85);
-            this.cbGenre.Name = "cbGenre";
-            this.cbGenre.Size = new System.Drawing.Size(100, 20);
-            this.cbGenre.TabIndex = 5;
+            this.cbBookGenre.Location = new System.Drawing.Point(94, 85);
+            this.cbBookGenre.Name = "cbBookGenre";
+            this.cbBookGenre.Size = new System.Drawing.Size(100, 20);
+            this.cbBookGenre.TabIndex = 5;
             // 
-            // cbRate
+            // cbBookRate
             // 
-            this.cbRate.FormattingEnabled = true;
-            this.cbRate.Items.AddRange(new object[] {
+            this.cbBookRate.FormattingEnabled = true;
+            this.cbBookRate.Items.AddRange(new object[] {
             "?",
             "??",
             "???",
             "????"});
-            this.cbRate.Location = new System.Drawing.Point(94, 111);
-            this.cbRate.Name = "cbRate";
-            this.cbRate.Size = new System.Drawing.Size(100, 20);
-            this.cbRate.TabIndex = 6;
+            this.cbBookRate.Location = new System.Drawing.Point(94, 111);
+            this.cbBookRate.Name = "cbBookRate";
+            this.cbBookRate.Size = new System.Drawing.Size(100, 20);
+            this.cbBookRate.TabIndex = 6;
             // 
-            // lblRate
+            // lblBookRate
             // 
-            this.lblRate.AutoSize = true;
-            this.lblRate.ForeColor = System.Drawing.Color.White;
-            this.lblRate.Location = new System.Drawing.Point(23, 114);
-            this.lblRate.Name = "lblRate";
-            this.lblRate.Size = new System.Drawing.Size(53, 12);
-            this.lblRate.TabIndex = 7;
-            this.lblRate.Text = "자료등급";
+            this.lblBookRate.AutoSize = true;
+            this.lblBookRate.ForeColor = System.Drawing.Color.White;
+            this.lblBookRate.Location = new System.Drawing.Point(23, 114);
+            this.lblBookRate.Name = "lblBookRate";
+            this.lblBookRate.Size = new System.Drawing.Size(53, 12);
+            this.lblBookRate.TabIndex = 7;
+            this.lblBookRate.Text = "자료등급";
             // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
             this.btnSearch.Location = new System.Drawing.Point(556, 108);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "검색";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // listView1
             // 
@@ -177,34 +178,6 @@
             this.listView1.TabIndex = 7;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // cbRecord
-            // 
-            this.cbRecord.FormattingEnabled = true;
-            this.cbRecord.Items.AddRange(new object[] {
-            "전체",
-            "단행본",
-            "시청각자료",
-            "연속간행물",
-            "이론서",
-            "점자자료",
-            "학습만화",
-            "학위논문",
-            "해외원서"});
-            this.cbRecord.Location = new System.Drawing.Point(94, 33);
-            this.cbRecord.Name = "cbRecord";
-            this.cbRecord.Size = new System.Drawing.Size(100, 20);
-            this.cbRecord.TabIndex = 3;
-            // 
-            // lblRecord
-            // 
-            this.lblRecord.AutoSize = true;
-            this.lblRecord.ForeColor = System.Drawing.Color.White;
-            this.lblRecord.Location = new System.Drawing.Point(23, 36);
-            this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(65, 12);
-            this.lblRecord.TabIndex = 7;
-            this.lblRecord.Text = "레코드유형";
             // 
             // chNo
             // 
@@ -245,6 +218,34 @@
             // 
             this.chBookPbDate.Text = "발행년도";
             // 
+            // cbBookRecord
+            // 
+            this.cbBookRecord.FormattingEnabled = true;
+            this.cbBookRecord.Items.AddRange(new object[] {
+            "전체",
+            "단행본",
+            "시청각자료",
+            "연속간행물",
+            "이론서",
+            "점자자료",
+            "학습만화",
+            "학위논문",
+            "해외원서"});
+            this.cbBookRecord.Location = new System.Drawing.Point(94, 33);
+            this.cbBookRecord.Name = "cbBookRecord";
+            this.cbBookRecord.Size = new System.Drawing.Size(100, 20);
+            this.cbBookRecord.TabIndex = 3;
+            // 
+            // lblBookRecord
+            // 
+            this.lblBookRecord.AutoSize = true;
+            this.lblBookRecord.ForeColor = System.Drawing.Color.White;
+            this.lblBookRecord.Location = new System.Drawing.Point(23, 36);
+            this.lblBookRecord.Name = "lblBookRecord";
+            this.lblBookRecord.Size = new System.Drawing.Size(65, 12);
+            this.lblBookRecord.TabIndex = 7;
+            this.lblBookRecord.Text = "레코드유형";
+            // 
             // ListBookSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -252,16 +253,16 @@
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.lblRate);
-            this.Controls.Add(this.lblGenre);
-            this.Controls.Add(this.lblRecord);
-            this.Controls.Add(this.lblLanguage);
-            this.Controls.Add(this.cbRate);
-            this.Controls.Add(this.cbGenre);
-            this.Controls.Add(this.cbLanguage);
-            this.Controls.Add(this.cbRecord);
+            this.Controls.Add(this.lblBookRate);
+            this.Controls.Add(this.lblBookGenre);
+            this.Controls.Add(this.lblBookRecord);
+            this.Controls.Add(this.lblBookLanguage);
+            this.Controls.Add(this.cbBookRate);
+            this.Controls.Add(this.cbBookGenre);
+            this.Controls.Add(this.cbBookLanguage);
+            this.Controls.Add(this.cbBookRecord);
             this.Controls.Add(this.cbSearchType);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbBookName);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -278,18 +279,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbBookName;
         private System.Windows.Forms.ComboBox cbSearchType;
-        private System.Windows.Forms.ComboBox cbLanguage;
-        private System.Windows.Forms.Label lblLanguage;
-        private System.Windows.Forms.Label lblGenre;
-        private System.Windows.Forms.ComboBox cbGenre;
-        private System.Windows.Forms.ComboBox cbRate;
-        private System.Windows.Forms.Label lblRate;
+        private System.Windows.Forms.ComboBox cbBookLanguage;
+        private System.Windows.Forms.Label lblBookLanguage;
+        private System.Windows.Forms.Label lblBookGenre;
+        private System.Windows.Forms.ComboBox cbBookGenre;
+        private System.Windows.Forms.ComboBox cbBookRate;
+        private System.Windows.Forms.Label lblBookRate;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ComboBox cbRecord;
-        private System.Windows.Forms.Label lblRecord;
+        private System.Windows.Forms.ComboBox cbBookRecord;
+        private System.Windows.Forms.Label lblBookRecord;
         private System.Windows.Forms.ColumnHeader chNo;
         private System.Windows.Forms.ColumnHeader chType;
         private System.Windows.Forms.ColumnHeader chState;

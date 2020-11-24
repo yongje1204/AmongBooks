@@ -40,12 +40,12 @@ namespace proj
             this.imglistBookChk = new System.Windows.Forms.ImageList(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnBookSearch = new System.Windows.Forms.Button();
+            this.imglistBookSearch = new System.Windows.Forms.ImageList(this.components);
             this.btnUserMng = new System.Windows.Forms.Button();
             this.imglistUserMng = new System.Windows.Forms.ImageList(this.components);
             this.btnBookRtn = new System.Windows.Forms.Button();
             this.imglistBookRtn = new System.Windows.Forms.ImageList(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.imglistBookSearch = new System.Windows.Forms.ImageList(this.components);
             this.SuspendLayout();
             // 
             // imglistBookMng
@@ -86,7 +86,7 @@ namespace proj
             this.btnBookMng.ForeColor = System.Drawing.Color.Black;
             this.btnBookMng.ImageIndex = 0;
             this.btnBookMng.ImageList = this.imglistBookMng;
-            this.btnBookMng.Location = new System.Drawing.Point(369, 88);
+            this.btnBookMng.Location = new System.Drawing.Point(369, 216);
             this.btnBookMng.Name = "btnBookMng";
             this.btnBookMng.Size = new System.Drawing.Size(112, 122);
             this.btnBookMng.TabIndex = 0;
@@ -148,7 +148,7 @@ namespace proj
             this.btnBookSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookSearch.ImageIndex = 0;
             this.btnBookSearch.ImageList = this.imglistBookSearch;
-            this.btnBookSearch.Location = new System.Drawing.Point(369, 216);
+            this.btnBookSearch.Location = new System.Drawing.Point(369, 88);
             this.btnBookSearch.Name = "btnBookSearch";
             this.btnBookSearch.Size = new System.Drawing.Size(112, 122);
             this.btnBookSearch.TabIndex = 0;
@@ -159,6 +159,13 @@ namespace proj
             this.btnBookSearch.Click += new System.EventHandler(this.btnBookSearch_Click);
             this.btnBookSearch.MouseEnter += new System.EventHandler(this.btnBookSearch_MouseEnter);
             this.btnBookSearch.MouseLeave += new System.EventHandler(this.btnBookSearch_MouseLeave);
+            // 
+            // imglistBookSearch
+            // 
+            this.imglistBookSearch.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglistBookSearch.ImageStream")));
+            this.imglistBookSearch.TransparentColor = System.Drawing.Color.Transparent;
+            this.imglistBookSearch.Images.SetKeyName(0, "search1.png");
+            this.imglistBookSearch.Images.SetKeyName(1, "search2.png");
             // 
             // btnUserMng
             // 
@@ -219,13 +226,6 @@ namespace proj
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.Text = "notifyIcon1";
             this.notifyIcon.Visible = true;
-            // 
-            // imglistBookSearch
-            // 
-            this.imglistBookSearch.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imglistBookSearch.ImageStream")));
-            this.imglistBookSearch.TransparentColor = System.Drawing.Color.Transparent;
-            this.imglistBookSearch.Images.SetKeyName(0, "search1.png");
-            this.imglistBookSearch.Images.SetKeyName(1, "search2.png");
             // 
             // Main
             // 

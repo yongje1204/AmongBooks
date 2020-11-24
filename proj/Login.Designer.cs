@@ -31,8 +31,8 @@ namespace proj
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.txtPsw = new System.Windows.Forms.TextBox();
+            this.tbId = new System.Windows.Forms.TextBox();
+            this.tbPsw = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.lblPsw = new System.Windows.Forms.Label();
@@ -41,20 +41,20 @@ namespace proj
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtId
+            // tbId
             // 
-            this.txtId.Location = new System.Drawing.Point(110, 167);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(123, 21);
-            this.txtId.TabIndex = 0;
+            this.tbId.Location = new System.Drawing.Point(110, 167);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(123, 21);
+            this.tbId.TabIndex = 0;
             // 
-            // txtPsw
+            // tbPsw
             // 
-            this.txtPsw.Location = new System.Drawing.Point(110, 194);
-            this.txtPsw.Name = "txtPsw";
-            this.txtPsw.PasswordChar = '*';
-            this.txtPsw.Size = new System.Drawing.Size(123, 21);
-            this.txtPsw.TabIndex = 0;
+            this.tbPsw.Location = new System.Drawing.Point(110, 194);
+            this.tbPsw.Name = "tbPsw";
+            this.tbPsw.PasswordChar = '*';
+            this.tbPsw.Size = new System.Drawing.Size(123, 21);
+            this.tbPsw.TabIndex = 0;
             // 
             // btnLogin
             // 
@@ -120,13 +120,14 @@ namespace proj
             this.Controls.Add(this.lblLine);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtPsw);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.tbPsw);
+            this.Controls.Add(this.tbId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,8 +136,8 @@ namespace proj
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtPsw;
+        private System.Windows.Forms.TextBox tbId;
+        private System.Windows.Forms.TextBox tbPsw;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblPsw;

@@ -21,7 +21,7 @@ namespace proj
 
         private void ListBookSearch_Load(object sender, EventArgs e)
         {
-            this.cbRecord.SelectedIndex = this.cbLanguage.SelectedIndex = this.cbGenre.SelectedIndex = this.cbRate.SelectedIndex = this.cbSearchType.SelectedIndex = 0;
+            this.cbBookRecord.SelectedIndex = this.cbBookLanguage.SelectedIndex = this.cbBookGenre.SelectedIndex = this.cbBookRate.SelectedIndex = this.cbSearchType.SelectedIndex = 0;
         }
     }
 }
