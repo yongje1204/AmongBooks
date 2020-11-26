@@ -52,6 +52,30 @@
             this.lblBookSymbol_Cre = new System.Windows.Forms.Label();
             this.lblBookPublisher_Cre = new System.Windows.Forms.Label();
             this.tpModify = new System.Windows.Forms.TabPage();
+            this.btnSearch_Mod = new System.Windows.Forms.Button();
+            this.tbBookNum_Mod = new System.Windows.Forms.TextBox();
+            this.lblBookNum_Mod = new System.Windows.Forms.Label();
+            this.lblBookRate_Mod = new System.Windows.Forms.Label();
+            this.lblBookGenre_Mod = new System.Windows.Forms.Label();
+            this.lblBookRecord_Mod = new System.Windows.Forms.Label();
+            this.cbBookRate_Mod = new System.Windows.Forms.ComboBox();
+            this.cbBookGenre_Mod = new System.Windows.Forms.ComboBox();
+            this.cbBookRecord_Mod = new System.Windows.Forms.ComboBox();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.cbBookPbMonth_Mod = new System.Windows.Forms.ComboBox();
+            this.cbBookLanguage_Mod = new System.Windows.Forms.ComboBox();
+            this.tbBookPbYear_Mod = new System.Windows.Forms.TextBox();
+            this.tbBookSymbol_Mod = new System.Windows.Forms.TextBox();
+            this.tbBookPublisher_Mod = new System.Windows.Forms.TextBox();
+            this.tbBookSign_Mod = new System.Windows.Forms.TextBox();
+            this.lblBookName_Mod = new System.Windows.Forms.Label();
+            this.tbBookName_Mod = new System.Windows.Forms.TextBox();
+            this.lblBookLanguage_Mod = new System.Windows.Forms.Label();
+            this.lblBookSign_Mod = new System.Windows.Forms.Label();
+            this.lblBookPbYear_Mod = new System.Windows.Forms.Label();
+            this.lblBookPbDate_Mod = new System.Windows.Forms.Label();
+            this.lblBookSymbol_Mod = new System.Windows.Forms.Label();
+            this.lblBookPublisher_Mod = new System.Windows.Forms.Label();
             this.tpDelete = new System.Windows.Forms.TabPage();
             this.btnSearch_Del = new System.Windows.Forms.Button();
             this.tbBookNum_Del = new System.Windows.Forms.TextBox();
@@ -77,30 +101,6 @@
             this.lblBookPbDate_Del = new System.Windows.Forms.Label();
             this.lblBookSymbol_Del = new System.Windows.Forms.Label();
             this.lblBookPublisher_Del = new System.Windows.Forms.Label();
-            this.btnSearch_Mod = new System.Windows.Forms.Button();
-            this.tbBookNum_Mod = new System.Windows.Forms.TextBox();
-            this.lblBookNum_Mod = new System.Windows.Forms.Label();
-            this.lblBookRate_Mod = new System.Windows.Forms.Label();
-            this.lblBookGenre_Mod = new System.Windows.Forms.Label();
-            this.lblBookRecord_Mod = new System.Windows.Forms.Label();
-            this.cbBookRate_Mod = new System.Windows.Forms.ComboBox();
-            this.cbBookGenre_Mod = new System.Windows.Forms.ComboBox();
-            this.cbBookRecord_Mod = new System.Windows.Forms.ComboBox();
-            this.btnModify = new System.Windows.Forms.Button();
-            this.cbBookPbMonth_Mod = new System.Windows.Forms.ComboBox();
-            this.cbBookLanguage_Mod = new System.Windows.Forms.ComboBox();
-            this.tbBookPbYear_Mod = new System.Windows.Forms.TextBox();
-            this.tbBookSymbol_Mod = new System.Windows.Forms.TextBox();
-            this.tbBookPublisher_Mod = new System.Windows.Forms.TextBox();
-            this.tbBookSign_Mod = new System.Windows.Forms.TextBox();
-            this.lblBookName_Mod = new System.Windows.Forms.Label();
-            this.tbBookName_Mod = new System.Windows.Forms.TextBox();
-            this.lblBookLanguage_Mod = new System.Windows.Forms.Label();
-            this.lblBookSign_Mod = new System.Windows.Forms.Label();
-            this.lblBookPbYear_Mod = new System.Windows.Forms.Label();
-            this.lblBookPbDate_Mod = new System.Windows.Forms.Label();
-            this.lblBookSymbol_Mod = new System.Windows.Forms.Label();
-            this.lblBookPublisher_Mod = new System.Windows.Forms.Label();
             this.tcBookMng.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.tpModify.SuspendLayout();
@@ -178,7 +178,7 @@
             // 
             this.lblBookRecord_Cre.AutoSize = true;
             this.lblBookRecord_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookRecord_Cre.Location = new System.Drawing.Point(211, 258);
+            this.lblBookRecord_Cre.Location = new System.Drawing.Point(211, 259);
             this.lblBookRecord_Cre.Name = "lblBookRecord_Cre";
             this.lblBookRecord_Cre.Size = new System.Drawing.Size(65, 12);
             this.lblBookRecord_Cre.TabIndex = 55;
@@ -312,7 +312,7 @@
             // 
             this.lblBookName_Cre.AutoSize = true;
             this.lblBookName_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookName_Cre.Location = new System.Drawing.Point(219, 118);
+            this.lblBookName_Cre.Location = new System.Drawing.Point(219, 122);
             this.lblBookName_Cre.Name = "lblBookName_Cre";
             this.lblBookName_Cre.Size = new System.Drawing.Size(49, 12);
             this.lblBookName_Cre.TabIndex = 40;
@@ -329,7 +329,7 @@
             // 
             this.lblBookLanguage_Cre.AutoSize = true;
             this.lblBookLanguage_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookLanguage_Cre.Location = new System.Drawing.Point(219, 283);
+            this.lblBookLanguage_Cre.Location = new System.Drawing.Point(219, 284);
             this.lblBookLanguage_Cre.Name = "lblBookLanguage_Cre";
             this.lblBookLanguage_Cre.Size = new System.Drawing.Size(49, 12);
             this.lblBookLanguage_Cre.TabIndex = 39;
@@ -339,7 +339,7 @@
             // 
             this.lblBookSign_Cre.AutoSize = true;
             this.lblBookSign_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookSign_Cre.Location = new System.Drawing.Point(219, 144);
+            this.lblBookSign_Cre.Location = new System.Drawing.Point(219, 148);
             this.lblBookSign_Cre.Name = "lblBookSign_Cre";
             this.lblBookSign_Cre.Size = new System.Drawing.Size(49, 12);
             this.lblBookSign_Cre.TabIndex = 38;
@@ -359,7 +359,7 @@
             // 
             this.lblBookPbDate_Cre.AutoSize = true;
             this.lblBookPbDate_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookPbDate_Cre.Location = new System.Drawing.Point(216, 228);
+            this.lblBookPbDate_Cre.Location = new System.Drawing.Point(216, 231);
             this.lblBookPbDate_Cre.Name = "lblBookPbDate_Cre";
             this.lblBookPbDate_Cre.Size = new System.Drawing.Size(53, 12);
             this.lblBookPbDate_Cre.TabIndex = 36;
@@ -369,7 +369,7 @@
             // 
             this.lblBookSymbol_Cre.AutoSize = true;
             this.lblBookSymbol_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookSymbol_Cre.Location = new System.Drawing.Point(216, 198);
+            this.lblBookSymbol_Cre.Location = new System.Drawing.Point(216, 203);
             this.lblBookSymbol_Cre.Name = "lblBookSymbol_Cre";
             this.lblBookSymbol_Cre.Size = new System.Drawing.Size(53, 12);
             this.lblBookSymbol_Cre.TabIndex = 41;
@@ -379,7 +379,7 @@
             // 
             this.lblBookPublisher_Cre.AutoSize = true;
             this.lblBookPublisher_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblBookPublisher_Cre.Location = new System.Drawing.Point(219, 171);
+            this.lblBookPublisher_Cre.Location = new System.Drawing.Point(219, 176);
             this.lblBookPublisher_Cre.Name = "lblBookPublisher_Cre";
             this.lblBookPublisher_Cre.Size = new System.Drawing.Size(49, 12);
             this.lblBookPublisher_Cre.TabIndex = 35;
@@ -420,6 +420,266 @@
             this.tpModify.TabIndex = 1;
             this.tpModify.Text = "자료수정";
             this.tpModify.UseVisualStyleBackColor = true;
+            // 
+            // btnSearch_Mod
+            // 
+            this.btnSearch_Mod.BackColor = System.Drawing.Color.White;
+            this.btnSearch_Mod.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch_Mod.Location = new System.Drawing.Point(332, 115);
+            this.btnSearch_Mod.Name = "btnSearch_Mod";
+            this.btnSearch_Mod.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch_Mod.TabIndex = 61;
+            this.btnSearch_Mod.Text = "검색";
+            this.btnSearch_Mod.UseVisualStyleBackColor = false;
+            // 
+            // tbBookNum_Mod
+            // 
+            this.tbBookNum_Mod.Location = new System.Drawing.Point(278, 81);
+            this.tbBookNum_Mod.Name = "tbBookNum_Mod";
+            this.tbBookNum_Mod.Size = new System.Drawing.Size(203, 21);
+            this.tbBookNum_Mod.TabIndex = 59;
+            // 
+            // lblBookNum_Mod
+            // 
+            this.lblBookNum_Mod.AutoSize = true;
+            this.lblBookNum_Mod.BackColor = System.Drawing.Color.Transparent;
+            this.lblBookNum_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookNum_Mod.Location = new System.Drawing.Point(219, 85);
+            this.lblBookNum_Mod.Name = "lblBookNum_Mod";
+            this.lblBookNum_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblBookNum_Mod.TabIndex = 60;
+            this.lblBookNum_Mod.Text = "등록번호";
+            // 
+            // lblBookRate_Mod
+            // 
+            this.lblBookRate_Mod.AutoSize = true;
+            this.lblBookRate_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookRate_Mod.Location = new System.Drawing.Point(216, 374);
+            this.lblBookRate_Mod.Name = "lblBookRate_Mod";
+            this.lblBookRate_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblBookRate_Mod.TabIndex = 56;
+            this.lblBookRate_Mod.Text = "자료등급";
+            // 
+            // lblBookGenre_Mod
+            // 
+            this.lblBookGenre_Mod.AutoSize = true;
+            this.lblBookGenre_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookGenre_Mod.Location = new System.Drawing.Point(216, 348);
+            this.lblBookGenre_Mod.Name = "lblBookGenre_Mod";
+            this.lblBookGenre_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblBookGenre_Mod.TabIndex = 57;
+            this.lblBookGenre_Mod.Text = "별차기호";
+            // 
+            // lblBookRecord_Mod
+            // 
+            this.lblBookRecord_Mod.AutoSize = true;
+            this.lblBookRecord_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookRecord_Mod.Location = new System.Drawing.Point(211, 296);
+            this.lblBookRecord_Mod.Name = "lblBookRecord_Mod";
+            this.lblBookRecord_Mod.Size = new System.Drawing.Size(65, 12);
+            this.lblBookRecord_Mod.TabIndex = 58;
+            this.lblBookRecord_Mod.Text = "레코드유형";
+            // 
+            // cbBookRate_Mod
+            // 
+            this.cbBookRate_Mod.FormattingEnabled = true;
+            this.cbBookRate_Mod.Items.AddRange(new object[] {
+            "?",
+            "??",
+            "???",
+            "????"});
+            this.cbBookRate_Mod.Location = new System.Drawing.Point(278, 370);
+            this.cbBookRate_Mod.Name = "cbBookRate_Mod";
+            this.cbBookRate_Mod.Size = new System.Drawing.Size(100, 20);
+            this.cbBookRate_Mod.TabIndex = 55;
+            // 
+            // cbBookGenre_Mod
+            // 
+            this.cbBookGenre_Mod.FormattingEnabled = true;
+            this.cbBookGenre_Mod.Items.AddRange(new object[] {
+            "SF",
+            "학원",
+            "판타지",
+            "코믹/명랑",
+            "취미/오락",
+            "요리",
+            "예술",
+            "역사/고전",
+            "액션",
+            "실물자료",
+            "스포츠"});
+            this.cbBookGenre_Mod.Location = new System.Drawing.Point(278, 344);
+            this.cbBookGenre_Mod.Name = "cbBookGenre_Mod";
+            this.cbBookGenre_Mod.Size = new System.Drawing.Size(100, 20);
+            this.cbBookGenre_Mod.TabIndex = 54;
+            // 
+            // cbBookRecord_Mod
+            // 
+            this.cbBookRecord_Mod.FormattingEnabled = true;
+            this.cbBookRecord_Mod.Items.AddRange(new object[] {
+            "단행본",
+            "시청각자료",
+            "연속간행물",
+            "이론서",
+            "점자자료",
+            "학습만화",
+            "학위논문",
+            "해외원서"});
+            this.cbBookRecord_Mod.Location = new System.Drawing.Point(278, 292);
+            this.cbBookRecord_Mod.Name = "cbBookRecord_Mod";
+            this.cbBookRecord_Mod.Size = new System.Drawing.Size(100, 20);
+            this.cbBookRecord_Mod.TabIndex = 53;
+            // 
+            // btnModify
+            // 
+            this.btnModify.BackColor = System.Drawing.Color.White;
+            this.btnModify.Location = new System.Drawing.Point(303, 453);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(130, 40);
+            this.btnModify.TabIndex = 52;
+            this.btnModify.Text = "자료수정";
+            this.btnModify.UseVisualStyleBackColor = false;
+            // 
+            // cbBookPbMonth_Mod
+            // 
+            this.cbBookPbMonth_Mod.FormattingEnabled = true;
+            this.cbBookPbMonth_Mod.Items.AddRange(new object[] {
+            "01월",
+            "02월",
+            "03월",
+            "04월",
+            "05월",
+            "06월",
+            "07월",
+            "08월",
+            "09월",
+            "10월",
+            "11월",
+            "12월"});
+            this.cbBookPbMonth_Mod.Location = new System.Drawing.Point(410, 262);
+            this.cbBookPbMonth_Mod.Name = "cbBookPbMonth_Mod";
+            this.cbBookPbMonth_Mod.Size = new System.Drawing.Size(71, 20);
+            this.cbBookPbMonth_Mod.TabIndex = 51;
+            // 
+            // cbBookLanguage_Mod
+            // 
+            this.cbBookLanguage_Mod.FormattingEnabled = true;
+            this.cbBookLanguage_Mod.Items.AddRange(new object[] {
+            "한국어",
+            "영어",
+            "일본어",
+            "중국어",
+            "?",
+            "??"});
+            this.cbBookLanguage_Mod.Location = new System.Drawing.Point(278, 317);
+            this.cbBookLanguage_Mod.Name = "cbBookLanguage_Mod";
+            this.cbBookLanguage_Mod.Size = new System.Drawing.Size(100, 20);
+            this.cbBookLanguage_Mod.TabIndex = 50;
+            // 
+            // tbBookPbYear_Mod
+            // 
+            this.tbBookPbYear_Mod.Location = new System.Drawing.Point(278, 262);
+            this.tbBookPbYear_Mod.Name = "tbBookPbYear_Mod";
+            this.tbBookPbYear_Mod.Size = new System.Drawing.Size(91, 21);
+            this.tbBookPbYear_Mod.TabIndex = 49;
+            // 
+            // tbBookSymbol_Mod
+            // 
+            this.tbBookSymbol_Mod.Location = new System.Drawing.Point(278, 235);
+            this.tbBookSymbol_Mod.Name = "tbBookSymbol_Mod";
+            this.tbBookSymbol_Mod.Size = new System.Drawing.Size(203, 21);
+            this.tbBookSymbol_Mod.TabIndex = 48;
+            // 
+            // tbBookPublisher_Mod
+            // 
+            this.tbBookPublisher_Mod.Location = new System.Drawing.Point(278, 208);
+            this.tbBookPublisher_Mod.Name = "tbBookPublisher_Mod";
+            this.tbBookPublisher_Mod.Size = new System.Drawing.Size(203, 21);
+            this.tbBookPublisher_Mod.TabIndex = 47;
+            // 
+            // tbBookSign_Mod
+            // 
+            this.tbBookSign_Mod.Location = new System.Drawing.Point(278, 181);
+            this.tbBookSign_Mod.Name = "tbBookSign_Mod";
+            this.tbBookSign_Mod.Size = new System.Drawing.Size(203, 21);
+            this.tbBookSign_Mod.TabIndex = 46;
+            // 
+            // lblBookName_Mod
+            // 
+            this.lblBookName_Mod.AutoSize = true;
+            this.lblBookName_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookName_Mod.Location = new System.Drawing.Point(219, 159);
+            this.lblBookName_Mod.Name = "lblBookName_Mod";
+            this.lblBookName_Mod.Size = new System.Drawing.Size(49, 12);
+            this.lblBookName_Mod.TabIndex = 43;
+            this.lblBookName_Mod.Text = "서     명";
+            // 
+            // tbBookName_Mod
+            // 
+            this.tbBookName_Mod.Location = new System.Drawing.Point(278, 155);
+            this.tbBookName_Mod.Name = "tbBookName_Mod";
+            this.tbBookName_Mod.Size = new System.Drawing.Size(203, 21);
+            this.tbBookName_Mod.TabIndex = 45;
+            // 
+            // lblBookLanguage_Mod
+            // 
+            this.lblBookLanguage_Mod.AutoSize = true;
+            this.lblBookLanguage_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookLanguage_Mod.Location = new System.Drawing.Point(219, 321);
+            this.lblBookLanguage_Mod.Name = "lblBookLanguage_Mod";
+            this.lblBookLanguage_Mod.Size = new System.Drawing.Size(49, 12);
+            this.lblBookLanguage_Mod.TabIndex = 42;
+            this.lblBookLanguage_Mod.Text = "언     어";
+            // 
+            // lblBookSign_Mod
+            // 
+            this.lblBookSign_Mod.AutoSize = true;
+            this.lblBookSign_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookSign_Mod.Location = new System.Drawing.Point(219, 184);
+            this.lblBookSign_Mod.Name = "lblBookSign_Mod";
+            this.lblBookSign_Mod.Size = new System.Drawing.Size(49, 12);
+            this.lblBookSign_Mod.TabIndex = 41;
+            this.lblBookSign_Mod.Text = "저     자";
+            // 
+            // lblBookPbYear_Mod
+            // 
+            this.lblBookPbYear_Mod.AutoSize = true;
+            this.lblBookPbYear_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbYear_Mod.Location = new System.Drawing.Point(371, 266);
+            this.lblBookPbYear_Mod.Name = "lblBookPbYear_Mod";
+            this.lblBookPbYear_Mod.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbYear_Mod.TabIndex = 40;
+            this.lblBookPbYear_Mod.Text = "년";
+            // 
+            // lblBookPbDate_Mod
+            // 
+            this.lblBookPbDate_Mod.AutoSize = true;
+            this.lblBookPbDate_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbDate_Mod.Location = new System.Drawing.Point(216, 267);
+            this.lblBookPbDate_Mod.Name = "lblBookPbDate_Mod";
+            this.lblBookPbDate_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblBookPbDate_Mod.TabIndex = 39;
+            this.lblBookPbDate_Mod.Text = "발행년월";
+            // 
+            // lblBookSymbol_Mod
+            // 
+            this.lblBookSymbol_Mod.AutoSize = true;
+            this.lblBookSymbol_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookSymbol_Mod.Location = new System.Drawing.Point(216, 238);
+            this.lblBookSymbol_Mod.Name = "lblBookSymbol_Mod";
+            this.lblBookSymbol_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblBookSymbol_Mod.TabIndex = 44;
+            this.lblBookSymbol_Mod.Text = "청구기호";
+            // 
+            // lblBookPublisher_Mod
+            // 
+            this.lblBookPublisher_Mod.AutoSize = true;
+            this.lblBookPublisher_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookPublisher_Mod.Location = new System.Drawing.Point(219, 211);
+            this.lblBookPublisher_Mod.Name = "lblBookPublisher_Mod";
+            this.lblBookPublisher_Mod.Size = new System.Drawing.Size(49, 12);
+            this.lblBookPublisher_Mod.TabIndex = 38;
+            this.lblBookPublisher_Mod.Text = "출 판 사";
             // 
             // tpDelete
             // 
@@ -480,7 +740,7 @@
             this.lblBookNum_Del.AutoSize = true;
             this.lblBookNum_Del.BackColor = System.Drawing.Color.Transparent;
             this.lblBookNum_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookNum_Del.Location = new System.Drawing.Point(219, 84);
+            this.lblBookNum_Del.Location = new System.Drawing.Point(219, 85);
             this.lblBookNum_Del.Name = "lblBookNum_Del";
             this.lblBookNum_Del.Size = new System.Drawing.Size(53, 12);
             this.lblBookNum_Del.TabIndex = 60;
@@ -490,7 +750,7 @@
             // 
             this.lblBookRate_Del.AutoSize = true;
             this.lblBookRate_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookRate_Del.Location = new System.Drawing.Point(216, 373);
+            this.lblBookRate_Del.Location = new System.Drawing.Point(216, 374);
             this.lblBookRate_Del.Name = "lblBookRate_Del";
             this.lblBookRate_Del.Size = new System.Drawing.Size(53, 12);
             this.lblBookRate_Del.TabIndex = 56;
@@ -500,7 +760,7 @@
             // 
             this.lblBookGenre_Del.AutoSize = true;
             this.lblBookGenre_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookGenre_Del.Location = new System.Drawing.Point(216, 347);
+            this.lblBookGenre_Del.Location = new System.Drawing.Point(216, 348);
             this.lblBookGenre_Del.Name = "lblBookGenre_Del";
             this.lblBookGenre_Del.Size = new System.Drawing.Size(53, 12);
             this.lblBookGenre_Del.TabIndex = 57;
@@ -510,7 +770,7 @@
             // 
             this.lblBookRecord_Del.AutoSize = true;
             this.lblBookRecord_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookRecord_Del.Location = new System.Drawing.Point(211, 295);
+            this.lblBookRecord_Del.Location = new System.Drawing.Point(211, 296);
             this.lblBookRecord_Del.Name = "lblBookRecord_Del";
             this.lblBookRecord_Del.Size = new System.Drawing.Size(65, 12);
             this.lblBookRecord_Del.TabIndex = 58;
@@ -653,7 +913,7 @@
             // 
             this.lblBookName_Del.AutoSize = true;
             this.lblBookName_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookName_Del.Location = new System.Drawing.Point(219, 155);
+            this.lblBookName_Del.Location = new System.Drawing.Point(219, 159);
             this.lblBookName_Del.Name = "lblBookName_Del";
             this.lblBookName_Del.Size = new System.Drawing.Size(49, 12);
             this.lblBookName_Del.TabIndex = 43;
@@ -671,7 +931,7 @@
             // 
             this.lblBookLanguage_Del.AutoSize = true;
             this.lblBookLanguage_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookLanguage_Del.Location = new System.Drawing.Point(219, 320);
+            this.lblBookLanguage_Del.Location = new System.Drawing.Point(219, 321);
             this.lblBookLanguage_Del.Name = "lblBookLanguage_Del";
             this.lblBookLanguage_Del.Size = new System.Drawing.Size(49, 12);
             this.lblBookLanguage_Del.TabIndex = 42;
@@ -681,7 +941,7 @@
             // 
             this.lblBookSign_Del.AutoSize = true;
             this.lblBookSign_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookSign_Del.Location = new System.Drawing.Point(219, 181);
+            this.lblBookSign_Del.Location = new System.Drawing.Point(219, 184);
             this.lblBookSign_Del.Name = "lblBookSign_Del";
             this.lblBookSign_Del.Size = new System.Drawing.Size(49, 12);
             this.lblBookSign_Del.TabIndex = 41;
@@ -701,7 +961,7 @@
             // 
             this.lblBookPbDate_Del.AutoSize = true;
             this.lblBookPbDate_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookPbDate_Del.Location = new System.Drawing.Point(216, 265);
+            this.lblBookPbDate_Del.Location = new System.Drawing.Point(216, 267);
             this.lblBookPbDate_Del.Name = "lblBookPbDate_Del";
             this.lblBookPbDate_Del.Size = new System.Drawing.Size(53, 12);
             this.lblBookPbDate_Del.TabIndex = 39;
@@ -711,7 +971,7 @@
             // 
             this.lblBookSymbol_Del.AutoSize = true;
             this.lblBookSymbol_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookSymbol_Del.Location = new System.Drawing.Point(216, 235);
+            this.lblBookSymbol_Del.Location = new System.Drawing.Point(216, 238);
             this.lblBookSymbol_Del.Name = "lblBookSymbol_Del";
             this.lblBookSymbol_Del.Size = new System.Drawing.Size(53, 12);
             this.lblBookSymbol_Del.TabIndex = 44;
@@ -721,271 +981,11 @@
             // 
             this.lblBookPublisher_Del.AutoSize = true;
             this.lblBookPublisher_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookPublisher_Del.Location = new System.Drawing.Point(219, 208);
+            this.lblBookPublisher_Del.Location = new System.Drawing.Point(219, 211);
             this.lblBookPublisher_Del.Name = "lblBookPublisher_Del";
             this.lblBookPublisher_Del.Size = new System.Drawing.Size(49, 12);
             this.lblBookPublisher_Del.TabIndex = 38;
             this.lblBookPublisher_Del.Text = "출 판 사";
-            // 
-            // btnSearch_Mod
-            // 
-            this.btnSearch_Mod.BackColor = System.Drawing.Color.White;
-            this.btnSearch_Mod.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch_Mod.Location = new System.Drawing.Point(332, 115);
-            this.btnSearch_Mod.Name = "btnSearch_Mod";
-            this.btnSearch_Mod.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch_Mod.TabIndex = 61;
-            this.btnSearch_Mod.Text = "검색";
-            this.btnSearch_Mod.UseVisualStyleBackColor = false;
-            // 
-            // tbBookNum_Mod
-            // 
-            this.tbBookNum_Mod.Location = new System.Drawing.Point(278, 81);
-            this.tbBookNum_Mod.Name = "tbBookNum_Mod";
-            this.tbBookNum_Mod.Size = new System.Drawing.Size(203, 21);
-            this.tbBookNum_Mod.TabIndex = 59;
-            // 
-            // lblBookNum_Mod
-            // 
-            this.lblBookNum_Mod.AutoSize = true;
-            this.lblBookNum_Mod.BackColor = System.Drawing.Color.Transparent;
-            this.lblBookNum_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookNum_Mod.Location = new System.Drawing.Point(219, 84);
-            this.lblBookNum_Mod.Name = "lblBookNum_Mod";
-            this.lblBookNum_Mod.Size = new System.Drawing.Size(53, 12);
-            this.lblBookNum_Mod.TabIndex = 60;
-            this.lblBookNum_Mod.Text = "등록번호";
-            // 
-            // lblBookRate_Mod
-            // 
-            this.lblBookRate_Mod.AutoSize = true;
-            this.lblBookRate_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookRate_Mod.Location = new System.Drawing.Point(216, 373);
-            this.lblBookRate_Mod.Name = "lblBookRate_Mod";
-            this.lblBookRate_Mod.Size = new System.Drawing.Size(53, 12);
-            this.lblBookRate_Mod.TabIndex = 56;
-            this.lblBookRate_Mod.Text = "자료등급";
-            // 
-            // lblBookGenre_Mod
-            // 
-            this.lblBookGenre_Mod.AutoSize = true;
-            this.lblBookGenre_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookGenre_Mod.Location = new System.Drawing.Point(216, 347);
-            this.lblBookGenre_Mod.Name = "lblBookGenre_Mod";
-            this.lblBookGenre_Mod.Size = new System.Drawing.Size(53, 12);
-            this.lblBookGenre_Mod.TabIndex = 57;
-            this.lblBookGenre_Mod.Text = "별차기호";
-            // 
-            // lblBookRecord_Mod
-            // 
-            this.lblBookRecord_Mod.AutoSize = true;
-            this.lblBookRecord_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookRecord_Mod.Location = new System.Drawing.Point(211, 295);
-            this.lblBookRecord_Mod.Name = "lblBookRecord_Mod";
-            this.lblBookRecord_Mod.Size = new System.Drawing.Size(65, 12);
-            this.lblBookRecord_Mod.TabIndex = 58;
-            this.lblBookRecord_Mod.Text = "레코드유형";
-            // 
-            // cbBookRate_Mod
-            // 
-            this.cbBookRate_Mod.FormattingEnabled = true;
-            this.cbBookRate_Mod.Items.AddRange(new object[] {
-            "?",
-            "??",
-            "???",
-            "????"});
-            this.cbBookRate_Mod.Location = new System.Drawing.Point(278, 370);
-            this.cbBookRate_Mod.Name = "cbBookRate_Mod";
-            this.cbBookRate_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbBookRate_Mod.TabIndex = 55;
-            // 
-            // cbBookGenre_Mod
-            // 
-            this.cbBookGenre_Mod.FormattingEnabled = true;
-            this.cbBookGenre_Mod.Items.AddRange(new object[] {
-            "SF",
-            "학원",
-            "판타지",
-            "코믹/명랑",
-            "취미/오락",
-            "요리",
-            "예술",
-            "역사/고전",
-            "액션",
-            "실물자료",
-            "스포츠"});
-            this.cbBookGenre_Mod.Location = new System.Drawing.Point(278, 344);
-            this.cbBookGenre_Mod.Name = "cbBookGenre_Mod";
-            this.cbBookGenre_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbBookGenre_Mod.TabIndex = 54;
-            // 
-            // cbBookRecord_Mod
-            // 
-            this.cbBookRecord_Mod.FormattingEnabled = true;
-            this.cbBookRecord_Mod.Items.AddRange(new object[] {
-            "단행본",
-            "시청각자료",
-            "연속간행물",
-            "이론서",
-            "점자자료",
-            "학습만화",
-            "학위논문",
-            "해외원서"});
-            this.cbBookRecord_Mod.Location = new System.Drawing.Point(278, 292);
-            this.cbBookRecord_Mod.Name = "cbBookRecord_Mod";
-            this.cbBookRecord_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbBookRecord_Mod.TabIndex = 53;
-            // 
-            // btnModify
-            // 
-            this.btnModify.BackColor = System.Drawing.Color.White;
-            this.btnModify.Location = new System.Drawing.Point(303, 453);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Size = new System.Drawing.Size(130, 40);
-            this.btnModify.TabIndex = 52;
-            this.btnModify.Text = "자료수정";
-            this.btnModify.UseVisualStyleBackColor = false;
-            // 
-            // cbBookPbMonth_Mod
-            // 
-            this.cbBookPbMonth_Mod.FormattingEnabled = true;
-            this.cbBookPbMonth_Mod.Items.AddRange(new object[] {
-            "01월",
-            "02월",
-            "03월",
-            "04월",
-            "05월",
-            "06월",
-            "07월",
-            "08월",
-            "09월",
-            "10월",
-            "11월",
-            "12월"});
-            this.cbBookPbMonth_Mod.Location = new System.Drawing.Point(410, 262);
-            this.cbBookPbMonth_Mod.Name = "cbBookPbMonth_Mod";
-            this.cbBookPbMonth_Mod.Size = new System.Drawing.Size(71, 20);
-            this.cbBookPbMonth_Mod.TabIndex = 51;
-            // 
-            // cbBookLanguage_Mod
-            // 
-            this.cbBookLanguage_Mod.FormattingEnabled = true;
-            this.cbBookLanguage_Mod.Items.AddRange(new object[] {
-            "한국어",
-            "영어",
-            "일본어",
-            "중국어",
-            "?",
-            "??"});
-            this.cbBookLanguage_Mod.Location = new System.Drawing.Point(278, 317);
-            this.cbBookLanguage_Mod.Name = "cbBookLanguage_Mod";
-            this.cbBookLanguage_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbBookLanguage_Mod.TabIndex = 50;
-            // 
-            // tbBookPbYear_Mod
-            // 
-            this.tbBookPbYear_Mod.Location = new System.Drawing.Point(278, 262);
-            this.tbBookPbYear_Mod.Name = "tbBookPbYear_Mod";
-            this.tbBookPbYear_Mod.Size = new System.Drawing.Size(91, 21);
-            this.tbBookPbYear_Mod.TabIndex = 49;
-            // 
-            // tbBookSymbol_Mod
-            // 
-            this.tbBookSymbol_Mod.Location = new System.Drawing.Point(278, 235);
-            this.tbBookSymbol_Mod.Name = "tbBookSymbol_Mod";
-            this.tbBookSymbol_Mod.Size = new System.Drawing.Size(203, 21);
-            this.tbBookSymbol_Mod.TabIndex = 48;
-            // 
-            // tbBookPublisher_Mod
-            // 
-            this.tbBookPublisher_Mod.Location = new System.Drawing.Point(278, 208);
-            this.tbBookPublisher_Mod.Name = "tbBookPublisher_Mod";
-            this.tbBookPublisher_Mod.Size = new System.Drawing.Size(203, 21);
-            this.tbBookPublisher_Mod.TabIndex = 47;
-            // 
-            // tbBookSign_Mod
-            // 
-            this.tbBookSign_Mod.Location = new System.Drawing.Point(278, 181);
-            this.tbBookSign_Mod.Name = "tbBookSign_Mod";
-            this.tbBookSign_Mod.Size = new System.Drawing.Size(203, 21);
-            this.tbBookSign_Mod.TabIndex = 46;
-            // 
-            // lblBookName_Mod
-            // 
-            this.lblBookName_Mod.AutoSize = true;
-            this.lblBookName_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookName_Mod.Location = new System.Drawing.Point(219, 155);
-            this.lblBookName_Mod.Name = "lblBookName_Mod";
-            this.lblBookName_Mod.Size = new System.Drawing.Size(49, 12);
-            this.lblBookName_Mod.TabIndex = 43;
-            this.lblBookName_Mod.Text = "서     명";
-            // 
-            // tbBookName_Mod
-            // 
-            this.tbBookName_Mod.Location = new System.Drawing.Point(278, 155);
-            this.tbBookName_Mod.Name = "tbBookName_Mod";
-            this.tbBookName_Mod.Size = new System.Drawing.Size(203, 21);
-            this.tbBookName_Mod.TabIndex = 45;
-            // 
-            // lblBookLanguage_Mod
-            // 
-            this.lblBookLanguage_Mod.AutoSize = true;
-            this.lblBookLanguage_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookLanguage_Mod.Location = new System.Drawing.Point(219, 320);
-            this.lblBookLanguage_Mod.Name = "lblBookLanguage_Mod";
-            this.lblBookLanguage_Mod.Size = new System.Drawing.Size(49, 12);
-            this.lblBookLanguage_Mod.TabIndex = 42;
-            this.lblBookLanguage_Mod.Text = "언     어";
-            // 
-            // lblBookSign_Mod
-            // 
-            this.lblBookSign_Mod.AutoSize = true;
-            this.lblBookSign_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookSign_Mod.Location = new System.Drawing.Point(219, 181);
-            this.lblBookSign_Mod.Name = "lblBookSign_Mod";
-            this.lblBookSign_Mod.Size = new System.Drawing.Size(49, 12);
-            this.lblBookSign_Mod.TabIndex = 41;
-            this.lblBookSign_Mod.Text = "저     자";
-            // 
-            // lblBookPbYear_Mod
-            // 
-            this.lblBookPbYear_Mod.AutoSize = true;
-            this.lblBookPbYear_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookPbYear_Mod.Location = new System.Drawing.Point(371, 266);
-            this.lblBookPbYear_Mod.Name = "lblBookPbYear_Mod";
-            this.lblBookPbYear_Mod.Size = new System.Drawing.Size(17, 12);
-            this.lblBookPbYear_Mod.TabIndex = 40;
-            this.lblBookPbYear_Mod.Text = "년";
-            // 
-            // lblBookPbDate_Mod
-            // 
-            this.lblBookPbDate_Mod.AutoSize = true;
-            this.lblBookPbDate_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookPbDate_Mod.Location = new System.Drawing.Point(216, 265);
-            this.lblBookPbDate_Mod.Name = "lblBookPbDate_Mod";
-            this.lblBookPbDate_Mod.Size = new System.Drawing.Size(53, 12);
-            this.lblBookPbDate_Mod.TabIndex = 39;
-            this.lblBookPbDate_Mod.Text = "발행년월";
-            // 
-            // lblBookSymbol_Mod
-            // 
-            this.lblBookSymbol_Mod.AutoSize = true;
-            this.lblBookSymbol_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookSymbol_Mod.Location = new System.Drawing.Point(216, 235);
-            this.lblBookSymbol_Mod.Name = "lblBookSymbol_Mod";
-            this.lblBookSymbol_Mod.Size = new System.Drawing.Size(53, 12);
-            this.lblBookSymbol_Mod.TabIndex = 44;
-            this.lblBookSymbol_Mod.Text = "청구기호";
-            // 
-            // lblBookPublisher_Mod
-            // 
-            this.lblBookPublisher_Mod.AutoSize = true;
-            this.lblBookPublisher_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookPublisher_Mod.Location = new System.Drawing.Point(219, 208);
-            this.lblBookPublisher_Mod.Name = "lblBookPublisher_Mod";
-            this.lblBookPublisher_Mod.Size = new System.Drawing.Size(49, 12);
-            this.lblBookPublisher_Mod.TabIndex = 38;
-            this.lblBookPublisher_Mod.Text = "출 판 사";
             // 
             // ListBookMng
             // 

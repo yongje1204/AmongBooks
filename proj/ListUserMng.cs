@@ -18,5 +18,6 @@ namespace proj
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
         }
+
     }
 }
