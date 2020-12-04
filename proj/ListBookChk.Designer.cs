@@ -44,10 +44,8 @@
             this.tbUserState = new System.Windows.Forms.TextBox();
             this.lblUserPhone = new System.Windows.Forms.Label();
             this.lblUserState = new System.Windows.Forms.Label();
-            this.tbUserMajor = new System.Windows.Forms.TextBox();
-            this.lblUserMajor = new System.Windows.Forms.Label();
-            this.tbUserLevel = new System.Windows.Forms.TextBox();
-            this.lblUserLevel = new System.Windows.Forms.Label();
+            this.tbUserType = new System.Windows.Forms.TextBox();
+            this.lblUserType = new System.Windows.Forms.Label();
             this.tbUserName = new System.Windows.Forms.TextBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.tbUserNum = new System.Windows.Forms.TextBox();
@@ -64,6 +62,9 @@
             this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblOverdue = new System.Windows.Forms.Label();
             this.cbChkType = new System.Windows.Forms.ComboBox();
+            this.tbChkMng = new System.Windows.Forms.TextBox();
+            this.lblChkMng = new System.Windows.Forms.Label();
+            this.lblChkType = new System.Windows.Forms.Label();
             this.gbBook.SuspendLayout();
             this.gbUser.SuspendLayout();
             this.SuspendLayout();
@@ -190,10 +191,8 @@
             this.gbUser.Controls.Add(this.tbUserState);
             this.gbUser.Controls.Add(this.lblUserPhone);
             this.gbUser.Controls.Add(this.lblUserState);
-            this.gbUser.Controls.Add(this.tbUserMajor);
-            this.gbUser.Controls.Add(this.lblUserMajor);
-            this.gbUser.Controls.Add(this.tbUserLevel);
-            this.gbUser.Controls.Add(this.lblUserLevel);
+            this.gbUser.Controls.Add(this.tbUserType);
+            this.gbUser.Controls.Add(this.lblUserType);
             this.gbUser.Controls.Add(this.tbUserName);
             this.gbUser.Controls.Add(this.lblUserName);
             this.gbUser.Controls.Add(this.tbUserNum);
@@ -201,14 +200,14 @@
             this.gbUser.ForeColor = System.Drawing.Color.White;
             this.gbUser.Location = new System.Drawing.Point(375, 25);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(300, 183);
+            this.gbUser.Size = new System.Drawing.Size(300, 155);
             this.gbUser.TabIndex = 2;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "회원";
             // 
             // tbUserPhone
             // 
-            this.tbUserPhone.Location = new System.Drawing.Point(76, 149);
+            this.tbUserPhone.Location = new System.Drawing.Point(76, 122);
             this.tbUserPhone.Name = "tbUserPhone";
             this.tbUserPhone.ReadOnly = true;
             this.tbUserPhone.Size = new System.Drawing.Size(203, 21);
@@ -217,7 +216,7 @@
             // 
             // tbUserState
             // 
-            this.tbUserState.Location = new System.Drawing.Point(76, 122);
+            this.tbUserState.Location = new System.Drawing.Point(76, 95);
             this.tbUserState.Name = "tbUserState";
             this.tbUserState.ReadOnly = true;
             this.tbUserState.Size = new System.Drawing.Size(203, 21);
@@ -228,7 +227,7 @@
             // 
             this.lblUserPhone.AutoSize = true;
             this.lblUserPhone.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone.Location = new System.Drawing.Point(16, 152);
+            this.lblUserPhone.Location = new System.Drawing.Point(16, 125);
             this.lblUserPhone.Name = "lblUserPhone";
             this.lblUserPhone.Size = new System.Drawing.Size(57, 12);
             this.lblUserPhone.TabIndex = 2;
@@ -238,49 +237,30 @@
             // 
             this.lblUserState.AutoSize = true;
             this.lblUserState.ForeColor = System.Drawing.Color.White;
-            this.lblUserState.Location = new System.Drawing.Point(19, 125);
+            this.lblUserState.Location = new System.Drawing.Point(19, 98);
             this.lblUserState.Name = "lblUserState";
             this.lblUserState.Size = new System.Drawing.Size(49, 12);
             this.lblUserState.TabIndex = 2;
             this.lblUserState.Text = "상     태";
             // 
-            // tbUserMajor
+            // tbUserType
             // 
-            this.tbUserMajor.Location = new System.Drawing.Point(76, 95);
-            this.tbUserMajor.Name = "tbUserMajor";
-            this.tbUserMajor.ReadOnly = true;
-            this.tbUserMajor.Size = new System.Drawing.Size(203, 21);
-            this.tbUserMajor.TabIndex = 3;
-            this.tbUserMajor.TabStop = false;
+            this.tbUserType.Location = new System.Drawing.Point(76, 68);
+            this.tbUserType.Name = "tbUserType";
+            this.tbUserType.ReadOnly = true;
+            this.tbUserType.Size = new System.Drawing.Size(203, 21);
+            this.tbUserType.TabIndex = 3;
+            this.tbUserType.TabStop = false;
             // 
-            // lblUserMajor
+            // lblUserType
             // 
-            this.lblUserMajor.AutoSize = true;
-            this.lblUserMajor.ForeColor = System.Drawing.Color.White;
-            this.lblUserMajor.Location = new System.Drawing.Point(19, 98);
-            this.lblUserMajor.Name = "lblUserMajor";
-            this.lblUserMajor.Size = new System.Drawing.Size(49, 12);
-            this.lblUserMajor.TabIndex = 2;
-            this.lblUserMajor.Text = "학     과";
-            // 
-            // tbUserLevel
-            // 
-            this.tbUserLevel.Location = new System.Drawing.Point(76, 68);
-            this.tbUserLevel.Name = "tbUserLevel";
-            this.tbUserLevel.ReadOnly = true;
-            this.tbUserLevel.Size = new System.Drawing.Size(203, 21);
-            this.tbUserLevel.TabIndex = 3;
-            this.tbUserLevel.TabStop = false;
-            // 
-            // lblUserLevel
-            // 
-            this.lblUserLevel.AutoSize = true;
-            this.lblUserLevel.ForeColor = System.Drawing.Color.White;
-            this.lblUserLevel.Location = new System.Drawing.Point(19, 71);
-            this.lblUserLevel.Name = "lblUserLevel";
-            this.lblUserLevel.Size = new System.Drawing.Size(49, 12);
-            this.lblUserLevel.TabIndex = 2;
-            this.lblUserLevel.Text = "등     급";
+            this.lblUserType.AutoSize = true;
+            this.lblUserType.ForeColor = System.Drawing.Color.White;
+            this.lblUserType.Location = new System.Drawing.Point(17, 71);
+            this.lblUserType.Name = "lblUserType";
+            this.lblUserType.Size = new System.Drawing.Size(53, 12);
+            this.lblUserType.TabIndex = 2;
+            this.lblUserType.Text = "회원유형";
             // 
             // tbUserName
             // 
@@ -322,7 +302,7 @@
             // btnCheckout
             // 
             this.btnCheckout.BackColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(285, 520);
+            this.btnCheckout.Location = new System.Drawing.Point(416, 519);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(130, 40);
             this.btnCheckout.TabIndex = 3;
@@ -411,10 +391,41 @@
             "??",
             "???",
             "????"});
-            this.cbChkType.Location = new System.Drawing.Point(60, 530);
+            this.cbChkType.Location = new System.Drawing.Point(80, 530);
             this.cbChkType.Name = "cbChkType";
             this.cbChkType.Size = new System.Drawing.Size(121, 20);
             this.cbChkType.TabIndex = 3;
+            // 
+            // tbChkMng
+            // 
+            this.tbChkMng.Location = new System.Drawing.Point(251, 530);
+            this.tbChkMng.Name = "tbChkMng";
+            this.tbChkMng.ReadOnly = true;
+            this.tbChkMng.Size = new System.Drawing.Size(125, 21);
+            this.tbChkMng.TabIndex = 7;
+            this.tbChkMng.TabStop = false;
+            // 
+            // lblChkMng
+            // 
+            this.lblChkMng.AutoSize = true;
+            this.lblChkMng.BackColor = System.Drawing.Color.Transparent;
+            this.lblChkMng.ForeColor = System.Drawing.Color.White;
+            this.lblChkMng.Location = new System.Drawing.Point(249, 515);
+            this.lblChkMng.Name = "lblChkMng";
+            this.lblChkMng.Size = new System.Drawing.Size(69, 12);
+            this.lblChkMng.TabIndex = 6;
+            this.lblChkMng.Text = "대출 담당자";
+            // 
+            // lblChkType
+            // 
+            this.lblChkType.AutoSize = true;
+            this.lblChkType.BackColor = System.Drawing.Color.Transparent;
+            this.lblChkType.ForeColor = System.Drawing.Color.White;
+            this.lblChkType.Location = new System.Drawing.Point(21, 533);
+            this.lblChkType.Name = "lblChkType";
+            this.lblChkType.Size = new System.Drawing.Size(53, 12);
+            this.lblChkType.TabIndex = 6;
+            this.lblChkType.Text = "대출유형";
             // 
             // ListBookChk
             // 
@@ -422,6 +433,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.tbChkMng);
+            this.Controls.Add(this.lblChkType);
+            this.Controls.Add(this.lblChkMng);
             this.Controls.Add(this.lblOverdue);
             this.Controls.Add(this.lvBookList);
             this.Controls.Add(this.btnCheckout);
@@ -465,10 +479,8 @@
         private System.Windows.Forms.Label lblBookPublisher;
         private System.Windows.Forms.TextBox tbUserState;
         private System.Windows.Forms.Label lblUserState;
-        private System.Windows.Forms.TextBox tbUserMajor;
-        private System.Windows.Forms.Label lblUserMajor;
-        private System.Windows.Forms.TextBox tbUserLevel;
-        private System.Windows.Forms.Label lblUserLevel;
+        private System.Windows.Forms.TextBox tbUserType;
+        private System.Windows.Forms.Label lblUserType;
         private System.Windows.Forms.TextBox tbUserPhone;
         private System.Windows.Forms.Label lblUserPhone;
         private System.Windows.Forms.Button btnCheckout;
@@ -483,5 +495,8 @@
         private System.Windows.Forms.ColumnHeader chType;
         private System.Windows.Forms.Label lblOverdue;
         private System.Windows.Forms.ComboBox cbChkType;
+        private System.Windows.Forms.TextBox tbChkMng;
+        private System.Windows.Forms.Label lblChkMng;
+        private System.Windows.Forms.Label lblChkType;
     }
 }

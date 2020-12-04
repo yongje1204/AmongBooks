@@ -30,16 +30,13 @@
         {
             this.tcUserMng = new System.Windows.Forms.TabControl();
             this.tpCreate = new System.Windows.Forms.TabPage();
-            this.tpModify = new System.Windows.Forms.TabPage();
-            this.tpDelete = new System.Windows.Forms.TabPage();
             this.lblUserPhone2_Cre = new System.Windows.Forms.Label();
             this.lblUserPhone1_Cre = new System.Windows.Forms.Label();
             this.tbUserNum_Cre = new System.Windows.Forms.TextBox();
             this.lblUserNum_Cre = new System.Windows.Forms.Label();
             this.lblUserBirth_Cre = new System.Windows.Forms.Label();
             this.lblUserGender_Cre = new System.Windows.Forms.Label();
-            this.cbUserMajor_Cre = new System.Windows.Forms.ComboBox();
-            this.cbUserLevel_Cre = new System.Windows.Forms.ComboBox();
+            this.cbUserType_Cre = new System.Windows.Forms.ComboBox();
             this.cbUserBirth3_Cre = new System.Windows.Forms.ComboBox();
             this.cbUserBirth2_Cre = new System.Windows.Forms.ComboBox();
             this.cbUserBirth1_Cre = new System.Windows.Forms.ComboBox();
@@ -59,17 +56,16 @@
             this.tbUserName_Cre = new System.Windows.Forms.TextBox();
             this.lblUserEmail_Cre = new System.Windows.Forms.Label();
             this.lblUserPhone_Cre = new System.Windows.Forms.Label();
-            this.lblUserLevel_Cre = new System.Windows.Forms.Label();
-            this.lblUserMajor_Cre = new System.Windows.Forms.Label();
+            this.lblUserType_Cre = new System.Windows.Forms.Label();
             this.lblUserAddr_Cre = new System.Windows.Forms.Label();
+            this.tpModify = new System.Windows.Forms.TabPage();
             this.lblUserPhone2_Mod = new System.Windows.Forms.Label();
             this.lblUserPhone1_Mod = new System.Windows.Forms.Label();
             this.tbUserNum_Mod = new System.Windows.Forms.TextBox();
             this.lblUserNum_Mod = new System.Windows.Forms.Label();
             this.lblUserBirth_Mod = new System.Windows.Forms.Label();
             this.lblUserGender_Mod = new System.Windows.Forms.Label();
-            this.cbUserMajor_Mod = new System.Windows.Forms.ComboBox();
-            this.cbUserLevel_Mod = new System.Windows.Forms.ComboBox();
+            this.cbUserType_Mod = new System.Windows.Forms.ComboBox();
             this.cbUserBirth3_Mod = new System.Windows.Forms.ComboBox();
             this.cbUserBirth2_Mod = new System.Windows.Forms.ComboBox();
             this.cbUserBirth1_Mod = new System.Windows.Forms.ComboBox();
@@ -89,10 +85,19 @@
             this.tbUserName_Mod = new System.Windows.Forms.TextBox();
             this.lblUserEmail_Mod = new System.Windows.Forms.Label();
             this.lblUserPhone_Mod = new System.Windows.Forms.Label();
-            this.lblUserLevel_Mod = new System.Windows.Forms.Label();
-            this.lblUserMajor_Mod = new System.Windows.Forms.Label();
+            this.lblUserType_Mod = new System.Windows.Forms.Label();
             this.lblUserAddr_Mod = new System.Windows.Forms.Label();
             this.btnSearch_Mod = new System.Windows.Forms.Button();
+            this.tpDelete = new System.Windows.Forms.TabPage();
+            this.lvBookList = new System.Windows.Forms.ListView();
+            this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSymbol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chRtnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblUserPhone2_Del = new System.Windows.Forms.Label();
             this.lblUserPhone1_Del = new System.Windows.Forms.Label();
             this.tbUserNum_Del = new System.Windows.Forms.TextBox();
@@ -116,15 +121,6 @@
             this.lblUserPhone_Del = new System.Windows.Forms.Label();
             this.lblUserAddr_Del = new System.Windows.Forms.Label();
             this.btnSearch_Del = new System.Windows.Forms.Button();
-            this.lvBookList = new System.Windows.Forms.ListView();
-            this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chBookNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chBookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chSymbol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chRtnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcUserMng.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.tpModify.SuspendLayout();
@@ -156,8 +152,7 @@
             this.tpCreate.Controls.Add(this.lblUserNum_Cre);
             this.tpCreate.Controls.Add(this.lblUserBirth_Cre);
             this.tpCreate.Controls.Add(this.lblUserGender_Cre);
-            this.tpCreate.Controls.Add(this.cbUserMajor_Cre);
-            this.tpCreate.Controls.Add(this.cbUserLevel_Cre);
+            this.tpCreate.Controls.Add(this.cbUserType_Cre);
             this.tpCreate.Controls.Add(this.cbUserBirth3_Cre);
             this.tpCreate.Controls.Add(this.cbUserBirth2_Cre);
             this.tpCreate.Controls.Add(this.cbUserBirth1_Cre);
@@ -177,8 +172,7 @@
             this.tpCreate.Controls.Add(this.tbUserName_Cre);
             this.tpCreate.Controls.Add(this.lblUserEmail_Cre);
             this.tpCreate.Controls.Add(this.lblUserPhone_Cre);
-            this.tpCreate.Controls.Add(this.lblUserLevel_Cre);
-            this.tpCreate.Controls.Add(this.lblUserMajor_Cre);
+            this.tpCreate.Controls.Add(this.lblUserType_Cre);
             this.tpCreate.Controls.Add(this.lblUserAddr_Cre);
             this.tpCreate.Location = new System.Drawing.Point(4, 22);
             this.tpCreate.Margin = new System.Windows.Forms.Padding(0);
@@ -186,85 +180,6 @@
             this.tpCreate.Size = new System.Drawing.Size(692, 574);
             this.tpCreate.TabIndex = 0;
             this.tpCreate.Text = "회원등록";
-            // 
-            // tpModify
-            // 
-            this.tpModify.BackgroundImage = global::proj.Properties.Resources._900x600;
-            this.tpModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tpModify.Controls.Add(this.lblUserPhone2_Mod);
-            this.tpModify.Controls.Add(this.lblUserPhone1_Mod);
-            this.tpModify.Controls.Add(this.tbUserNum_Mod);
-            this.tpModify.Controls.Add(this.lblUserNum_Mod);
-            this.tpModify.Controls.Add(this.lblUserBirth_Mod);
-            this.tpModify.Controls.Add(this.lblUserGender_Mod);
-            this.tpModify.Controls.Add(this.cbUserMajor_Mod);
-            this.tpModify.Controls.Add(this.cbUserLevel_Mod);
-            this.tpModify.Controls.Add(this.cbUserBirth3_Mod);
-            this.tpModify.Controls.Add(this.cbUserBirth2_Mod);
-            this.tpModify.Controls.Add(this.cbUserBirth1_Mod);
-            this.tpModify.Controls.Add(this.cbUserGender_Mod);
-            this.tpModify.Controls.Add(this.btnModify);
-            this.tpModify.Controls.Add(this.tbUserAddr_Mod);
-            this.tpModify.Controls.Add(this.tbUserPhone3_Mod);
-            this.tpModify.Controls.Add(this.tbUserEmail2_Mod);
-            this.tpModify.Controls.Add(this.tbUserPhone2_Mod);
-            this.tpModify.Controls.Add(this.tbUserEmail1_Mod);
-            this.tpModify.Controls.Add(this.tbUserPhone1_Mod);
-            this.tpModify.Controls.Add(this.lblUserBirth3_Mod);
-            this.tpModify.Controls.Add(this.lblUserBirth2_Mod);
-            this.tpModify.Controls.Add(this.lblUserEmail1_Mod);
-            this.tpModify.Controls.Add(this.lblUserBirth1_Mod);
-            this.tpModify.Controls.Add(this.lblUserName_Mod);
-            this.tpModify.Controls.Add(this.tbUserName_Mod);
-            this.tpModify.Controls.Add(this.lblUserEmail_Mod);
-            this.tpModify.Controls.Add(this.lblUserPhone_Mod);
-            this.tpModify.Controls.Add(this.lblUserLevel_Mod);
-            this.tpModify.Controls.Add(this.lblUserMajor_Mod);
-            this.tpModify.Controls.Add(this.lblUserAddr_Mod);
-            this.tpModify.Controls.Add(this.btnSearch_Mod);
-            this.tpModify.Location = new System.Drawing.Point(4, 22);
-            this.tpModify.Name = "tpModify";
-            this.tpModify.Padding = new System.Windows.Forms.Padding(3);
-            this.tpModify.Size = new System.Drawing.Size(692, 574);
-            this.tpModify.TabIndex = 1;
-            this.tpModify.Text = "회원수정";
-            this.tpModify.UseVisualStyleBackColor = true;
-            // 
-            // tpDelete
-            // 
-            this.tpDelete.BackgroundImage = global::proj.Properties.Resources._900x600;
-            this.tpDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tpDelete.Controls.Add(this.lvBookList);
-            this.tpDelete.Controls.Add(this.lblUserPhone2_Del);
-            this.tpDelete.Controls.Add(this.lblUserPhone1_Del);
-            this.tpDelete.Controls.Add(this.tbUserNum_Del);
-            this.tpDelete.Controls.Add(this.lblUserNum_Del);
-            this.tpDelete.Controls.Add(this.lblUserBirth_Del);
-            this.tpDelete.Controls.Add(this.lblUserGender_Del);
-            this.tpDelete.Controls.Add(this.cbUserBirth3_Del);
-            this.tpDelete.Controls.Add(this.cbUserBirth2_Del);
-            this.tpDelete.Controls.Add(this.cbUserBirth1_Del);
-            this.tpDelete.Controls.Add(this.cbUserGender_Del);
-            this.tpDelete.Controls.Add(this.btnDelete);
-            this.tpDelete.Controls.Add(this.tbUserAddr_Del);
-            this.tpDelete.Controls.Add(this.tbUserPhone3_Del);
-            this.tpDelete.Controls.Add(this.tbUserPhone2_Del);
-            this.tpDelete.Controls.Add(this.tbUserPhone1_Del);
-            this.tpDelete.Controls.Add(this.lblUserBirth3_Del);
-            this.tpDelete.Controls.Add(this.lblUserBirth2_Del);
-            this.tpDelete.Controls.Add(this.lblUserBirth1_Del);
-            this.tpDelete.Controls.Add(this.lblUserName_Del);
-            this.tpDelete.Controls.Add(this.tbUserName_Del);
-            this.tpDelete.Controls.Add(this.lblUserPhone_Del);
-            this.tpDelete.Controls.Add(this.lblUserAddr_Del);
-            this.tpDelete.Controls.Add(this.btnSearch_Del);
-            this.tpDelete.Location = new System.Drawing.Point(4, 22);
-            this.tpDelete.Name = "tpDelete";
-            this.tpDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDelete.Size = new System.Drawing.Size(692, 574);
-            this.tpDelete.TabIndex = 2;
-            this.tpDelete.Text = "회원탈퇴";
-            this.tpDelete.UseVisualStyleBackColor = true;
             // 
             // lblUserPhone2_Cre
             // 
@@ -325,34 +240,16 @@
             this.lblUserGender_Cre.TabIndex = 114;
             this.lblUserGender_Cre.Text = "성    별";
             // 
-            // cbUserMajor_Cre
+            // cbUserType_Cre
             // 
-            this.cbUserMajor_Cre.FormattingEnabled = true;
-            this.cbUserMajor_Cre.Items.AddRange(new object[] {
-            "?",
-            "??",
-            "???"});
-            this.cbUserMajor_Cre.Location = new System.Drawing.Point(264, 272);
-            this.cbUserMajor_Cre.Name = "cbUserMajor_Cre";
-            this.cbUserMajor_Cre.Size = new System.Drawing.Size(100, 20);
-            this.cbUserMajor_Cre.TabIndex = 98;
-            // 
-            // cbUserLevel_Cre
-            // 
-            this.cbUserLevel_Cre.FormattingEnabled = true;
-            this.cbUserLevel_Cre.Items.AddRange(new object[] {
-            "단행본",
-            "시청각자료",
-            "연속간행물",
-            "이론서",
-            "점자자료",
-            "학습만화",
-            "학위논문",
-            "해외원서"});
-            this.cbUserLevel_Cre.Location = new System.Drawing.Point(264, 298);
-            this.cbUserLevel_Cre.Name = "cbUserLevel_Cre";
-            this.cbUserLevel_Cre.Size = new System.Drawing.Size(100, 20);
-            this.cbUserLevel_Cre.TabIndex = 99;
+            this.cbUserType_Cre.FormattingEnabled = true;
+            this.cbUserType_Cre.Items.AddRange(new object[] {
+            "일반회원",
+            "직원"});
+            this.cbUserType_Cre.Location = new System.Drawing.Point(264, 273);
+            this.cbUserType_Cre.Name = "cbUserType_Cre";
+            this.cbUserType_Cre.Size = new System.Drawing.Size(100, 20);
+            this.cbUserType_Cre.TabIndex = 99;
             // 
             // cbUserBirth3_Cre
             // 
@@ -582,7 +479,7 @@
             // 
             // tbUserEmail2_Cre
             // 
-            this.tbUserEmail2_Cre.Location = new System.Drawing.Point(408, 324);
+            this.tbUserEmail2_Cre.Location = new System.Drawing.Point(408, 299);
             this.tbUserEmail2_Cre.Name = "tbUserEmail2_Cre";
             this.tbUserEmail2_Cre.Size = new System.Drawing.Size(81, 21);
             this.tbUserEmail2_Cre.TabIndex = 101;
@@ -596,7 +493,7 @@
             // 
             // tbUserEmail1_Cre
             // 
-            this.tbUserEmail1_Cre.Location = new System.Drawing.Point(264, 324);
+            this.tbUserEmail1_Cre.Location = new System.Drawing.Point(264, 299);
             this.tbUserEmail1_Cre.Name = "tbUserEmail1_Cre";
             this.tbUserEmail1_Cre.Size = new System.Drawing.Size(123, 21);
             this.tbUserEmail1_Cre.TabIndex = 100;
@@ -632,7 +529,7 @@
             // 
             this.lblUserEmail1_Cre.AutoSize = true;
             this.lblUserEmail1_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserEmail1_Cre.Location = new System.Drawing.Point(388, 329);
+            this.lblUserEmail1_Cre.Location = new System.Drawing.Point(388, 304);
             this.lblUserEmail1_Cre.Name = "lblUserEmail1_Cre";
             this.lblUserEmail1_Cre.Size = new System.Drawing.Size(17, 12);
             this.lblUserEmail1_Cre.TabIndex = 110;
@@ -669,7 +566,7 @@
             // 
             this.lblUserEmail_Cre.AutoSize = true;
             this.lblUserEmail_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserEmail_Cre.Location = new System.Drawing.Point(204, 327);
+            this.lblUserEmail_Cre.Location = new System.Drawing.Point(204, 302);
             this.lblUserEmail_Cre.Name = "lblUserEmail_Cre";
             this.lblUserEmail_Cre.Size = new System.Drawing.Size(49, 12);
             this.lblUserEmail_Cre.TabIndex = 106;
@@ -685,25 +582,15 @@
             this.lblUserPhone_Cre.TabIndex = 107;
             this.lblUserPhone_Cre.Text = "휴 대 폰";
             // 
-            // lblUserLevel_Cre
+            // lblUserType_Cre
             // 
-            this.lblUserLevel_Cre.AutoSize = true;
-            this.lblUserLevel_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserLevel_Cre.Location = new System.Drawing.Point(206, 301);
-            this.lblUserLevel_Cre.Name = "lblUserLevel_Cre";
-            this.lblUserLevel_Cre.Size = new System.Drawing.Size(45, 12);
-            this.lblUserLevel_Cre.TabIndex = 105;
-            this.lblUserLevel_Cre.Text = "등    급";
-            // 
-            // lblUserMajor_Cre
-            // 
-            this.lblUserMajor_Cre.AutoSize = true;
-            this.lblUserMajor_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserMajor_Cre.Location = new System.Drawing.Point(206, 275);
-            this.lblUserMajor_Cre.Name = "lblUserMajor_Cre";
-            this.lblUserMajor_Cre.Size = new System.Drawing.Size(45, 12);
-            this.lblUserMajor_Cre.TabIndex = 113;
-            this.lblUserMajor_Cre.Text = "학    과";
+            this.lblUserType_Cre.AutoSize = true;
+            this.lblUserType_Cre.ForeColor = System.Drawing.Color.White;
+            this.lblUserType_Cre.Location = new System.Drawing.Point(204, 276);
+            this.lblUserType_Cre.Name = "lblUserType_Cre";
+            this.lblUserType_Cre.Size = new System.Drawing.Size(53, 12);
+            this.lblUserType_Cre.TabIndex = 105;
+            this.lblUserType_Cre.Text = "회원유형";
             // 
             // lblUserAddr_Cre
             // 
@@ -714,6 +601,47 @@
             this.lblUserAddr_Cre.Size = new System.Drawing.Size(45, 12);
             this.lblUserAddr_Cre.TabIndex = 104;
             this.lblUserAddr_Cre.Text = "주    소";
+            // 
+            // tpModify
+            // 
+            this.tpModify.BackgroundImage = global::proj.Properties.Resources._900x600;
+            this.tpModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tpModify.Controls.Add(this.lblUserPhone2_Mod);
+            this.tpModify.Controls.Add(this.lblUserPhone1_Mod);
+            this.tpModify.Controls.Add(this.tbUserNum_Mod);
+            this.tpModify.Controls.Add(this.lblUserNum_Mod);
+            this.tpModify.Controls.Add(this.lblUserBirth_Mod);
+            this.tpModify.Controls.Add(this.lblUserGender_Mod);
+            this.tpModify.Controls.Add(this.cbUserType_Mod);
+            this.tpModify.Controls.Add(this.cbUserBirth3_Mod);
+            this.tpModify.Controls.Add(this.cbUserBirth2_Mod);
+            this.tpModify.Controls.Add(this.cbUserBirth1_Mod);
+            this.tpModify.Controls.Add(this.cbUserGender_Mod);
+            this.tpModify.Controls.Add(this.btnModify);
+            this.tpModify.Controls.Add(this.tbUserAddr_Mod);
+            this.tpModify.Controls.Add(this.tbUserPhone3_Mod);
+            this.tpModify.Controls.Add(this.tbUserEmail2_Mod);
+            this.tpModify.Controls.Add(this.tbUserPhone2_Mod);
+            this.tpModify.Controls.Add(this.tbUserEmail1_Mod);
+            this.tpModify.Controls.Add(this.tbUserPhone1_Mod);
+            this.tpModify.Controls.Add(this.lblUserBirth3_Mod);
+            this.tpModify.Controls.Add(this.lblUserBirth2_Mod);
+            this.tpModify.Controls.Add(this.lblUserEmail1_Mod);
+            this.tpModify.Controls.Add(this.lblUserBirth1_Mod);
+            this.tpModify.Controls.Add(this.lblUserName_Mod);
+            this.tpModify.Controls.Add(this.tbUserName_Mod);
+            this.tpModify.Controls.Add(this.lblUserEmail_Mod);
+            this.tpModify.Controls.Add(this.lblUserPhone_Mod);
+            this.tpModify.Controls.Add(this.lblUserType_Mod);
+            this.tpModify.Controls.Add(this.lblUserAddr_Mod);
+            this.tpModify.Controls.Add(this.btnSearch_Mod);
+            this.tpModify.Location = new System.Drawing.Point(4, 22);
+            this.tpModify.Name = "tpModify";
+            this.tpModify.Padding = new System.Windows.Forms.Padding(3);
+            this.tpModify.Size = new System.Drawing.Size(692, 574);
+            this.tpModify.TabIndex = 1;
+            this.tpModify.Text = "회원수정";
+            this.tpModify.UseVisualStyleBackColor = true;
             // 
             // lblUserPhone2_Mod
             // 
@@ -773,34 +701,16 @@
             this.lblUserGender_Mod.TabIndex = 175;
             this.lblUserGender_Mod.Text = "성    별";
             // 
-            // cbUserMajor_Mod
+            // cbUserType_Mod
             // 
-            this.cbUserMajor_Mod.FormattingEnabled = true;
-            this.cbUserMajor_Mod.Items.AddRange(new object[] {
-            "?",
-            "??",
-            "???"});
-            this.cbUserMajor_Mod.Location = new System.Drawing.Point(256, 282);
-            this.cbUserMajor_Mod.Name = "cbUserMajor_Mod";
-            this.cbUserMajor_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbUserMajor_Mod.TabIndex = 159;
-            // 
-            // cbUserLevel_Mod
-            // 
-            this.cbUserLevel_Mod.FormattingEnabled = true;
-            this.cbUserLevel_Mod.Items.AddRange(new object[] {
-            "단행본",
-            "시청각자료",
-            "연속간행물",
-            "이론서",
-            "점자자료",
-            "학습만화",
-            "학위논문",
-            "해외원서"});
-            this.cbUserLevel_Mod.Location = new System.Drawing.Point(256, 308);
-            this.cbUserLevel_Mod.Name = "cbUserLevel_Mod";
-            this.cbUserLevel_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbUserLevel_Mod.TabIndex = 160;
+            this.cbUserType_Mod.FormattingEnabled = true;
+            this.cbUserType_Mod.Items.AddRange(new object[] {
+            "일반회원",
+            "직원"});
+            this.cbUserType_Mod.Location = new System.Drawing.Point(256, 283);
+            this.cbUserType_Mod.Name = "cbUserType_Mod";
+            this.cbUserType_Mod.Size = new System.Drawing.Size(100, 20);
+            this.cbUserType_Mod.TabIndex = 160;
             // 
             // cbUserBirth3_Mod
             // 
@@ -1030,7 +940,7 @@
             // 
             // tbUserEmail2_Mod
             // 
-            this.tbUserEmail2_Mod.Location = new System.Drawing.Point(400, 334);
+            this.tbUserEmail2_Mod.Location = new System.Drawing.Point(400, 309);
             this.tbUserEmail2_Mod.Name = "tbUserEmail2_Mod";
             this.tbUserEmail2_Mod.Size = new System.Drawing.Size(81, 21);
             this.tbUserEmail2_Mod.TabIndex = 162;
@@ -1044,7 +954,7 @@
             // 
             // tbUserEmail1_Mod
             // 
-            this.tbUserEmail1_Mod.Location = new System.Drawing.Point(256, 334);
+            this.tbUserEmail1_Mod.Location = new System.Drawing.Point(256, 309);
             this.tbUserEmail1_Mod.Name = "tbUserEmail1_Mod";
             this.tbUserEmail1_Mod.Size = new System.Drawing.Size(123, 21);
             this.tbUserEmail1_Mod.TabIndex = 161;
@@ -1080,7 +990,7 @@
             // 
             this.lblUserEmail1_Mod.AutoSize = true;
             this.lblUserEmail1_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserEmail1_Mod.Location = new System.Drawing.Point(380, 339);
+            this.lblUserEmail1_Mod.Location = new System.Drawing.Point(380, 314);
             this.lblUserEmail1_Mod.Name = "lblUserEmail1_Mod";
             this.lblUserEmail1_Mod.Size = new System.Drawing.Size(17, 12);
             this.lblUserEmail1_Mod.TabIndex = 171;
@@ -1117,7 +1027,7 @@
             // 
             this.lblUserEmail_Mod.AutoSize = true;
             this.lblUserEmail_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserEmail_Mod.Location = new System.Drawing.Point(196, 337);
+            this.lblUserEmail_Mod.Location = new System.Drawing.Point(196, 312);
             this.lblUserEmail_Mod.Name = "lblUserEmail_Mod";
             this.lblUserEmail_Mod.Size = new System.Drawing.Size(49, 12);
             this.lblUserEmail_Mod.TabIndex = 167;
@@ -1133,25 +1043,15 @@
             this.lblUserPhone_Mod.TabIndex = 168;
             this.lblUserPhone_Mod.Text = "휴 대 폰";
             // 
-            // lblUserLevel_Mod
+            // lblUserType_Mod
             // 
-            this.lblUserLevel_Mod.AutoSize = true;
-            this.lblUserLevel_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserLevel_Mod.Location = new System.Drawing.Point(198, 311);
-            this.lblUserLevel_Mod.Name = "lblUserLevel_Mod";
-            this.lblUserLevel_Mod.Size = new System.Drawing.Size(45, 12);
-            this.lblUserLevel_Mod.TabIndex = 166;
-            this.lblUserLevel_Mod.Text = "등    급";
-            // 
-            // lblUserMajor_Mod
-            // 
-            this.lblUserMajor_Mod.AutoSize = true;
-            this.lblUserMajor_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserMajor_Mod.Location = new System.Drawing.Point(198, 285);
-            this.lblUserMajor_Mod.Name = "lblUserMajor_Mod";
-            this.lblUserMajor_Mod.Size = new System.Drawing.Size(45, 12);
-            this.lblUserMajor_Mod.TabIndex = 174;
-            this.lblUserMajor_Mod.Text = "학    과";
+            this.lblUserType_Mod.AutoSize = true;
+            this.lblUserType_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblUserType_Mod.Location = new System.Drawing.Point(196, 286);
+            this.lblUserType_Mod.Name = "lblUserType_Mod";
+            this.lblUserType_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblUserType_Mod.TabIndex = 166;
+            this.lblUserType_Mod.Text = "회원유형";
             // 
             // lblUserAddr_Mod
             // 
@@ -1173,6 +1073,103 @@
             this.btnSearch_Mod.TabIndex = 149;
             this.btnSearch_Mod.Text = "검색";
             this.btnSearch_Mod.UseVisualStyleBackColor = false;
+            // 
+            // tpDelete
+            // 
+            this.tpDelete.BackgroundImage = global::proj.Properties.Resources._900x600;
+            this.tpDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tpDelete.Controls.Add(this.lvBookList);
+            this.tpDelete.Controls.Add(this.lblUserPhone2_Del);
+            this.tpDelete.Controls.Add(this.lblUserPhone1_Del);
+            this.tpDelete.Controls.Add(this.tbUserNum_Del);
+            this.tpDelete.Controls.Add(this.lblUserNum_Del);
+            this.tpDelete.Controls.Add(this.lblUserBirth_Del);
+            this.tpDelete.Controls.Add(this.lblUserGender_Del);
+            this.tpDelete.Controls.Add(this.cbUserBirth3_Del);
+            this.tpDelete.Controls.Add(this.cbUserBirth2_Del);
+            this.tpDelete.Controls.Add(this.cbUserBirth1_Del);
+            this.tpDelete.Controls.Add(this.cbUserGender_Del);
+            this.tpDelete.Controls.Add(this.btnDelete);
+            this.tpDelete.Controls.Add(this.tbUserAddr_Del);
+            this.tpDelete.Controls.Add(this.tbUserPhone3_Del);
+            this.tpDelete.Controls.Add(this.tbUserPhone2_Del);
+            this.tpDelete.Controls.Add(this.tbUserPhone1_Del);
+            this.tpDelete.Controls.Add(this.lblUserBirth3_Del);
+            this.tpDelete.Controls.Add(this.lblUserBirth2_Del);
+            this.tpDelete.Controls.Add(this.lblUserBirth1_Del);
+            this.tpDelete.Controls.Add(this.lblUserName_Del);
+            this.tpDelete.Controls.Add(this.tbUserName_Del);
+            this.tpDelete.Controls.Add(this.lblUserPhone_Del);
+            this.tpDelete.Controls.Add(this.lblUserAddr_Del);
+            this.tpDelete.Controls.Add(this.btnSearch_Del);
+            this.tpDelete.Location = new System.Drawing.Point(4, 22);
+            this.tpDelete.Name = "tpDelete";
+            this.tpDelete.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDelete.Size = new System.Drawing.Size(692, 574);
+            this.tpDelete.TabIndex = 2;
+            this.tpDelete.Text = "회원탈퇴";
+            this.tpDelete.UseVisualStyleBackColor = true;
+            // 
+            // lvBookList
+            // 
+            this.lvBookList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chNo,
+            this.chState,
+            this.chBookNum,
+            this.chBookName,
+            this.chSymbol,
+            this.chDate,
+            this.chRtnDate,
+            this.chType});
+            this.lvBookList.FullRowSelect = true;
+            this.lvBookList.GridLines = true;
+            this.lvBookList.HideSelection = false;
+            this.lvBookList.Location = new System.Drawing.Point(-5, 284);
+            this.lvBookList.Name = "lvBookList";
+            this.lvBookList.Size = new System.Drawing.Size(706, 149);
+            this.lvBookList.TabIndex = 180;
+            this.lvBookList.UseCompatibleStateImageBehavior = false;
+            this.lvBookList.View = System.Windows.Forms.View.Details;
+            // 
+            // chNo
+            // 
+            this.chNo.Text = "No";
+            this.chNo.Width = 50;
+            // 
+            // chState
+            // 
+            this.chState.Text = "상태";
+            this.chState.Width = 80;
+            // 
+            // chBookNum
+            // 
+            this.chBookNum.Text = "자료번호";
+            this.chBookNum.Width = 100;
+            // 
+            // chBookName
+            // 
+            this.chBookName.Text = "자료명";
+            this.chBookName.Width = 160;
+            // 
+            // chSymbol
+            // 
+            this.chSymbol.Text = "청구기호";
+            this.chSymbol.Width = 80;
+            // 
+            // chDate
+            // 
+            this.chDate.Text = "대출일";
+            this.chDate.Width = 80;
+            // 
+            // chRtnDate
+            // 
+            this.chRtnDate.Text = "반납예정일";
+            this.chRtnDate.Width = 80;
+            // 
+            // chType
+            // 
+            this.chType.Text = "대출유형";
+            this.chType.Width = 70;
             // 
             // lblUserPhone2_Del
             // 
@@ -1559,67 +1556,6 @@
             this.btnSearch_Del.Text = "검색";
             this.btnSearch_Del.UseVisualStyleBackColor = false;
             // 
-            // lvBookList
-            // 
-            this.lvBookList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chNo,
-            this.chState,
-            this.chBookNum,
-            this.chBookName,
-            this.chSymbol,
-            this.chDate,
-            this.chRtnDate,
-            this.chType});
-            this.lvBookList.FullRowSelect = true;
-            this.lvBookList.GridLines = true;
-            this.lvBookList.HideSelection = false;
-            this.lvBookList.Location = new System.Drawing.Point(-5, 284);
-            this.lvBookList.Name = "lvBookList";
-            this.lvBookList.Size = new System.Drawing.Size(706, 149);
-            this.lvBookList.TabIndex = 180;
-            this.lvBookList.UseCompatibleStateImageBehavior = false;
-            this.lvBookList.View = System.Windows.Forms.View.Details;
-            // 
-            // chNo
-            // 
-            this.chNo.Text = "No";
-            this.chNo.Width = 50;
-            // 
-            // chState
-            // 
-            this.chState.Text = "상태";
-            this.chState.Width = 80;
-            // 
-            // chBookNum
-            // 
-            this.chBookNum.Text = "자료번호";
-            this.chBookNum.Width = 100;
-            // 
-            // chBookName
-            // 
-            this.chBookName.Text = "자료명";
-            this.chBookName.Width = 160;
-            // 
-            // chSymbol
-            // 
-            this.chSymbol.Text = "청구기호";
-            this.chSymbol.Width = 80;
-            // 
-            // chDate
-            // 
-            this.chDate.Text = "대출일";
-            this.chDate.Width = 80;
-            // 
-            // chRtnDate
-            // 
-            this.chRtnDate.Text = "반납예정일";
-            this.chRtnDate.Width = 80;
-            // 
-            // chType
-            // 
-            this.chType.Text = "대출유형";
-            this.chType.Width = 70;
-            // 
             // ListUserMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1657,8 +1593,7 @@
         private System.Windows.Forms.Label lblUserNum_Cre;
         private System.Windows.Forms.Label lblUserBirth_Cre;
         private System.Windows.Forms.Label lblUserGender_Cre;
-        private System.Windows.Forms.ComboBox cbUserMajor_Cre;
-        private System.Windows.Forms.ComboBox cbUserLevel_Cre;
+        private System.Windows.Forms.ComboBox cbUserType_Cre;
         private System.Windows.Forms.ComboBox cbUserBirth3_Cre;
         private System.Windows.Forms.ComboBox cbUserBirth2_Cre;
         private System.Windows.Forms.ComboBox cbUserBirth1_Cre;
@@ -1678,8 +1613,7 @@
         private System.Windows.Forms.TextBox tbUserName_Cre;
         private System.Windows.Forms.Label lblUserEmail_Cre;
         private System.Windows.Forms.Label lblUserPhone_Cre;
-        private System.Windows.Forms.Label lblUserLevel_Cre;
-        private System.Windows.Forms.Label lblUserMajor_Cre;
+        private System.Windows.Forms.Label lblUserType_Cre;
         private System.Windows.Forms.Label lblUserAddr_Cre;
         private System.Windows.Forms.Label lblUserPhone2_Mod;
         private System.Windows.Forms.Label lblUserPhone1_Mod;
@@ -1687,8 +1621,7 @@
         private System.Windows.Forms.Label lblUserNum_Mod;
         private System.Windows.Forms.Label lblUserBirth_Mod;
         private System.Windows.Forms.Label lblUserGender_Mod;
-        private System.Windows.Forms.ComboBox cbUserMajor_Mod;
-        private System.Windows.Forms.ComboBox cbUserLevel_Mod;
+        private System.Windows.Forms.ComboBox cbUserType_Mod;
         private System.Windows.Forms.ComboBox cbUserBirth3_Mod;
         private System.Windows.Forms.ComboBox cbUserBirth2_Mod;
         private System.Windows.Forms.ComboBox cbUserBirth1_Mod;
@@ -1708,8 +1641,7 @@
         private System.Windows.Forms.TextBox tbUserName_Mod;
         private System.Windows.Forms.Label lblUserEmail_Mod;
         private System.Windows.Forms.Label lblUserPhone_Mod;
-        private System.Windows.Forms.Label lblUserLevel_Mod;
-        private System.Windows.Forms.Label lblUserMajor_Mod;
+        private System.Windows.Forms.Label lblUserType_Mod;
         private System.Windows.Forms.Label lblUserAddr_Mod;
         private System.Windows.Forms.Button btnSearch_Mod;
         private System.Windows.Forms.Label lblUserPhone2_Del;

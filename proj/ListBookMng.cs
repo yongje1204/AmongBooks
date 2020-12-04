@@ -19,5 +19,9 @@ namespace proj
             this.BackColor = Color.Transparent;
         }
 
+        private void ListBookMng_Load(object sender, EventArgs e)
+        {
+            this.cbBookGenre_Cre.SelectedIndex = this.cbBookLanguage_Cre.SelectedIndex = this.cbBookPbMonth_Cre.SelectedIndex = 0;
+        }
     }
 }
