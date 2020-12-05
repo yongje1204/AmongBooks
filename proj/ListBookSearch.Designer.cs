@@ -43,6 +43,8 @@
             this.chBookSign = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookPublisher = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookPbDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookVol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookCopy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // tbBookName
@@ -104,17 +106,15 @@
             this.cbBookGenre.FormattingEnabled = true;
             this.cbBookGenre.Items.AddRange(new object[] {
             "전체",
-            "SF",
-            "학원",
-            "판타지",
-            "코믹/명랑",
+            "학문",
+            "문학",
             "취미/오락",
             "요리",
             "예술",
             "역사/고전",
-            "액션",
             "실물자료",
-            "스포츠"});
+            "스포츠",
+            "자기계발"});
             this.cbBookGenre.Location = new System.Drawing.Point(96, 111);
             this.cbBookGenre.Name = "cbBookGenre";
             this.cbBookGenre.Size = new System.Drawing.Size(100, 20);
@@ -140,7 +140,9 @@
             this.chBookSymbol,
             this.chBookSign,
             this.chBookPublisher,
-            this.chBookPbDate});
+            this.chBookPbDate,
+            this.chBookVol,
+            this.chBookCopy});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(25, 200);
@@ -163,7 +165,7 @@
             // chBookName
             // 
             this.chBookName.Text = "서명";
-            this.chBookName.Width = 180;
+            this.chBookName.Width = 150;
             // 
             // chBookSymbol
             // 
@@ -183,6 +185,16 @@
             // chBookPbDate
             // 
             this.chBookPbDate.Text = "발행년도";
+            // 
+            // chBookVol
+            // 
+            this.chBookVol.Text = "Vol.";
+            this.chBookVol.Width = 40;
+            // 
+            // chBookCopy
+            // 
+            this.chBookCopy.Text = "Copy.";
+            this.chBookCopy.Width = 50;
             // 
             // ListBookSearch
             // 
@@ -228,5 +240,7 @@
         private System.Windows.Forms.ColumnHeader chBookSign;
         private System.Windows.Forms.ColumnHeader chBookPublisher;
         private System.Windows.Forms.ColumnHeader chBookPbDate;
+        private System.Windows.Forms.ColumnHeader chBookVol;
+        private System.Windows.Forms.ColumnHeader chBookCopy;
     }
 }

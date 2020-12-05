@@ -30,9 +30,8 @@
         {
             this.tcBookMng = new System.Windows.Forms.TabControl();
             this.tpCreate = new System.Windows.Forms.TabPage();
-            this.tpModify = new System.Windows.Forms.TabPage();
-            this.tpDelete = new System.Windows.Forms.TabPage();
             this.lblBookGenre_Cre = new System.Windows.Forms.Label();
+            this.cbBookGetType_Cre = new System.Windows.Forms.ComboBox();
             this.cbBookGenre_Cre = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.cbBookPbMonth_Cre = new System.Windows.Forms.ComboBox();
@@ -59,7 +58,7 @@
             this.lblBookPbDate_Cre = new System.Windows.Forms.Label();
             this.lblBookSymbol_Cre = new System.Windows.Forms.Label();
             this.lblBookPublisher_Cre = new System.Windows.Forms.Label();
-            this.cbBookGetType_Cre = new System.Windows.Forms.ComboBox();
+            this.tpModify = new System.Windows.Forms.TabPage();
             this.cbBookGetType_Mod = new System.Windows.Forms.ComboBox();
             this.tbBookGetPri_Mod = new System.Windows.Forms.TextBox();
             this.tbBookOriPri_Mod = new System.Windows.Forms.TextBox();
@@ -91,6 +90,7 @@
             this.lblBookPbDate_Mod = new System.Windows.Forms.Label();
             this.lblBookSymbol_Mod = new System.Windows.Forms.Label();
             this.lblBookPublisher_Mod = new System.Windows.Forms.Label();
+            this.tpDelete = new System.Windows.Forms.TabPage();
             this.cbBookGetType_Del = new System.Windows.Forms.ComboBox();
             this.tbBookGetPri_Del = new System.Windows.Forms.TextBox();
             this.tbBookOriPri_Del = new System.Windows.Forms.TextBox();
@@ -182,92 +182,6 @@
             this.tpCreate.TabIndex = 0;
             this.tpCreate.Text = "자료등록";
             // 
-            // tpModify
-            // 
-            this.tpModify.BackgroundImage = global::proj.Properties.Resources._900x600;
-            this.tpModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tpModify.Controls.Add(this.cbBookGetType_Mod);
-            this.tpModify.Controls.Add(this.tbBookGetPri_Mod);
-            this.tpModify.Controls.Add(this.tbBookOriPri_Mod);
-            this.tpModify.Controls.Add(this.tbBookCopy_Mod);
-            this.tpModify.Controls.Add(this.tbBookVol_Mod);
-            this.tpModify.Controls.Add(this.lblBookGetType_Mod);
-            this.tpModify.Controls.Add(this.lblBookGetPri_Mod);
-            this.tpModify.Controls.Add(this.lblBookOriPri_Mod);
-            this.tpModify.Controls.Add(this.lblBookCopy_Mod);
-            this.tpModify.Controls.Add(this.lblBookVol_Mod);
-            this.tpModify.Controls.Add(this.lblBookPbMonth_Mod);
-            this.tpModify.Controls.Add(this.btnSearch_Mod);
-            this.tpModify.Controls.Add(this.tbBookNum_Mod);
-            this.tpModify.Controls.Add(this.lblBookNum_Mod);
-            this.tpModify.Controls.Add(this.lblBookGenre_Mod);
-            this.tpModify.Controls.Add(this.cbBookGenre_Mod);
-            this.tpModify.Controls.Add(this.btnModify);
-            this.tpModify.Controls.Add(this.cbBookPbMonth_Mod);
-            this.tpModify.Controls.Add(this.cbBookLanguage_Mod);
-            this.tpModify.Controls.Add(this.tbBookPbYear_Mod);
-            this.tpModify.Controls.Add(this.tbBookSymbol_Mod);
-            this.tpModify.Controls.Add(this.tbBookPublisher_Mod);
-            this.tpModify.Controls.Add(this.tbBookSign_Mod);
-            this.tpModify.Controls.Add(this.lblBookName_Mod);
-            this.tpModify.Controls.Add(this.tbBookName_Mod);
-            this.tpModify.Controls.Add(this.lblBookLanguage_Mod);
-            this.tpModify.Controls.Add(this.lblBookSign_Mod);
-            this.tpModify.Controls.Add(this.lblBookPbYear_Mod);
-            this.tpModify.Controls.Add(this.lblBookPbDate_Mod);
-            this.tpModify.Controls.Add(this.lblBookSymbol_Mod);
-            this.tpModify.Controls.Add(this.lblBookPublisher_Mod);
-            this.tpModify.Location = new System.Drawing.Point(4, 22);
-            this.tpModify.Name = "tpModify";
-            this.tpModify.Padding = new System.Windows.Forms.Padding(3);
-            this.tpModify.Size = new System.Drawing.Size(692, 574);
-            this.tpModify.TabIndex = 1;
-            this.tpModify.Text = "자료수정";
-            this.tpModify.UseVisualStyleBackColor = true;
-            // 
-            // tpDelete
-            // 
-            this.tpDelete.BackgroundImage = global::proj.Properties.Resources._900x600;
-            this.tpDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tpDelete.Controls.Add(this.cbBookGetType_Del);
-            this.tpDelete.Controls.Add(this.tbBookGetPri_Del);
-            this.tpDelete.Controls.Add(this.tbBookOriPri_Del);
-            this.tpDelete.Controls.Add(this.tbBookCopy_Del);
-            this.tpDelete.Controls.Add(this.tbBookVol_Del);
-            this.tpDelete.Controls.Add(this.lblBookGetType_Del);
-            this.tpDelete.Controls.Add(this.lblBookGetPri_Del);
-            this.tpDelete.Controls.Add(this.lblBookOriPri_Del);
-            this.tpDelete.Controls.Add(this.lblBookCopy_Del);
-            this.tpDelete.Controls.Add(this.lblBookVol_Del);
-            this.tpDelete.Controls.Add(this.lblBookPbMonth_Del);
-            this.tpDelete.Controls.Add(this.btnSearch_Del);
-            this.tpDelete.Controls.Add(this.tbBookNum_Del);
-            this.tpDelete.Controls.Add(this.lblBookNum_Del);
-            this.tpDelete.Controls.Add(this.lblBookGenre_Del);
-            this.tpDelete.Controls.Add(this.cbBookGenre_Del);
-            this.tpDelete.Controls.Add(this.btnDelete);
-            this.tpDelete.Controls.Add(this.cbBookPbMonth_Del);
-            this.tpDelete.Controls.Add(this.cbBookLanguage_Del);
-            this.tpDelete.Controls.Add(this.tbBookPbYear_Del);
-            this.tpDelete.Controls.Add(this.tbBookSymbol_Del);
-            this.tpDelete.Controls.Add(this.tbBookPublisher_Del);
-            this.tpDelete.Controls.Add(this.tbBookSign_Del);
-            this.tpDelete.Controls.Add(this.lblBookName_Del);
-            this.tpDelete.Controls.Add(this.tbBookName_Del);
-            this.tpDelete.Controls.Add(this.lblBookLanguage_Del);
-            this.tpDelete.Controls.Add(this.lblBookSign_Del);
-            this.tpDelete.Controls.Add(this.lblBookPbYear_Del);
-            this.tpDelete.Controls.Add(this.lblBookPbDate_Del);
-            this.tpDelete.Controls.Add(this.lblBookSymbol_Del);
-            this.tpDelete.Controls.Add(this.lblBookPublisher_Del);
-            this.tpDelete.Location = new System.Drawing.Point(4, 22);
-            this.tpDelete.Name = "tpDelete";
-            this.tpDelete.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDelete.Size = new System.Drawing.Size(692, 574);
-            this.tpDelete.TabIndex = 2;
-            this.tpDelete.Text = "자료삭제";
-            this.tpDelete.UseVisualStyleBackColor = true;
-            // 
             // lblBookGenre_Cre
             // 
             this.lblBookGenre_Cre.AutoSize = true;
@@ -278,21 +192,30 @@
             this.lblBookGenre_Cre.TabIndex = 82;
             this.lblBookGenre_Cre.Text = "자료분야";
             // 
+            // cbBookGetType_Cre
+            // 
+            this.cbBookGetType_Cre.FormattingEnabled = true;
+            this.cbBookGetType_Cre.Items.AddRange(new object[] {
+            "구입",
+            "기부"});
+            this.cbBookGetType_Cre.Location = new System.Drawing.Point(275, 374);
+            this.cbBookGetType_Cre.Name = "cbBookGetType_Cre";
+            this.cbBookGetType_Cre.Size = new System.Drawing.Size(100, 20);
+            this.cbBookGetType_Cre.TabIndex = 81;
+            // 
             // cbBookGenre_Cre
             // 
             this.cbBookGenre_Cre.FormattingEnabled = true;
             this.cbBookGenre_Cre.Items.AddRange(new object[] {
-            "SF",
-            "학원",
-            "판타지",
-            "코믹/명랑",
+            "학문",
+            "문학",
             "취미/오락",
             "요리",
             "예술",
             "역사/고전",
-            "액션",
             "실물자료",
-            "스포츠"});
+            "스포츠",
+            "자기계발"});
             this.cbBookGenre_Cre.Location = new System.Drawing.Point(275, 240);
             this.cbBookGenre_Cre.Name = "cbBookGenre_Cre";
             this.cbBookGenre_Cre.Size = new System.Drawing.Size(100, 20);
@@ -537,16 +460,48 @@
             this.lblBookPublisher_Cre.TabIndex = 55;
             this.lblBookPublisher_Cre.Text = "출 판 사";
             // 
-            // cbBookGetType_Cre
+            // tpModify
             // 
-            this.cbBookGetType_Cre.FormattingEnabled = true;
-            this.cbBookGetType_Cre.Items.AddRange(new object[] {
-            "구입",
-            "기부"});
-            this.cbBookGetType_Cre.Location = new System.Drawing.Point(275, 374);
-            this.cbBookGetType_Cre.Name = "cbBookGetType_Cre";
-            this.cbBookGetType_Cre.Size = new System.Drawing.Size(100, 20);
-            this.cbBookGetType_Cre.TabIndex = 81;
+            this.tpModify.BackgroundImage = global::proj.Properties.Resources._900x600;
+            this.tpModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tpModify.Controls.Add(this.cbBookGetType_Mod);
+            this.tpModify.Controls.Add(this.tbBookGetPri_Mod);
+            this.tpModify.Controls.Add(this.tbBookOriPri_Mod);
+            this.tpModify.Controls.Add(this.tbBookCopy_Mod);
+            this.tpModify.Controls.Add(this.tbBookVol_Mod);
+            this.tpModify.Controls.Add(this.lblBookGetType_Mod);
+            this.tpModify.Controls.Add(this.lblBookGetPri_Mod);
+            this.tpModify.Controls.Add(this.lblBookOriPri_Mod);
+            this.tpModify.Controls.Add(this.lblBookCopy_Mod);
+            this.tpModify.Controls.Add(this.lblBookVol_Mod);
+            this.tpModify.Controls.Add(this.lblBookPbMonth_Mod);
+            this.tpModify.Controls.Add(this.btnSearch_Mod);
+            this.tpModify.Controls.Add(this.tbBookNum_Mod);
+            this.tpModify.Controls.Add(this.lblBookNum_Mod);
+            this.tpModify.Controls.Add(this.lblBookGenre_Mod);
+            this.tpModify.Controls.Add(this.cbBookGenre_Mod);
+            this.tpModify.Controls.Add(this.btnModify);
+            this.tpModify.Controls.Add(this.cbBookPbMonth_Mod);
+            this.tpModify.Controls.Add(this.cbBookLanguage_Mod);
+            this.tpModify.Controls.Add(this.tbBookPbYear_Mod);
+            this.tpModify.Controls.Add(this.tbBookSymbol_Mod);
+            this.tpModify.Controls.Add(this.tbBookPublisher_Mod);
+            this.tpModify.Controls.Add(this.tbBookSign_Mod);
+            this.tpModify.Controls.Add(this.lblBookName_Mod);
+            this.tpModify.Controls.Add(this.tbBookName_Mod);
+            this.tpModify.Controls.Add(this.lblBookLanguage_Mod);
+            this.tpModify.Controls.Add(this.lblBookSign_Mod);
+            this.tpModify.Controls.Add(this.lblBookPbYear_Mod);
+            this.tpModify.Controls.Add(this.lblBookPbDate_Mod);
+            this.tpModify.Controls.Add(this.lblBookSymbol_Mod);
+            this.tpModify.Controls.Add(this.lblBookPublisher_Mod);
+            this.tpModify.Location = new System.Drawing.Point(4, 22);
+            this.tpModify.Name = "tpModify";
+            this.tpModify.Padding = new System.Windows.Forms.Padding(3);
+            this.tpModify.Size = new System.Drawing.Size(692, 574);
+            this.tpModify.TabIndex = 1;
+            this.tpModify.Text = "자료수정";
+            this.tpModify.UseVisualStyleBackColor = true;
             // 
             // cbBookGetType_Mod
             // 
@@ -690,17 +645,15 @@
             // 
             this.cbBookGenre_Mod.FormattingEnabled = true;
             this.cbBookGenre_Mod.Items.AddRange(new object[] {
-            "SF",
-            "학원",
-            "판타지",
-            "코믹/명랑",
+            "학문",
+            "문학",
             "취미/오락",
             "요리",
             "예술",
             "역사/고전",
-            "액션",
             "실물자료",
-            "스포츠"});
+            "스포츠",
+            "자기계발"});
             this.cbBookGenre_Mod.Location = new System.Drawing.Point(275, 283);
             this.cbBookGenre_Mod.Name = "cbBookGenre_Mod";
             this.cbBookGenre_Mod.Size = new System.Drawing.Size(100, 20);
@@ -857,6 +810,49 @@
             this.lblBookPublisher_Mod.TabIndex = 92;
             this.lblBookPublisher_Mod.Text = "출 판 사";
             // 
+            // tpDelete
+            // 
+            this.tpDelete.BackgroundImage = global::proj.Properties.Resources._900x600;
+            this.tpDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tpDelete.Controls.Add(this.cbBookGetType_Del);
+            this.tpDelete.Controls.Add(this.tbBookGetPri_Del);
+            this.tpDelete.Controls.Add(this.tbBookOriPri_Del);
+            this.tpDelete.Controls.Add(this.tbBookCopy_Del);
+            this.tpDelete.Controls.Add(this.tbBookVol_Del);
+            this.tpDelete.Controls.Add(this.lblBookGetType_Del);
+            this.tpDelete.Controls.Add(this.lblBookGetPri_Del);
+            this.tpDelete.Controls.Add(this.lblBookOriPri_Del);
+            this.tpDelete.Controls.Add(this.lblBookCopy_Del);
+            this.tpDelete.Controls.Add(this.lblBookVol_Del);
+            this.tpDelete.Controls.Add(this.lblBookPbMonth_Del);
+            this.tpDelete.Controls.Add(this.btnSearch_Del);
+            this.tpDelete.Controls.Add(this.tbBookNum_Del);
+            this.tpDelete.Controls.Add(this.lblBookNum_Del);
+            this.tpDelete.Controls.Add(this.lblBookGenre_Del);
+            this.tpDelete.Controls.Add(this.cbBookGenre_Del);
+            this.tpDelete.Controls.Add(this.btnDelete);
+            this.tpDelete.Controls.Add(this.cbBookPbMonth_Del);
+            this.tpDelete.Controls.Add(this.cbBookLanguage_Del);
+            this.tpDelete.Controls.Add(this.tbBookPbYear_Del);
+            this.tpDelete.Controls.Add(this.tbBookSymbol_Del);
+            this.tpDelete.Controls.Add(this.tbBookPublisher_Del);
+            this.tpDelete.Controls.Add(this.tbBookSign_Del);
+            this.tpDelete.Controls.Add(this.lblBookName_Del);
+            this.tpDelete.Controls.Add(this.tbBookName_Del);
+            this.tpDelete.Controls.Add(this.lblBookLanguage_Del);
+            this.tpDelete.Controls.Add(this.lblBookSign_Del);
+            this.tpDelete.Controls.Add(this.lblBookPbYear_Del);
+            this.tpDelete.Controls.Add(this.lblBookPbDate_Del);
+            this.tpDelete.Controls.Add(this.lblBookSymbol_Del);
+            this.tpDelete.Controls.Add(this.lblBookPublisher_Del);
+            this.tpDelete.Location = new System.Drawing.Point(4, 22);
+            this.tpDelete.Name = "tpDelete";
+            this.tpDelete.Padding = new System.Windows.Forms.Padding(3);
+            this.tpDelete.Size = new System.Drawing.Size(692, 574);
+            this.tpDelete.TabIndex = 2;
+            this.tpDelete.Text = "자료삭제";
+            this.tpDelete.UseVisualStyleBackColor = true;
+            // 
             // cbBookGetType_Del
             // 
             this.cbBookGetType_Del.FormattingEnabled = true;
@@ -1000,17 +996,15 @@
             this.cbBookGenre_Del.Enabled = false;
             this.cbBookGenre_Del.FormattingEnabled = true;
             this.cbBookGenre_Del.Items.AddRange(new object[] {
-            "SF",
-            "학원",
-            "판타지",
-            "코믹/명랑",
+            "학문",
+            "문학",
             "취미/오락",
             "요리",
             "예술",
             "역사/고전",
-            "액션",
             "실물자료",
-            "스포츠"});
+            "스포츠",
+            "자기계발"});
             this.cbBookGenre_Del.Location = new System.Drawing.Point(275, 283);
             this.cbBookGenre_Del.Name = "cbBookGenre_Del";
             this.cbBookGenre_Del.Size = new System.Drawing.Size(100, 20);
