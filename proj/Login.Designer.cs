@@ -47,6 +47,7 @@ namespace proj
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(123, 21);
             this.tbId.TabIndex = 0;
+            this.tbId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbId_KeyDown);
             // 
             // tbPsw
             // 
@@ -54,7 +55,8 @@ namespace proj
             this.tbPsw.Name = "tbPsw";
             this.tbPsw.PasswordChar = '*';
             this.tbPsw.Size = new System.Drawing.Size(123, 21);
-            this.tbPsw.TabIndex = 0;
+            this.tbPsw.TabIndex = 1;
+            this.tbPsw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPsw_KeyDown);
             // 
             // btnLogin
             // 
@@ -62,9 +64,10 @@ namespace proj
             this.btnLogin.Location = new System.Drawing.Point(259, 167);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(73, 48);
-            this.btnLogin.TabIndex = 1;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "로그인";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblId
             // 
@@ -114,7 +117,7 @@ namespace proj
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::proj.Properties.Resources._900x600;
-            this.ClientSize = new System.Drawing.Size(384, 361);
+            this.ClientSize = new System.Drawing.Size(384, 247);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblPsw);
             this.Controls.Add(this.lblLine);

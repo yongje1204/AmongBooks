@@ -16,10 +16,10 @@ namespace proj
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(/*new Login()*/ new Main());
+            Application.Run(new Login());
 
-            //Main main = new Main();
-            //Application.Run(main);
+            Main main = new Main();
+            Application.Run(main);
 
             List list = new List();
             Application.Run(list);
