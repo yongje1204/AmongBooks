@@ -30,6 +30,8 @@
         {
             this.lblBookNum = new System.Windows.Forms.Label();
             this.gbBook = new System.Windows.Forms.GroupBox();
+            this.tbBookState = new System.Windows.Forms.TextBox();
+            this.lblBookState = new System.Windows.Forms.Label();
             this.tbBookSymbol = new System.Windows.Forms.TextBox();
             this.tbBookPublisher = new System.Windows.Forms.TextBox();
             this.tbBookSign = new System.Windows.Forms.TextBox();
@@ -41,9 +43,7 @@
             this.tbBookNum = new System.Windows.Forms.TextBox();
             this.gbUser = new System.Windows.Forms.GroupBox();
             this.tbUserPhone = new System.Windows.Forms.TextBox();
-            this.tbUserState = new System.Windows.Forms.TextBox();
             this.lblUserPhone = new System.Windows.Forms.Label();
-            this.lblUserState = new System.Windows.Forms.Label();
             this.tbUserType = new System.Windows.Forms.TextBox();
             this.lblUserType = new System.Windows.Forms.Label();
             this.tbUserName = new System.Windows.Forms.TextBox();
@@ -65,6 +65,8 @@
             this.tbChkMng = new System.Windows.Forms.TextBox();
             this.lblChkMng = new System.Windows.Forms.Label();
             this.lblChkType = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.gbBook.SuspendLayout();
             this.gbUser.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +85,8 @@
             // gbBook
             // 
             this.gbBook.BackColor = System.Drawing.Color.Transparent;
+            this.gbBook.Controls.Add(this.tbBookState);
+            this.gbBook.Controls.Add(this.lblBookState);
             this.gbBook.Controls.Add(this.tbBookSymbol);
             this.gbBook.Controls.Add(this.tbBookPublisher);
             this.gbBook.Controls.Add(this.tbBookSign);
@@ -96,10 +100,29 @@
             this.gbBook.ForeColor = System.Drawing.Color.White;
             this.gbBook.Location = new System.Drawing.Point(25, 25);
             this.gbBook.Name = "gbBook";
-            this.gbBook.Size = new System.Drawing.Size(300, 155);
+            this.gbBook.Size = new System.Drawing.Size(300, 183);
             this.gbBook.TabIndex = 1;
             this.gbBook.TabStop = false;
             this.gbBook.Text = "도서";
+            // 
+            // tbBookState
+            // 
+            this.tbBookState.Location = new System.Drawing.Point(76, 148);
+            this.tbBookState.Name = "tbBookState";
+            this.tbBookState.ReadOnly = true;
+            this.tbBookState.Size = new System.Drawing.Size(203, 21);
+            this.tbBookState.TabIndex = 9;
+            this.tbBookState.TabStop = false;
+            // 
+            // lblBookState
+            // 
+            this.lblBookState.AutoSize = true;
+            this.lblBookState.ForeColor = System.Drawing.Color.White;
+            this.lblBookState.Location = new System.Drawing.Point(20, 151);
+            this.lblBookState.Name = "lblBookState";
+            this.lblBookState.Size = new System.Drawing.Size(49, 12);
+            this.lblBookState.TabIndex = 8;
+            this.lblBookState.Text = "상     태";
             // 
             // tbBookSymbol
             // 
@@ -183,14 +206,13 @@
             this.tbBookNum.Name = "tbBookNum";
             this.tbBookNum.Size = new System.Drawing.Size(203, 21);
             this.tbBookNum.TabIndex = 0;
+            this.tbBookNum.Click += new System.EventHandler(this.tbBookNum_Click);
             // 
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.Color.Transparent;
             this.gbUser.Controls.Add(this.tbUserPhone);
-            this.gbUser.Controls.Add(this.tbUserState);
             this.gbUser.Controls.Add(this.lblUserPhone);
-            this.gbUser.Controls.Add(this.lblUserState);
             this.gbUser.Controls.Add(this.tbUserType);
             this.gbUser.Controls.Add(this.lblUserType);
             this.gbUser.Controls.Add(this.tbUserName);
@@ -200,48 +222,29 @@
             this.gbUser.ForeColor = System.Drawing.Color.White;
             this.gbUser.Location = new System.Drawing.Point(375, 25);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Size = new System.Drawing.Size(300, 155);
+            this.gbUser.Size = new System.Drawing.Size(300, 128);
             this.gbUser.TabIndex = 2;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "회원";
             // 
             // tbUserPhone
             // 
-            this.tbUserPhone.Location = new System.Drawing.Point(76, 122);
+            this.tbUserPhone.Location = new System.Drawing.Point(76, 97);
             this.tbUserPhone.Name = "tbUserPhone";
             this.tbUserPhone.ReadOnly = true;
             this.tbUserPhone.Size = new System.Drawing.Size(203, 21);
             this.tbUserPhone.TabIndex = 3;
             this.tbUserPhone.TabStop = false;
             // 
-            // tbUserState
-            // 
-            this.tbUserState.Location = new System.Drawing.Point(76, 95);
-            this.tbUserState.Name = "tbUserState";
-            this.tbUserState.ReadOnly = true;
-            this.tbUserState.Size = new System.Drawing.Size(203, 21);
-            this.tbUserState.TabIndex = 3;
-            this.tbUserState.TabStop = false;
-            // 
             // lblUserPhone
             // 
             this.lblUserPhone.AutoSize = true;
             this.lblUserPhone.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone.Location = new System.Drawing.Point(16, 125);
+            this.lblUserPhone.Location = new System.Drawing.Point(16, 100);
             this.lblUserPhone.Name = "lblUserPhone";
             this.lblUserPhone.Size = new System.Drawing.Size(57, 12);
             this.lblUserPhone.TabIndex = 2;
             this.lblUserPhone.Text = "휴  대  폰";
-            // 
-            // lblUserState
-            // 
-            this.lblUserState.AutoSize = true;
-            this.lblUserState.ForeColor = System.Drawing.Color.White;
-            this.lblUserState.Location = new System.Drawing.Point(19, 98);
-            this.lblUserState.Name = "lblUserState";
-            this.lblUserState.Size = new System.Drawing.Size(49, 12);
-            this.lblUserState.TabIndex = 2;
-            this.lblUserState.Text = "상     태";
             // 
             // tbUserType
             // 
@@ -287,6 +290,7 @@
             this.tbUserNum.Name = "tbUserNum";
             this.tbUserNum.Size = new System.Drawing.Size(203, 21);
             this.tbUserNum.TabIndex = 0;
+            this.tbUserNum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbUserNum_MouseClick);
             // 
             // lblUserNum
             // 
@@ -302,6 +306,7 @@
             // btnCheckout
             // 
             this.btnCheckout.BackColor = System.Drawing.Color.White;
+            this.btnCheckout.Enabled = false;
             this.btnCheckout.Location = new System.Drawing.Point(416, 519);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(130, 40);
@@ -427,6 +432,27 @@
             this.lblChkType.TabIndex = 6;
             this.lblChkType.Text = "대출유형";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(490, 261);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 40);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "대출";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(416, 173);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(130, 40);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Text = "검색";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // ListBookChk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -438,6 +464,8 @@
             this.Controls.Add(this.lblChkMng);
             this.Controls.Add(this.lblOverdue);
             this.Controls.Add(this.lvBookList);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.cbChkType);
             this.Controls.Add(this.gbUser);
@@ -477,8 +505,6 @@
         private System.Windows.Forms.TextBox tbBookSymbol;
         private System.Windows.Forms.Label lblBookSymbol;
         private System.Windows.Forms.Label lblBookPublisher;
-        private System.Windows.Forms.TextBox tbUserState;
-        private System.Windows.Forms.Label lblUserState;
         private System.Windows.Forms.TextBox tbUserType;
         private System.Windows.Forms.Label lblUserType;
         private System.Windows.Forms.TextBox tbUserPhone;
@@ -498,5 +524,9 @@
         private System.Windows.Forms.TextBox tbChkMng;
         private System.Windows.Forms.Label lblChkMng;
         private System.Windows.Forms.Label lblChkType;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbBookState;
+        private System.Windows.Forms.Label lblBookState;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
