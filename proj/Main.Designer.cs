@@ -62,9 +62,9 @@ namespace proj
             this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUser.Location = new System.Drawing.Point(722, 11);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(36, 12);
+            this.lblUser.Size = new System.Drawing.Size(41, 12);
             this.lblUser.TabIndex = 1;
-            this.lblUser.Text = "user1";
+            this.lblUser.Text = "Admin";
             // 
             // btnLogout
             // 

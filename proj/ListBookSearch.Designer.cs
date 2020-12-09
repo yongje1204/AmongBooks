@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbBookName = new System.Windows.Forms.TextBox();
+            this.tbSearch_word = new System.Windows.Forms.TextBox();
             this.cbSearchType = new System.Windows.Forms.ComboBox();
             this.cbBookLanguage = new System.Windows.Forms.ComboBox();
             this.lblBookLanguage = new System.Windows.Forms.Label();
@@ -45,14 +45,20 @@
             this.chBookPbDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookVol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookCopy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookOripri = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookGetpri = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookGettype = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookField = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookLang = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // tbBookName
+            // tbSearch_word
             // 
-            this.tbBookName.Location = new System.Drawing.Point(235, 110);
-            this.tbBookName.Name = "tbBookName";
-            this.tbBookName.Size = new System.Drawing.Size(280, 21);
-            this.tbBookName.TabIndex = 0;
+            this.tbSearch_word.Location = new System.Drawing.Point(235, 110);
+            this.tbSearch_word.Name = "tbSearch_word";
+            this.tbSearch_word.Size = new System.Drawing.Size(280, 21);
+            this.tbSearch_word.TabIndex = 0;
+            this.tbSearch_word.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSearch_word_KeyDown);
             // 
             // cbSearchType
             // 
@@ -130,6 +136,7 @@
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // listView1
             // 
@@ -142,7 +149,12 @@
             this.chBookPublisher,
             this.chBookPbDate,
             this.chBookVol,
-            this.chBookCopy});
+            this.chBookCopy,
+            this.chBookOripri,
+            this.chBookGetpri,
+            this.chBookGettype,
+            this.chBookField,
+            this.chBookLang});
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(25, 200);
@@ -154,13 +166,12 @@
             // 
             // chNo
             // 
-            this.chNo.Text = "No";
-            this.chNo.Width = 50;
+            this.chNo.Text = "등록번호";
+            this.chNo.Width = 100;
             // 
             // chState
             // 
             this.chState.Text = "상태";
-            this.chState.Width = 40;
             // 
             // chBookName
             // 
@@ -194,7 +205,27 @@
             // chBookCopy
             // 
             this.chBookCopy.Text = "Copy.";
-            this.chBookCopy.Width = 50;
+            this.chBookCopy.Width = 40;
+            // 
+            // chBookOripri
+            // 
+            this.chBookOripri.Text = "원가격";
+            // 
+            // chBookGetpri
+            // 
+            this.chBookGetpri.Text = "입수 가격";
+            // 
+            // chBookGettype
+            // 
+            this.chBookGettype.Text = "입수 유형";
+            // 
+            // chBookField
+            // 
+            this.chBookField.Text = "자료 분야";
+            // 
+            // chBookLang
+            // 
+            this.chBookLang.Text = "언어";
             // 
             // ListBookSearch
             // 
@@ -208,7 +239,7 @@
             this.Controls.Add(this.cbBookGenre);
             this.Controls.Add(this.cbBookLanguage);
             this.Controls.Add(this.cbSearchType);
-            this.Controls.Add(this.tbBookName);
+            this.Controls.Add(this.tbSearch_word);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -225,7 +256,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbBookName;
+        private System.Windows.Forms.TextBox tbSearch_word;
         private System.Windows.Forms.ComboBox cbSearchType;
         private System.Windows.Forms.ComboBox cbBookLanguage;
         private System.Windows.Forms.Label lblBookLanguage;
@@ -242,5 +273,10 @@
         private System.Windows.Forms.ColumnHeader chBookPbDate;
         private System.Windows.Forms.ColumnHeader chBookVol;
         private System.Windows.Forms.ColumnHeader chBookCopy;
+        private System.Windows.Forms.ColumnHeader chBookOripri;
+        private System.Windows.Forms.ColumnHeader chBookGetpri;
+        private System.Windows.Forms.ColumnHeader chBookGettype;
+        private System.Windows.Forms.ColumnHeader chBookField;
+        private System.Windows.Forms.ColumnHeader chBookLang;
     }
 }
