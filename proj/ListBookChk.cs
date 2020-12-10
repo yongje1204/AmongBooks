@@ -146,7 +146,7 @@ namespace proj
             Conn.Open();
 
             //rent_num 생성을 위한 오늘 대출수 count(rnt_num)
-            string sql = "SELECT count(*) FROM Rent WHERE (Rent.rent_num LIKE 'r20201210_%%%');";
+            string sql = "SELECT count(*) FROM Rent WHERE (Rent.rent_num LIKE 'r" + DateTime.Now.ToString("yyyyMMdd") + "_%%%');";
             var Comm = new OleDbCommand(sql, Conn);
             var myRead = Comm.ExecuteReader();
             while (myRead.Read())
