@@ -30,17 +30,21 @@
         {
             this.tcUserMng = new System.Windows.Forms.TabControl();
             this.tpCreate = new System.Windows.Forms.TabPage();
+            this.gbUserType_Cre = new System.Windows.Forms.GroupBox();
+            this.rbTypeMem_Cre = new System.Windows.Forms.RadioButton();
+            this.rbTypeEmp_Cre = new System.Windows.Forms.RadioButton();
+            this.gbUserSex_Cre = new System.Windows.Forms.GroupBox();
+            this.rbMale_Cre = new System.Windows.Forms.RadioButton();
+            this.rbFemale_Cre = new System.Windows.Forms.RadioButton();
             this.lblUserPhone2_Cre = new System.Windows.Forms.Label();
             this.lblUserPhone1_Cre = new System.Windows.Forms.Label();
             this.tbUserNum_Cre = new System.Windows.Forms.TextBox();
             this.lblUserNum_Cre = new System.Windows.Forms.Label();
             this.lblUserBirth_Cre = new System.Windows.Forms.Label();
             this.lblUserGender_Cre = new System.Windows.Forms.Label();
-            this.cbUserType_Cre = new System.Windows.Forms.ComboBox();
             this.cbUserBirth3_Cre = new System.Windows.Forms.ComboBox();
             this.cbUserBirth2_Cre = new System.Windows.Forms.ComboBox();
             this.cbUserBirth1_Cre = new System.Windows.Forms.ComboBox();
-            this.cbUserGender_Cre = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.tbUserAddr_Cre = new System.Windows.Forms.TextBox();
             this.tbUserPhone3_Cre = new System.Windows.Forms.TextBox();
@@ -123,6 +127,8 @@
             this.btnSearch_Del = new System.Windows.Forms.Button();
             this.tcUserMng.SuspendLayout();
             this.tpCreate.SuspendLayout();
+            this.gbUserType_Cre.SuspendLayout();
+            this.gbUserSex_Cre.SuspendLayout();
             this.tpModify.SuspendLayout();
             this.tpDelete.SuspendLayout();
             this.SuspendLayout();
@@ -146,17 +152,17 @@
             // 
             this.tpCreate.BackColor = System.Drawing.Color.Transparent;
             this.tpCreate.BackgroundImage = global::proj.Properties.Resources._900x600;
+            this.tpCreate.Controls.Add(this.gbUserType_Cre);
+            this.tpCreate.Controls.Add(this.gbUserSex_Cre);
             this.tpCreate.Controls.Add(this.lblUserPhone2_Cre);
             this.tpCreate.Controls.Add(this.lblUserPhone1_Cre);
             this.tpCreate.Controls.Add(this.tbUserNum_Cre);
             this.tpCreate.Controls.Add(this.lblUserNum_Cre);
             this.tpCreate.Controls.Add(this.lblUserBirth_Cre);
             this.tpCreate.Controls.Add(this.lblUserGender_Cre);
-            this.tpCreate.Controls.Add(this.cbUserType_Cre);
             this.tpCreate.Controls.Add(this.cbUserBirth3_Cre);
             this.tpCreate.Controls.Add(this.cbUserBirth2_Cre);
             this.tpCreate.Controls.Add(this.cbUserBirth1_Cre);
-            this.tpCreate.Controls.Add(this.cbUserGender_Cre);
             this.tpCreate.Controls.Add(this.btnCreate);
             this.tpCreate.Controls.Add(this.tbUserAddr_Cre);
             this.tpCreate.Controls.Add(this.tbUserPhone3_Cre);
@@ -180,6 +186,70 @@
             this.tpCreate.Size = new System.Drawing.Size(692, 574);
             this.tpCreate.TabIndex = 0;
             this.tpCreate.Text = "회원등록";
+            // 
+            // gbUserType_Cre
+            // 
+            this.gbUserType_Cre.Controls.Add(this.rbTypeMem_Cre);
+            this.gbUserType_Cre.Controls.Add(this.rbTypeEmp_Cre);
+            this.gbUserType_Cre.Location = new System.Drawing.Point(264, 264);
+            this.gbUserType_Cre.Name = "gbUserType_Cre";
+            this.gbUserType_Cre.Size = new System.Drawing.Size(225, 31);
+            this.gbUserType_Cre.TabIndex = 121;
+            this.gbUserType_Cre.TabStop = false;
+            // 
+            // rbTypeMem_Cre
+            // 
+            this.rbTypeMem_Cre.AutoSize = true;
+            this.rbTypeMem_Cre.Checked = true;
+            this.rbTypeMem_Cre.Location = new System.Drawing.Point(45, 10);
+            this.rbTypeMem_Cre.Name = "rbTypeMem_Cre";
+            this.rbTypeMem_Cre.Size = new System.Drawing.Size(75, 16);
+            this.rbTypeMem_Cre.TabIndex = 121;
+            this.rbTypeMem_Cre.TabStop = true;
+            this.rbTypeMem_Cre.Text = "일반 회원";
+            this.rbTypeMem_Cre.UseVisualStyleBackColor = true;
+            // 
+            // rbTypeEmp_Cre
+            // 
+            this.rbTypeEmp_Cre.AutoSize = true;
+            this.rbTypeEmp_Cre.Location = new System.Drawing.Point(126, 9);
+            this.rbTypeEmp_Cre.Name = "rbTypeEmp_Cre";
+            this.rbTypeEmp_Cre.Size = new System.Drawing.Size(47, 16);
+            this.rbTypeEmp_Cre.TabIndex = 122;
+            this.rbTypeEmp_Cre.Text = "직원";
+            this.rbTypeEmp_Cre.UseVisualStyleBackColor = true;
+            // 
+            // gbUserSex_Cre
+            // 
+            this.gbUserSex_Cre.Controls.Add(this.rbMale_Cre);
+            this.gbUserSex_Cre.Controls.Add(this.rbFemale_Cre);
+            this.gbUserSex_Cre.Location = new System.Drawing.Point(264, 158);
+            this.gbUserSex_Cre.Name = "gbUserSex_Cre";
+            this.gbUserSex_Cre.Size = new System.Drawing.Size(224, 31);
+            this.gbUserSex_Cre.TabIndex = 123;
+            this.gbUserSex_Cre.TabStop = false;
+            // 
+            // rbMale_Cre
+            // 
+            this.rbMale_Cre.AutoSize = true;
+            this.rbMale_Cre.Checked = true;
+            this.rbMale_Cre.Location = new System.Drawing.Point(58, 10);
+            this.rbMale_Cre.Name = "rbMale_Cre";
+            this.rbMale_Cre.Size = new System.Drawing.Size(47, 16);
+            this.rbMale_Cre.TabIndex = 119;
+            this.rbMale_Cre.TabStop = true;
+            this.rbMale_Cre.Text = "남자";
+            this.rbMale_Cre.UseVisualStyleBackColor = true;
+            // 
+            // rbFemale_Cre
+            // 
+            this.rbFemale_Cre.AutoSize = true;
+            this.rbFemale_Cre.Location = new System.Drawing.Point(126, 10);
+            this.rbFemale_Cre.Name = "rbFemale_Cre";
+            this.rbFemale_Cre.Size = new System.Drawing.Size(47, 16);
+            this.rbFemale_Cre.TabIndex = 120;
+            this.rbFemale_Cre.Text = "여자";
+            this.rbFemale_Cre.UseVisualStyleBackColor = true;
             // 
             // lblUserPhone2_Cre
             // 
@@ -208,6 +278,7 @@
             this.tbUserNum_Cre.ReadOnly = true;
             this.tbUserNum_Cre.Size = new System.Drawing.Size(225, 21);
             this.tbUserNum_Cre.TabIndex = 103;
+            this.tbUserNum_Cre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblUserNum_Cre
             // 
@@ -239,17 +310,6 @@
             this.lblUserGender_Cre.Size = new System.Drawing.Size(45, 12);
             this.lblUserGender_Cre.TabIndex = 114;
             this.lblUserGender_Cre.Text = "성    별";
-            // 
-            // cbUserType_Cre
-            // 
-            this.cbUserType_Cre.FormattingEnabled = true;
-            this.cbUserType_Cre.Items.AddRange(new object[] {
-            "일반회원",
-            "직원"});
-            this.cbUserType_Cre.Location = new System.Drawing.Point(264, 273);
-            this.cbUserType_Cre.Name = "cbUserType_Cre";
-            this.cbUserType_Cre.Size = new System.Drawing.Size(100, 20);
-            this.cbUserType_Cre.TabIndex = 99;
             // 
             // cbUserBirth3_Cre
             // 
@@ -286,7 +346,7 @@
             "29",
             "30",
             "31"});
-            this.cbUserBirth3_Cre.Location = new System.Drawing.Point(432, 193);
+            this.cbUserBirth3_Cre.Location = new System.Drawing.Point(433, 193);
             this.cbUserBirth3_Cre.Name = "cbUserBirth3_Cre";
             this.cbUserBirth3_Cre.Size = new System.Drawing.Size(52, 20);
             this.cbUserBirth3_Cre.TabIndex = 93;
@@ -442,17 +502,6 @@
             this.cbUserBirth1_Cre.Size = new System.Drawing.Size(70, 20);
             this.cbUserBirth1_Cre.TabIndex = 91;
             // 
-            // cbUserGender_Cre
-            // 
-            this.cbUserGender_Cre.FormattingEnabled = true;
-            this.cbUserGender_Cre.Items.AddRange(new object[] {
-            "여자",
-            "남자"});
-            this.cbUserGender_Cre.Location = new System.Drawing.Point(264, 167);
-            this.cbUserGender_Cre.Name = "cbUserGender_Cre";
-            this.cbUserGender_Cre.Size = new System.Drawing.Size(100, 20);
-            this.cbUserGender_Cre.TabIndex = 90;
-            // 
             // btnCreate
             // 
             this.btnCreate.BackColor = System.Drawing.Color.White;
@@ -462,6 +511,7 @@
             this.btnCreate.TabIndex = 102;
             this.btnCreate.Text = "회원등록";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // tbUserAddr_Cre
             // 
@@ -549,11 +599,11 @@
             // 
             this.lblUserName_Cre.AutoSize = true;
             this.lblUserName_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserName_Cre.Location = new System.Drawing.Point(208, 143);
+            this.lblUserName_Cre.Location = new System.Drawing.Point(196, 143);
             this.lblUserName_Cre.Name = "lblUserName_Cre";
-            this.lblUserName_Cre.Size = new System.Drawing.Size(45, 12);
+            this.lblUserName_Cre.Size = new System.Drawing.Size(55, 12);
             this.lblUserName_Cre.TabIndex = 112;
-            this.lblUserName_Cre.Text = "이    름";
+            this.lblUserName_Cre.Text = "* 이    름";
             // 
             // tbUserName_Cre
             // 
@@ -576,21 +626,21 @@
             // 
             this.lblUserPhone_Cre.AutoSize = true;
             this.lblUserPhone_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone_Cre.Location = new System.Drawing.Point(204, 222);
+            this.lblUserPhone_Cre.Location = new System.Drawing.Point(194, 222);
             this.lblUserPhone_Cre.Name = "lblUserPhone_Cre";
-            this.lblUserPhone_Cre.Size = new System.Drawing.Size(49, 12);
+            this.lblUserPhone_Cre.Size = new System.Drawing.Size(59, 12);
             this.lblUserPhone_Cre.TabIndex = 107;
-            this.lblUserPhone_Cre.Text = "휴 대 폰";
+            this.lblUserPhone_Cre.Text = "* 휴 대 폰";
             // 
             // lblUserType_Cre
             // 
             this.lblUserType_Cre.AutoSize = true;
             this.lblUserType_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserType_Cre.Location = new System.Drawing.Point(204, 276);
+            this.lblUserType_Cre.Location = new System.Drawing.Point(189, 276);
             this.lblUserType_Cre.Name = "lblUserType_Cre";
-            this.lblUserType_Cre.Size = new System.Drawing.Size(53, 12);
+            this.lblUserType_Cre.Size = new System.Drawing.Size(67, 12);
             this.lblUserType_Cre.TabIndex = 105;
-            this.lblUserType_Cre.Text = "회원유형";
+            this.lblUserType_Cre.Text = "*  회원유형";
             // 
             // lblUserAddr_Cre
             // 
@@ -1573,6 +1623,10 @@
             this.tcUserMng.ResumeLayout(false);
             this.tpCreate.ResumeLayout(false);
             this.tpCreate.PerformLayout();
+            this.gbUserType_Cre.ResumeLayout(false);
+            this.gbUserType_Cre.PerformLayout();
+            this.gbUserSex_Cre.ResumeLayout(false);
+            this.gbUserSex_Cre.PerformLayout();
             this.tpModify.ResumeLayout(false);
             this.tpModify.PerformLayout();
             this.tpDelete.ResumeLayout(false);
@@ -1593,11 +1647,9 @@
         private System.Windows.Forms.Label lblUserNum_Cre;
         private System.Windows.Forms.Label lblUserBirth_Cre;
         private System.Windows.Forms.Label lblUserGender_Cre;
-        private System.Windows.Forms.ComboBox cbUserType_Cre;
         private System.Windows.Forms.ComboBox cbUserBirth3_Cre;
         private System.Windows.Forms.ComboBox cbUserBirth2_Cre;
         private System.Windows.Forms.ComboBox cbUserBirth1_Cre;
-        private System.Windows.Forms.ComboBox cbUserGender_Cre;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.TextBox tbUserAddr_Cre;
         private System.Windows.Forms.TextBox tbUserPhone3_Cre;
@@ -1676,5 +1728,11 @@
         private System.Windows.Forms.ColumnHeader chDate;
         private System.Windows.Forms.ColumnHeader chRtnDate;
         private System.Windows.Forms.ColumnHeader chType;
+        private System.Windows.Forms.RadioButton rbFemale_Cre;
+        private System.Windows.Forms.RadioButton rbMale_Cre;
+        private System.Windows.Forms.RadioButton rbTypeEmp_Cre;
+        private System.Windows.Forms.RadioButton rbTypeMem_Cre;
+        private System.Windows.Forms.GroupBox gbUserSex_Cre;
+        private System.Windows.Forms.GroupBox gbUserType_Cre;
     }
 }
