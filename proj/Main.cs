@@ -12,9 +12,12 @@ namespace proj
 {
     public partial class Main : Form
     {
+        string mng_id = Login.mng_id;
+
         public Main()
         {
             InitializeComponent();
+            lblUser.Text = mng_id;
         }
 
         private void btnBookChk_MouseEnter(object sender, EventArgs e)
