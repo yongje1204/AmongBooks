@@ -35,7 +35,6 @@ namespace proj
         {
             this.listView1.Items.Clear();
 
-            int cnt = 0;
             if (tbSearch_word.Text!="") { 
                 var Conn = new OleDbConnection(StrSQL);
                 Conn.Open();
