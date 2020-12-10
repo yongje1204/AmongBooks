@@ -12,6 +12,11 @@ namespace proj
 {
     public partial class Login : Form
     {
+
+        public static string mng_id = null;
+        public static string mng_name = null;
+
+
         public Login()
         {
             InitializeComponent();
@@ -34,6 +39,9 @@ namespace proj
 
                 if (read.Read())
                 {
+                    mng_id = read[0].ToString();
+                    mng_name = read[2].ToString();
+
                     Main main = new Main();
                     main.Show();
                     this.Hide();
