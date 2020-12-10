@@ -30,6 +30,12 @@
         {
             this.tcBookMng = new System.Windows.Forms.TabControl();
             this.tpCreate = new System.Windows.Forms.TabPage();
+            this.cbBookPbDay_Cre = new System.Windows.Forms.ComboBox();
+            this.cbBookPbMonth_Cre = new System.Windows.Forms.ComboBox();
+            this.cbBookPbYear_Cre = new System.Windows.Forms.ComboBox();
+            this.lblBookPbDay_Cre = new System.Windows.Forms.Label();
+            this.lblBookPbMonth_Cre = new System.Windows.Forms.Label();
+            this.lblBookPbYear_Cre = new System.Windows.Forms.Label();
             this.lblBookGenre_Cre = new System.Windows.Forms.Label();
             this.cbBookGetType_Cre = new System.Windows.Forms.ComboBox();
             this.cbBookGenre_Cre = new System.Windows.Forms.ComboBox();
@@ -56,11 +62,13 @@
             this.lblBookPublisher_Cre = new System.Windows.Forms.Label();
             this.tpModify = new System.Windows.Forms.TabPage();
             this.cbBookGetType_Mod = new System.Windows.Forms.ComboBox();
+            this.tbBookState_Mod = new System.Windows.Forms.TextBox();
             this.tbBookGetPri_Mod = new System.Windows.Forms.TextBox();
             this.tbBookOriPri_Mod = new System.Windows.Forms.TextBox();
             this.tbBookCopy_Mod = new System.Windows.Forms.TextBox();
             this.tbBookVol_Mod = new System.Windows.Forms.TextBox();
             this.lblBookGetType_Mod = new System.Windows.Forms.Label();
+            this.lblBookState_Mod = new System.Windows.Forms.Label();
             this.lblBookGetPri_Mod = new System.Windows.Forms.Label();
             this.lblBookOriPri_Mod = new System.Windows.Forms.Label();
             this.lblBookCopy_Mod = new System.Windows.Forms.Label();
@@ -83,6 +91,8 @@
             this.lblBookSymbol_Mod = new System.Windows.Forms.Label();
             this.lblBookPublisher_Mod = new System.Windows.Forms.Label();
             this.tpDelete = new System.Windows.Forms.TabPage();
+            this.tbBookState_Del = new System.Windows.Forms.TextBox();
+            this.lblBookState_Del = new System.Windows.Forms.Label();
             this.cbBookGetType_Del = new System.Windows.Forms.ComboBox();
             this.tbBookGetPri_Del = new System.Windows.Forms.TextBox();
             this.tbBookOriPri_Del = new System.Windows.Forms.TextBox();
@@ -100,6 +110,7 @@
             this.cbBookGenre_Del = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cbBookLanguage_Del = new System.Windows.Forms.ComboBox();
+            this.tbBookPbDate_Del = new System.Windows.Forms.TextBox();
             this.tbBookSymbol_Del = new System.Windows.Forms.TextBox();
             this.tbBookPublisher_Del = new System.Windows.Forms.TextBox();
             this.tbBookSign_Del = new System.Windows.Forms.TextBox();
@@ -110,18 +121,12 @@
             this.lblBookPbDate_Del = new System.Windows.Forms.Label();
             this.lblBookSymbol_Del = new System.Windows.Forms.Label();
             this.lblBookPublisher_Del = new System.Windows.Forms.Label();
-            this.lblBookState_Mod = new System.Windows.Forms.Label();
-            this.tbBookState_Mod = new System.Windows.Forms.TextBox();
-            this.tbBookState_Del = new System.Windows.Forms.TextBox();
-            this.lblBookState_Del = new System.Windows.Forms.Label();
-            this.cbBookPbDate_Cre = new System.Windows.Forms.ComboBox();
-            this.cbBookPbMonth_Cre = new System.Windows.Forms.ComboBox();
-            this.cbBookPbYear_Cre = new System.Windows.Forms.ComboBox();
-            this.lblUserBirth3_Cre = new System.Windows.Forms.Label();
-            this.lblUserBirth2_Cre = new System.Windows.Forms.Label();
-            this.lblUserBirth1_cre = new System.Windows.Forms.Label();
-            this.tbBookPbDate_Mod = new System.Windows.Forms.TextBox();
-            this.tbBookPbDate_Del = new System.Windows.Forms.TextBox();
+            this.cbBookPbDay_Mod = new System.Windows.Forms.ComboBox();
+            this.cbBookPbMonth_Mod = new System.Windows.Forms.ComboBox();
+            this.cbBookPbYear_Mod = new System.Windows.Forms.ComboBox();
+            this.lblBookPbDay_Mod = new System.Windows.Forms.Label();
+            this.lblBookPbMonth_Mod = new System.Windows.Forms.Label();
+            this.lblBookPbYear_Mod = new System.Windows.Forms.Label();
             this.tcBookMng.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.tpModify.SuspendLayout();
@@ -147,12 +152,12 @@
             // 
             this.tpCreate.BackColor = System.Drawing.Color.Transparent;
             this.tpCreate.BackgroundImage = global::proj.Properties.Resources._900x600;
-            this.tpCreate.Controls.Add(this.cbBookPbDate_Cre);
+            this.tpCreate.Controls.Add(this.cbBookPbDay_Cre);
             this.tpCreate.Controls.Add(this.cbBookPbMonth_Cre);
             this.tpCreate.Controls.Add(this.cbBookPbYear_Cre);
-            this.tpCreate.Controls.Add(this.lblUserBirth3_Cre);
-            this.tpCreate.Controls.Add(this.lblUserBirth2_Cre);
-            this.tpCreate.Controls.Add(this.lblUserBirth1_cre);
+            this.tpCreate.Controls.Add(this.lblBookPbDay_Cre);
+            this.tpCreate.Controls.Add(this.lblBookPbMonth_Cre);
+            this.tpCreate.Controls.Add(this.lblBookPbYear_Cre);
             this.tpCreate.Controls.Add(this.lblBookGenre_Cre);
             this.tpCreate.Controls.Add(this.cbBookGetType_Cre);
             this.tpCreate.Controls.Add(this.cbBookGenre_Cre);
@@ -183,6 +188,227 @@
             this.tpCreate.Size = new System.Drawing.Size(692, 574);
             this.tpCreate.TabIndex = 0;
             this.tpCreate.Text = "자료등록";
+            // 
+            // cbBookPbDay_Cre
+            // 
+            this.cbBookPbDay_Cre.FormattingEnabled = true;
+            this.cbBookPbDay_Cre.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.cbBookPbDay_Cre.Location = new System.Drawing.Point(443, 186);
+            this.cbBookPbDay_Cre.Name = "cbBookPbDay_Cre";
+            this.cbBookPbDay_Cre.Size = new System.Drawing.Size(52, 20);
+            this.cbBookPbDay_Cre.TabIndex = 114;
+            // 
+            // cbBookPbMonth_Cre
+            // 
+            this.cbBookPbMonth_Cre.FormattingEnabled = true;
+            this.cbBookPbMonth_Cre.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.cbBookPbMonth_Cre.Location = new System.Drawing.Point(368, 186);
+            this.cbBookPbMonth_Cre.Name = "cbBookPbMonth_Cre";
+            this.cbBookPbMonth_Cre.Size = new System.Drawing.Size(52, 20);
+            this.cbBookPbMonth_Cre.TabIndex = 113;
+            // 
+            // cbBookPbYear_Cre
+            // 
+            this.cbBookPbYear_Cre.FormattingEnabled = true;
+            this.cbBookPbYear_Cre.Items.AddRange(new object[] {
+            "2020",
+            "2019",
+            "2018",
+            "2017",
+            "2016",
+            "2015",
+            "2014",
+            "2013",
+            "2012",
+            "2011",
+            "2010",
+            "2009",
+            "2008",
+            "2007",
+            "2006",
+            "2005",
+            "2004",
+            "2003",
+            "2002",
+            "2001",
+            "2000",
+            "1999",
+            "1998",
+            "1997",
+            "1996",
+            "1995",
+            "1994",
+            "1993",
+            "1992",
+            "1991",
+            "1990",
+            "1989",
+            "1988",
+            "1987",
+            "1986",
+            "1985",
+            "1984",
+            "1983",
+            "1982",
+            "1981",
+            "1980",
+            "1979",
+            "1978",
+            "1977",
+            "1976",
+            "1975",
+            "1974",
+            "1973",
+            "1972",
+            "1971",
+            "1970",
+            "1969",
+            "1968",
+            "1967",
+            "1966",
+            "1965",
+            "1964",
+            "1963",
+            "1962",
+            "1961",
+            "1960",
+            "1959",
+            "1958",
+            "1957",
+            "1956",
+            "1955",
+            "1954",
+            "1953",
+            "1952",
+            "1951",
+            "1950",
+            "1949",
+            "1948",
+            "1947",
+            "1946",
+            "1945",
+            "1944",
+            "1943",
+            "1942",
+            "1941",
+            "1940",
+            "1939",
+            "1938",
+            "1937",
+            "1936",
+            "1935",
+            "1934",
+            "1933",
+            "1932",
+            "1931",
+            "1930",
+            "1929",
+            "1928",
+            "1927",
+            "1926",
+            "1925",
+            "1924",
+            "1923",
+            "1922",
+            "1921",
+            "1920",
+            "1919",
+            "1918",
+            "1917",
+            "1916",
+            "1915",
+            "1914",
+            "1913",
+            "1912",
+            "1911",
+            "1910",
+            "1909",
+            "1908",
+            "1907",
+            "1906",
+            "1905",
+            "1904",
+            "1903",
+            "1902",
+            "1901",
+            "1900"});
+            this.cbBookPbYear_Cre.Location = new System.Drawing.Point(275, 186);
+            this.cbBookPbYear_Cre.Name = "cbBookPbYear_Cre";
+            this.cbBookPbYear_Cre.Size = new System.Drawing.Size(70, 20);
+            this.cbBookPbYear_Cre.TabIndex = 112;
+            // 
+            // lblBookPbDay_Cre
+            // 
+            this.lblBookPbDay_Cre.AutoSize = true;
+            this.lblBookPbDay_Cre.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbDay_Cre.Location = new System.Drawing.Point(498, 190);
+            this.lblBookPbDay_Cre.Name = "lblBookPbDay_Cre";
+            this.lblBookPbDay_Cre.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbDay_Cre.TabIndex = 115;
+            this.lblBookPbDay_Cre.Text = "일";
+            // 
+            // lblBookPbMonth_Cre
+            // 
+            this.lblBookPbMonth_Cre.AutoSize = true;
+            this.lblBookPbMonth_Cre.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbMonth_Cre.Location = new System.Drawing.Point(423, 190);
+            this.lblBookPbMonth_Cre.Name = "lblBookPbMonth_Cre";
+            this.lblBookPbMonth_Cre.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbMonth_Cre.TabIndex = 116;
+            this.lblBookPbMonth_Cre.Text = "월";
+            // 
+            // lblBookPbYear_Cre
+            // 
+            this.lblBookPbYear_Cre.AutoSize = true;
+            this.lblBookPbYear_Cre.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbYear_Cre.Location = new System.Drawing.Point(348, 190);
+            this.lblBookPbYear_Cre.Name = "lblBookPbYear_Cre";
+            this.lblBookPbYear_Cre.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbYear_Cre.TabIndex = 117;
+            this.lblBookPbYear_Cre.Text = "년";
             // 
             // lblBookGenre_Cre
             // 
@@ -419,7 +645,12 @@
             // 
             this.tpModify.BackgroundImage = global::proj.Properties.Resources._900x600;
             this.tpModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tpModify.Controls.Add(this.tbBookPbDate_Mod);
+            this.tpModify.Controls.Add(this.cbBookPbDay_Mod);
+            this.tpModify.Controls.Add(this.cbBookPbMonth_Mod);
+            this.tpModify.Controls.Add(this.cbBookPbYear_Mod);
+            this.tpModify.Controls.Add(this.lblBookPbDay_Mod);
+            this.tpModify.Controls.Add(this.lblBookPbMonth_Mod);
+            this.tpModify.Controls.Add(this.lblBookPbYear_Mod);
             this.tpModify.Controls.Add(this.cbBookGetType_Mod);
             this.tpModify.Controls.Add(this.tbBookState_Mod);
             this.tpModify.Controls.Add(this.tbBookGetPri_Mod);
@@ -469,6 +700,14 @@
             this.cbBookGetType_Mod.Size = new System.Drawing.Size(100, 20);
             this.cbBookGetType_Mod.TabIndex = 122;
             // 
+            // tbBookState_Mod
+            // 
+            this.tbBookState_Mod.Enabled = false;
+            this.tbBookState_Mod.Location = new System.Drawing.Point(502, 363);
+            this.tbBookState_Mod.Name = "tbBookState_Mod";
+            this.tbBookState_Mod.Size = new System.Drawing.Size(100, 21);
+            this.tbBookState_Mod.TabIndex = 121;
+            // 
             // tbBookGetPri_Mod
             // 
             this.tbBookGetPri_Mod.Enabled = false;
@@ -510,6 +749,16 @@
             this.lblBookGetType_Mod.Size = new System.Drawing.Size(53, 12);
             this.lblBookGetType_Mod.TabIndex = 117;
             this.lblBookGetType_Mod.Text = "입수유형";
+            // 
+            // lblBookState_Mod
+            // 
+            this.lblBookState_Mod.AutoSize = true;
+            this.lblBookState_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookState_Mod.Location = new System.Drawing.Point(440, 366);
+            this.lblBookState_Mod.Name = "lblBookState_Mod";
+            this.lblBookState_Mod.Size = new System.Drawing.Size(53, 12);
+            this.lblBookState_Mod.TabIndex = 116;
+            this.lblBookState_Mod.Text = "도서상태";
             // 
             // lblBookGetPri_Mod
             // 
@@ -561,6 +810,7 @@
             this.btnSearch_Mod.TabIndex = 111;
             this.btnSearch_Mod.Text = "검색";
             this.btnSearch_Mod.UseVisualStyleBackColor = false;
+            this.btnSearch_Mod.Click += new System.EventHandler(this.btnSearch_Mod_Click);
             // 
             // tbBookNum_Mod
             // 
@@ -568,6 +818,7 @@
             this.tbBookNum_Mod.Name = "tbBookNum_Mod";
             this.tbBookNum_Mod.Size = new System.Drawing.Size(203, 21);
             this.tbBookNum_Mod.TabIndex = 109;
+            this.tbBookNum_Mod.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbBookNum_Mod_MouseClick);
             // 
             // lblBookNum_Mod
             // 
@@ -618,6 +869,7 @@
             this.btnModify.TabIndex = 106;
             this.btnModify.Text = "자료수정";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // cbBookLanguage_Mod
             // 
@@ -769,6 +1021,24 @@
             this.tpDelete.Text = "자료삭제";
             this.tpDelete.UseVisualStyleBackColor = true;
             // 
+            // tbBookState_Del
+            // 
+            this.tbBookState_Del.Enabled = false;
+            this.tbBookState_Del.Location = new System.Drawing.Point(502, 363);
+            this.tbBookState_Del.Name = "tbBookState_Del";
+            this.tbBookState_Del.Size = new System.Drawing.Size(100, 21);
+            this.tbBookState_Del.TabIndex = 124;
+            // 
+            // lblBookState_Del
+            // 
+            this.lblBookState_Del.AutoSize = true;
+            this.lblBookState_Del.ForeColor = System.Drawing.Color.White;
+            this.lblBookState_Del.Location = new System.Drawing.Point(440, 366);
+            this.lblBookState_Del.Name = "lblBookState_Del";
+            this.lblBookState_Del.Size = new System.Drawing.Size(53, 12);
+            this.lblBookState_Del.TabIndex = 123;
+            this.lblBookState_Del.Text = "도서상태";
+            // 
             // cbBookGetType_Del
             // 
             this.cbBookGetType_Del.Enabled = false;
@@ -873,6 +1143,7 @@
             this.btnSearch_Del.TabIndex = 111;
             this.btnSearch_Del.Text = "검색";
             this.btnSearch_Del.UseVisualStyleBackColor = false;
+            this.btnSearch_Del.Click += new System.EventHandler(this.btnSearch_Del_Click);
             // 
             // tbBookNum_Del
             // 
@@ -880,6 +1151,7 @@
             this.tbBookNum_Del.Name = "tbBookNum_Del";
             this.tbBookNum_Del.Size = new System.Drawing.Size(203, 21);
             this.tbBookNum_Del.TabIndex = 109;
+            this.tbBookNum_Del.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbBookNum_Del_MouseClick);
             // 
             // lblBookNum_Del
             // 
@@ -930,6 +1202,7 @@
             this.btnDelete.TabIndex = 106;
             this.btnDelete.Text = "자료삭제";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // cbBookLanguage_Del
             // 
@@ -946,6 +1219,15 @@
             this.cbBookLanguage_Del.Name = "cbBookLanguage_Del";
             this.cbBookLanguage_Del.Size = new System.Drawing.Size(100, 20);
             this.cbBookLanguage_Del.TabIndex = 104;
+            // 
+            // tbBookPbDate_Del
+            // 
+            this.tbBookPbDate_Del.Enabled = false;
+            this.tbBookPbDate_Del.Location = new System.Drawing.Point(275, 229);
+            this.tbBookPbDate_Del.Name = "tbBookPbDate_Del";
+            this.tbBookPbDate_Del.ReadOnly = true;
+            this.tbBookPbDate_Del.Size = new System.Drawing.Size(203, 21);
+            this.tbBookPbDate_Del.TabIndex = 102;
             // 
             // tbBookSymbol_Del
             // 
@@ -1043,46 +1325,10 @@
             this.lblBookPublisher_Del.TabIndex = 92;
             this.lblBookPublisher_Del.Text = "출 판 사";
             // 
-            // lblBookState_Mod
+            // cbBookPbDay_Mod
             // 
-            this.lblBookState_Mod.AutoSize = true;
-            this.lblBookState_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblBookState_Mod.Location = new System.Drawing.Point(440, 366);
-            this.lblBookState_Mod.Name = "lblBookState_Mod";
-            this.lblBookState_Mod.Size = new System.Drawing.Size(53, 12);
-            this.lblBookState_Mod.TabIndex = 116;
-            this.lblBookState_Mod.Text = "도서상태";
-            // 
-            // tbBookState_Mod
-            // 
-            this.tbBookState_Mod.Enabled = false;
-            this.tbBookState_Mod.Location = new System.Drawing.Point(502, 363);
-            this.tbBookState_Mod.Name = "tbBookState_Mod";
-            this.tbBookState_Mod.Size = new System.Drawing.Size(100, 21);
-            this.tbBookState_Mod.TabIndex = 121;
-            // 
-            // tbBookState_Del
-            // 
-            this.tbBookState_Del.Enabled = false;
-            this.tbBookState_Del.Location = new System.Drawing.Point(502, 363);
-            this.tbBookState_Del.Name = "tbBookState_Del";
-            this.tbBookState_Del.Size = new System.Drawing.Size(100, 21);
-            this.tbBookState_Del.TabIndex = 124;
-            // 
-            // lblBookState_Del
-            // 
-            this.lblBookState_Del.AutoSize = true;
-            this.lblBookState_Del.ForeColor = System.Drawing.Color.White;
-            this.lblBookState_Del.Location = new System.Drawing.Point(440, 366);
-            this.lblBookState_Del.Name = "lblBookState_Del";
-            this.lblBookState_Del.Size = new System.Drawing.Size(53, 12);
-            this.lblBookState_Del.TabIndex = 123;
-            this.lblBookState_Del.Text = "도서상태";
-            // 
-            // cbBookPbDate_Cre
-            // 
-            this.cbBookPbDate_Cre.FormattingEnabled = true;
-            this.cbBookPbDate_Cre.Items.AddRange(new object[] {
+            this.cbBookPbDay_Mod.FormattingEnabled = true;
+            this.cbBookPbDay_Mod.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -1114,15 +1360,15 @@
             "29",
             "30",
             "31"});
-            this.cbBookPbDate_Cre.Location = new System.Drawing.Point(443, 186);
-            this.cbBookPbDate_Cre.Name = "cbBookPbDate_Cre";
-            this.cbBookPbDate_Cre.Size = new System.Drawing.Size(52, 20);
-            this.cbBookPbDate_Cre.TabIndex = 114;
+            this.cbBookPbDay_Mod.Location = new System.Drawing.Point(443, 229);
+            this.cbBookPbDay_Mod.Name = "cbBookPbDay_Mod";
+            this.cbBookPbDay_Mod.Size = new System.Drawing.Size(52, 20);
+            this.cbBookPbDay_Mod.TabIndex = 125;
             // 
-            // cbBookPbMonth_Cre
+            // cbBookPbMonth_Mod
             // 
-            this.cbBookPbMonth_Cre.FormattingEnabled = true;
-            this.cbBookPbMonth_Cre.Items.AddRange(new object[] {
+            this.cbBookPbMonth_Mod.FormattingEnabled = true;
+            this.cbBookPbMonth_Mod.Items.AddRange(new object[] {
             "01",
             "02",
             "03",
@@ -1135,15 +1381,15 @@
             "10",
             "11",
             "12"});
-            this.cbBookPbMonth_Cre.Location = new System.Drawing.Point(368, 186);
-            this.cbBookPbMonth_Cre.Name = "cbBookPbMonth_Cre";
-            this.cbBookPbMonth_Cre.Size = new System.Drawing.Size(52, 20);
-            this.cbBookPbMonth_Cre.TabIndex = 113;
+            this.cbBookPbMonth_Mod.Location = new System.Drawing.Point(368, 229);
+            this.cbBookPbMonth_Mod.Name = "cbBookPbMonth_Mod";
+            this.cbBookPbMonth_Mod.Size = new System.Drawing.Size(52, 20);
+            this.cbBookPbMonth_Mod.TabIndex = 124;
             // 
-            // cbBookPbYear_Cre
+            // cbBookPbYear_Mod
             // 
-            this.cbBookPbYear_Cre.FormattingEnabled = true;
-            this.cbBookPbYear_Cre.Items.AddRange(new object[] {
+            this.cbBookPbYear_Mod.FormattingEnabled = true;
+            this.cbBookPbYear_Mod.Items.AddRange(new object[] {
             "2020",
             "2019",
             "2018",
@@ -1265,57 +1511,40 @@
             "1902",
             "1901",
             "1900"});
-            this.cbBookPbYear_Cre.Location = new System.Drawing.Point(275, 186);
-            this.cbBookPbYear_Cre.Name = "cbBookPbYear_Cre";
-            this.cbBookPbYear_Cre.Size = new System.Drawing.Size(70, 20);
-            this.cbBookPbYear_Cre.TabIndex = 112;
+            this.cbBookPbYear_Mod.Location = new System.Drawing.Point(275, 229);
+            this.cbBookPbYear_Mod.Name = "cbBookPbYear_Mod";
+            this.cbBookPbYear_Mod.Size = new System.Drawing.Size(70, 20);
+            this.cbBookPbYear_Mod.TabIndex = 123;
             // 
-            // lblUserBirth3_Cre
+            // lblBookPbDay_Mod
             // 
-            this.lblUserBirth3_Cre.AutoSize = true;
-            this.lblUserBirth3_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth3_Cre.Location = new System.Drawing.Point(498, 190);
-            this.lblUserBirth3_Cre.Name = "lblUserBirth3_Cre";
-            this.lblUserBirth3_Cre.Size = new System.Drawing.Size(17, 12);
-            this.lblUserBirth3_Cre.TabIndex = 115;
-            this.lblUserBirth3_Cre.Text = "일";
+            this.lblBookPbDay_Mod.AutoSize = true;
+            this.lblBookPbDay_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbDay_Mod.Location = new System.Drawing.Point(498, 233);
+            this.lblBookPbDay_Mod.Name = "lblBookPbDay_Mod";
+            this.lblBookPbDay_Mod.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbDay_Mod.TabIndex = 126;
+            this.lblBookPbDay_Mod.Text = "일";
             // 
-            // lblUserBirth2_Cre
+            // lblBookPbMonth_Mod
             // 
-            this.lblUserBirth2_Cre.AutoSize = true;
-            this.lblUserBirth2_Cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth2_Cre.Location = new System.Drawing.Point(423, 190);
-            this.lblUserBirth2_Cre.Name = "lblUserBirth2_Cre";
-            this.lblUserBirth2_Cre.Size = new System.Drawing.Size(17, 12);
-            this.lblUserBirth2_Cre.TabIndex = 116;
-            this.lblUserBirth2_Cre.Text = "월";
+            this.lblBookPbMonth_Mod.AutoSize = true;
+            this.lblBookPbMonth_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbMonth_Mod.Location = new System.Drawing.Point(423, 233);
+            this.lblBookPbMonth_Mod.Name = "lblBookPbMonth_Mod";
+            this.lblBookPbMonth_Mod.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbMonth_Mod.TabIndex = 127;
+            this.lblBookPbMonth_Mod.Text = "월";
             // 
-            // lblUserBirth1_cre
+            // lblBookPbYear_Mod
             // 
-            this.lblUserBirth1_cre.AutoSize = true;
-            this.lblUserBirth1_cre.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth1_cre.Location = new System.Drawing.Point(348, 190);
-            this.lblUserBirth1_cre.Name = "lblUserBirth1_cre";
-            this.lblUserBirth1_cre.Size = new System.Drawing.Size(17, 12);
-            this.lblUserBirth1_cre.TabIndex = 117;
-            this.lblUserBirth1_cre.Text = "년";
-            // 
-            // tbBookPbDate_Mod
-            // 
-            this.tbBookPbDate_Mod.Enabled = false;
-            this.tbBookPbDate_Mod.Location = new System.Drawing.Point(275, 229);
-            this.tbBookPbDate_Mod.Name = "tbBookPbDate_Mod";
-            this.tbBookPbDate_Mod.Size = new System.Drawing.Size(203, 21);
-            this.tbBookPbDate_Mod.TabIndex = 123;
-            // 
-            // tbBookPbDate_Del
-            // 
-            this.tbBookPbDate_Del.Enabled = false;
-            this.tbBookPbDate_Del.Location = new System.Drawing.Point(275, 229);
-            this.tbBookPbDate_Del.Name = "tbBookPbDate_Del";
-            this.tbBookPbDate_Del.ReadOnly = true;
-            this.tbBookPbDate_Del.Size = new System.Drawing.Size(203, 21);
-            this.tbBookPbDate_Del.TabIndex = 102;
+            this.lblBookPbYear_Mod.AutoSize = true;
+            this.lblBookPbYear_Mod.ForeColor = System.Drawing.Color.White;
+            this.lblBookPbYear_Mod.Location = new System.Drawing.Point(348, 233);
+            this.lblBookPbYear_Mod.Name = "lblBookPbYear_Mod";
+            this.lblBookPbYear_Mod.Size = new System.Drawing.Size(17, 12);
+            this.lblBookPbYear_Mod.TabIndex = 128;
+            this.lblBookPbYear_Mod.Text = "년";
             // 
             // ListBookMng
             // 
@@ -1431,13 +1660,18 @@
         private System.Windows.Forms.Label lblBookState_Mod;
         private System.Windows.Forms.TextBox tbBookState_Del;
         private System.Windows.Forms.Label lblBookState_Del;
-        private System.Windows.Forms.ComboBox cbBookPbDate_Cre;
+        private System.Windows.Forms.ComboBox cbBookPbDay_Cre;
         private System.Windows.Forms.ComboBox cbBookPbMonth_Cre;
         private System.Windows.Forms.ComboBox cbBookPbYear_Cre;
-        private System.Windows.Forms.Label lblUserBirth3_Cre;
-        private System.Windows.Forms.Label lblUserBirth2_Cre;
-        private System.Windows.Forms.Label lblUserBirth1_cre;
-        private System.Windows.Forms.TextBox tbBookPbDate_Mod;
+        private System.Windows.Forms.Label lblBookPbDay_Cre;
+        private System.Windows.Forms.Label lblBookPbMonth_Cre;
+        private System.Windows.Forms.Label lblBookPbYear_Cre;
         private System.Windows.Forms.TextBox tbBookPbDate_Del;
+        private System.Windows.Forms.ComboBox cbBookPbDay_Mod;
+        private System.Windows.Forms.ComboBox cbBookPbMonth_Mod;
+        private System.Windows.Forms.ComboBox cbBookPbYear_Mod;
+        private System.Windows.Forms.Label lblBookPbDay_Mod;
+        private System.Windows.Forms.Label lblBookPbMonth_Mod;
+        private System.Windows.Forms.Label lblBookPbYear_Mod;
     }
 }

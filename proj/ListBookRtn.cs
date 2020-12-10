@@ -182,7 +182,7 @@ namespace proj
             }
             else
             {
-                MessageBox.Show("정상적으로 데이터가 저장되지 않았습니다.", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("정상적으로 데이터가 저장되지 않았습니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Conn.Close();
