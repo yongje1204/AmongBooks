@@ -16,7 +16,7 @@ namespace proj
     {
         //데이터베이스 연결
         private string StrSQL = @"Provider=Microsoft.ACE.OLEDB.16.0;Data Source=AmongBooks.accdb;Mode=ReadWrite";
-
+        private string rnt_num = "";
         public ListBookRtn()
         {
             InitializeComponent();
@@ -54,14 +54,15 @@ namespace proj
             }
 
             //도서가 대출중인지 확인
-            sql = "SELECT Rent.user_num FROM Rent WHERE Rent.book_num = '" + this.tbBookNum.Text + "' AND Rent.rent_state LIKE '%%중'";
+            sql = "SELECT Rent.rent_num, Rent.user_num FROM Rent WHERE Rent.book_num = '" + this.tbBookNum.Text + "' AND Rent.rent_state LIKE '%%중'";
             Comm = new OleDbCommand(sql, Conn);
             myRead = Comm.ExecuteReader();
 
             //도서가 대출 중일 경우
             if(myRead.Read() == true)
             {
-                this.tbUserNum.Text = myRead[0].ToString();
+                this.rnt_num = myRead[0].ToString();
+                this.tbUserNum.Text = myRead[1].ToString();
 
                 //대출중인 회원 조회
                 sql = "SELECT Member.user_name, Member.user_type, Member.user_phone FROM Member WHERE Member.user_num = '" + this.tbUserNum.Text + "';";
@@ -76,7 +77,7 @@ namespace proj
                 }
 
                 //회원 연체여부 갱신
-                sql = "UPDATE Rent SET Rent.rent_state = '연체중' where Rent.user_num = '" + this.tbUserNum.Text + "' AND Rent.return_date < '" + DateTime.Now.ToString("yyyy-MM-dd") + "';";
+                sql = "UPDATE Rent SET Rent.rent_state = '연체중' where Rent.user_num = '" + this.tbUserNum.Text + "' AND Rent.return_date < '" + DateTime.Now.ToString("yyyy-MM-dd") + "' AND Rent.rent_state = '대출중';";
                 Comm = new OleDbCommand(sql, Conn);
                 Comm.ExecuteNonQuery();
 
@@ -116,10 +117,11 @@ namespace proj
             //도서가 대출중이 아닐 경우
             else if(myRead.Read() == false)
             {
-                this.tbUserNum.Text = "대출중인 도서가 아닙니다.";
-                this.tbUserName.Text = "대출중인 도서가 아닙니다.";
-                this.tbUserType.Text = "대출중인 도서가 아닙니다.";
-                this.tbUserPhone.Text = "대출중인 도서가 아닙니다.";
+                this.tbBookName.Text = "대출중인 도서가 아닙니다.";
+                this.tbBookSign.Text = "대출중인 도서가 아닙니다.";
+                this.tbBookPublisher.Text = "대출중인 도서가 아닙니다.";
+                this.tbBookSymbol.Text = "대출중인 도서가 아닙니다.";
+                this.tbBookState.Text = "대출중인 도서가 아닙니다.";
             }
 
         }
@@ -132,12 +134,57 @@ namespace proj
             this.tbBookPublisher.Text = "";
             this.tbBookSymbol.Text = "";
             this.tbBookState.Text = "";
+            this.rnt_num = "";
+            this.tbUserName.Text = "";
+            this.tbUserType.Text = "";
+            this.tbUserPhone.Text = "";
+            this.lblOverdue.Text = "0건 연체";
+            this.lvBookList.Items.Clear();
             this.btnReturn.Enabled = false;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            var Conn = new OleDbConnection(StrSQL);
+            Conn.Open();
+            
+            //Rent테이블 업데이트
+            string sql = "UPDATE Rent SET Rent.rent_state = '반납완료' WHERE Rent.rent_num = '" + rnt_num + "';";
+            var Comm = new OleDbCommand(sql, Conn);
+            int x =Comm.ExecuteNonQuery();
 
+            //Book테이블 업데이트
+            sql = "UPDATE Book SET Book.book_state = '대출가능' WHERE Book.book_num = '" + this.tbBookNum.Text + "';";
+            Comm = new OleDbCommand(sql, Conn);
+            int y = Comm.ExecuteNonQuery();
+
+
+            if (x == 1 && y == 1)
+            {
+                MessageBox.Show("정상적으로 데이터가 저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                //반납시 조회값 전부 초기화
+                this.tbUserNum.Text = "";
+                this.tbUserName.Text = "";
+                this.tbUserType.Text = "";
+                this.tbUserPhone.Text = "";
+                this.lblOverdue.Text = "0건 연체";
+                this.tbBookNum.Text = "";
+                this.tbBookName.Text = "";
+                this.tbBookSign.Text = "";
+                this.tbBookPublisher.Text = "";
+                this.tbBookSymbol.Text = "";
+                this.tbBookState.Text = "";
+                this.lvBookList.Items.Clear();
+                this.btnReturn.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("정상적으로 데이터가 저장되지 않았습니다.", "에러", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            Conn.Close();
         }
     }
 }

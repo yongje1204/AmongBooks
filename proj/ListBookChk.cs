@@ -78,7 +78,7 @@ namespace proj
             }
 
             //회원 연체여부 갱신
-            sql = "UPDATE Rent SET Rent.rent_state = '연체중' where Rent.user_num = '" + this.tbUserNum.Text + "' AND Rent.return_date < '" + DateTime.Now.ToString("yyyy-MM-dd") + "';";
+            sql = "UPDATE Rent SET Rent.rent_state = '연체중' where Rent.user_num = '" + this.tbUserNum.Text + "' AND Rent.return_date < '" + DateTime.Now.ToString("yyyy-MM-dd") + "' AND Rent.rent_state = '대출중';";
             Comm = new OleDbCommand(sql, Conn);
             Comm.ExecuteNonQuery();
 
@@ -160,14 +160,15 @@ namespace proj
             Comm = new OleDbCommand(sql, Conn);
             int x = Comm.ExecuteNonQuery();
 
-            if (x == 1)
+            //Book테이블에 (도서상태)Update
+            sql = "UPDATE Book SET book_state = '대출중' WHERE book_num = '" + this.tbBookNum.Text + "';";
+            Comm = new OleDbCommand(sql, Conn);
+            int y = Comm.ExecuteNonQuery();
+
+            if (x == 1 && y == 1)
             {
                 MessageBox.Show("정상적으로 데이터가 저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //Book테이블에 (도서상태)Update
-                sql = "UPDATE Book SET book_state = '대출중' WHERE book_num = '" + this.tbBookNum.Text + "';";
-                Comm = new OleDbCommand(sql, Conn);
-                Comm.ExecuteNonQuery();
 
                 //대출시 조회값 전부 초기화
                 this.tbUserNum.Text = "";
