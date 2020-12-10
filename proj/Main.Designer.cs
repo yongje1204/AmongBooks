@@ -38,7 +38,6 @@ namespace proj
             this.btnBookMng = new System.Windows.Forms.Button();
             this.btnBookChk = new System.Windows.Forms.Button();
             this.imglistBookChk = new System.Windows.Forms.ImageList(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.btnBookSearch = new System.Windows.Forms.Button();
             this.imglistBookSearch = new System.Windows.Forms.ImageList(this.components);
             this.btnUserMng = new System.Windows.Forms.Button();
@@ -86,7 +85,7 @@ namespace proj
             this.btnBookMng.ForeColor = System.Drawing.Color.Black;
             this.btnBookMng.ImageIndex = 0;
             this.btnBookMng.ImageList = this.imglistBookMng;
-            this.btnBookMng.Location = new System.Drawing.Point(369, 216);
+            this.btnBookMng.Location = new System.Drawing.Point(309, 216);
             this.btnBookMng.Name = "btnBookMng";
             this.btnBookMng.Size = new System.Drawing.Size(112, 122);
             this.btnBookMng.TabIndex = 0;
@@ -125,22 +124,6 @@ namespace proj
             this.imglistBookChk.Images.SetKeyName(0, "bookchk1.png");
             this.imglistBookChk.Images.SetKeyName(1, "bookchk2.png");
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Enabled = false;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageIndex = 0;
-            this.button1.Location = new System.Drawing.Point(487, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 122);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "\r\n빈칸";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // btnBookSearch
             // 
             this.btnBookSearch.BackColor = System.Drawing.Color.White;
@@ -175,7 +158,7 @@ namespace proj
             this.btnUserMng.ForeColor = System.Drawing.Color.Black;
             this.btnUserMng.ImageIndex = 0;
             this.btnUserMng.ImageList = this.imglistUserMng;
-            this.btnUserMng.Location = new System.Drawing.Point(487, 88);
+            this.btnUserMng.Location = new System.Drawing.Point(427, 216);
             this.btnUserMng.Name = "btnUserMng";
             this.btnUserMng.Size = new System.Drawing.Size(112, 122);
             this.btnUserMng.TabIndex = 0;
@@ -202,7 +185,7 @@ namespace proj
             this.btnBookRtn.ForeColor = System.Drawing.Color.Black;
             this.btnBookRtn.ImageIndex = 0;
             this.btnBookRtn.ImageList = this.imglistBookRtn;
-            this.btnBookRtn.Location = new System.Drawing.Point(251, 216);
+            this.btnBookRtn.Location = new System.Drawing.Point(487, 88);
             this.btnBookRtn.Name = "btnBookRtn";
             this.btnBookRtn.Size = new System.Drawing.Size(112, 122);
             this.btnBookRtn.TabIndex = 0;
@@ -237,7 +220,6 @@ namespace proj
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnBookRtn);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnUserMng);
             this.Controls.Add(this.btnBookSearch);
             this.Controls.Add(this.btnBookChk);
@@ -259,7 +241,6 @@ namespace proj
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnBookMng;
         private System.Windows.Forms.Button btnBookChk;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBookSearch;
         private System.Windows.Forms.Button btnUserMng;
         private System.Windows.Forms.Button btnBookRtn;

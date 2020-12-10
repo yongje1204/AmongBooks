@@ -28,14 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chRtnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chUserName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lvBookList = new System.Windows.Forms.ListView();
-            this.chRntMng = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnReturn = new System.Windows.Forms.Button();
             this.lblBookSign = new System.Windows.Forms.Label();
             this.gbBook = new System.Windows.Forms.GroupBox();
             this.tbBookState = new System.Windows.Forms.TextBox();
@@ -61,68 +54,30 @@
             this.lblRtnMng = new System.Windows.Forms.Label();
             this.tbRtnMng = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.lvBookList = new System.Windows.Forms.ListView();
+            this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSymbol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chChkDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chRtnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chBookState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblOverdue = new System.Windows.Forms.Label();
             this.gbBook.SuspendLayout();
             this.gbUser.SuspendLayout();
             this.SuspendLayout();
             // 
-            // chType
+            // btnReturn
             // 
-            this.chType.Text = "대출유형";
-            this.chType.Width = 70;
-            // 
-            // chNo
-            // 
-            this.chNo.Text = "No";
-            this.chNo.Width = 50;
-            // 
-            // btnCheckout
-            // 
-            this.btnCheckout.BackColor = System.Drawing.Color.White;
-            this.btnCheckout.Location = new System.Drawing.Point(410, 520);
-            this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(130, 40);
-            this.btnCheckout.TabIndex = 8;
-            this.btnCheckout.Text = "반납";
-            this.btnCheckout.UseVisualStyleBackColor = false;
-            // 
-            // chDate
-            // 
-            this.chDate.Text = "대출일";
-            this.chDate.Width = 80;
-            // 
-            // chRtnDate
-            // 
-            this.chRtnDate.Text = "반납예정일";
-            this.chRtnDate.Width = 80;
-            // 
-            // chUserName
-            // 
-            this.chUserName.Text = "이름";
-            this.chUserName.Width = 100;
-            // 
-            // lvBookList
-            // 
-            this.lvBookList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.chNo,
-            this.chUserName,
-            this.chDate,
-            this.chRtnDate,
-            this.chType,
-            this.chRntMng});
-            this.lvBookList.FullRowSelect = true;
-            this.lvBookList.GridLines = true;
-            this.lvBookList.HideSelection = false;
-            this.lvBookList.Location = new System.Drawing.Point(123, 251);
-            this.lvBookList.Name = "lvBookList";
-            this.lvBookList.Size = new System.Drawing.Size(465, 250);
-            this.lvBookList.TabIndex = 10;
-            this.lvBookList.UseCompatibleStateImageBehavior = false;
-            this.lvBookList.View = System.Windows.Forms.View.Details;
-            // 
-            // chRntMng
-            // 
-            this.chRntMng.Text = "대출담당자";
-            this.chRntMng.Width = 80;
+            this.btnReturn.BackColor = System.Drawing.Color.White;
+            this.btnReturn.Enabled = false;
+            this.btnReturn.Location = new System.Drawing.Point(416, 519);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(130, 40);
+            this.btnReturn.TabIndex = 8;
+            this.btnReturn.Text = "반납";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // lblBookSign
             // 
@@ -248,6 +203,7 @@
             this.tbBookNum.Name = "tbBookNum";
             this.tbBookNum.Size = new System.Drawing.Size(203, 21);
             this.tbBookNum.TabIndex = 0;
+            this.tbBookNum.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbBookNum_MouseClick);
             // 
             // lblBookNum
             // 
@@ -361,7 +317,7 @@
             this.lblRtnMng.AutoSize = true;
             this.lblRtnMng.BackColor = System.Drawing.Color.Transparent;
             this.lblRtnMng.ForeColor = System.Drawing.Color.White;
-            this.lblRtnMng.Location = new System.Drawing.Point(177, 516);
+            this.lblRtnMng.Location = new System.Drawing.Point(249, 515);
             this.lblRtnMng.Name = "lblRtnMng";
             this.lblRtnMng.Size = new System.Drawing.Size(69, 12);
             this.lblRtnMng.TabIndex = 2;
@@ -369,7 +325,7 @@
             // 
             // tbRtnMng
             // 
-            this.tbRtnMng.Location = new System.Drawing.Point(179, 531);
+            this.tbRtnMng.Location = new System.Drawing.Point(251, 530);
             this.tbRtnMng.Name = "tbRtnMng";
             this.tbRtnMng.ReadOnly = true;
             this.tbRtnMng.Size = new System.Drawing.Size(125, 21);
@@ -385,6 +341,73 @@
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // lvBookList
+            // 
+            this.lvBookList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chNo,
+            this.chBookNum,
+            this.chBookName,
+            this.chSymbol,
+            this.chChkDate,
+            this.chRtnDate,
+            this.chBookState});
+            this.lvBookList.FullRowSelect = true;
+            this.lvBookList.GridLines = true;
+            this.lvBookList.HideSelection = false;
+            this.lvBookList.Location = new System.Drawing.Point(20, 247);
+            this.lvBookList.Name = "lvBookList";
+            this.lvBookList.Size = new System.Drawing.Size(664, 250);
+            this.lvBookList.TabIndex = 13;
+            this.lvBookList.UseCompatibleStateImageBehavior = false;
+            this.lvBookList.View = System.Windows.Forms.View.Details;
+            // 
+            // chNo
+            // 
+            this.chNo.Text = "No";
+            this.chNo.Width = 100;
+            // 
+            // chBookNum
+            // 
+            this.chBookNum.Text = "자료번호";
+            this.chBookNum.Width = 100;
+            // 
+            // chBookName
+            // 
+            this.chBookName.Text = "자료명";
+            this.chBookName.Width = 160;
+            // 
+            // chSymbol
+            // 
+            this.chSymbol.Text = "청구기호";
+            this.chSymbol.Width = 80;
+            // 
+            // chChkDate
+            // 
+            this.chChkDate.Text = "대출일";
+            this.chChkDate.Width = 80;
+            // 
+            // chRtnDate
+            // 
+            this.chRtnDate.Text = "반납예정일";
+            this.chRtnDate.Width = 80;
+            // 
+            // chBookState
+            // 
+            this.chBookState.Text = "상태";
+            // 
+            // lblOverdue
+            // 
+            this.lblOverdue.AutoSize = true;
+            this.lblOverdue.BackColor = System.Drawing.Color.Transparent;
+            this.lblOverdue.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblOverdue.ForeColor = System.Drawing.Color.White;
+            this.lblOverdue.Location = new System.Drawing.Point(95, 510);
+            this.lblOverdue.Name = "lblOverdue";
+            this.lblOverdue.Size = new System.Drawing.Size(57, 13);
+            this.lblOverdue.TabIndex = 14;
+            this.lblOverdue.Text = "0건 연체";
             // 
             // ListBookRtn
             // 
@@ -392,11 +415,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 600);
             this.ControlBox = false;
+            this.Controls.Add(this.lblOverdue);
+            this.Controls.Add(this.lvBookList);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbRtnMng);
             this.Controls.Add(this.gbUser);
-            this.Controls.Add(this.btnCheckout);
-            this.Controls.Add(this.lvBookList);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.lblRtnMng);
             this.Controls.Add(this.gbBook);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -415,13 +439,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ColumnHeader chType;
-        private System.Windows.Forms.ColumnHeader chNo;
-        private System.Windows.Forms.Button btnCheckout;
-        private System.Windows.Forms.ColumnHeader chDate;
-        private System.Windows.Forms.ColumnHeader chRtnDate;
-        private System.Windows.Forms.ColumnHeader chUserName;
-        private System.Windows.Forms.ListView lvBookList;
+        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label lblBookSign;
         private System.Windows.Forms.GroupBox gbBook;
         private System.Windows.Forms.TextBox tbBookSymbol;
@@ -446,7 +464,15 @@
         private System.Windows.Forms.Label lblBookState;
         private System.Windows.Forms.Label lblRtnMng;
         private System.Windows.Forms.TextBox tbRtnMng;
-        private System.Windows.Forms.ColumnHeader chRntMng;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ListView lvBookList;
+        private System.Windows.Forms.ColumnHeader chNo;
+        private System.Windows.Forms.ColumnHeader chBookNum;
+        private System.Windows.Forms.ColumnHeader chBookName;
+        private System.Windows.Forms.ColumnHeader chSymbol;
+        private System.Windows.Forms.ColumnHeader chChkDate;
+        private System.Windows.Forms.ColumnHeader chRtnDate;
+        private System.Windows.Forms.ColumnHeader chBookState;
+        private System.Windows.Forms.Label lblOverdue;
     }
 }

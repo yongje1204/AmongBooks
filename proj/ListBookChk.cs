@@ -16,6 +16,7 @@ namespace proj
     { 
         //데이터베이스 연결
         private string StrSQL = @"Provider=Microsoft.ACE.OLEDB.16.0;Data Source=AmongBooks.accdb;Mode=ReadWrite";
+
         public ListBookChk()
         {
             InitializeComponent();
@@ -59,7 +60,7 @@ namespace proj
             }
 
             //회원 정보 조회
-            sql = "SELECT Member.user_name, Member.user_type, Member.user_phone FROM Member WHERE Member.user_num = \"" + this.tbUserNum.Text + "\";";
+            sql = "SELECT Member.user_name, Member.user_type, Member.user_phone FROM Member WHERE Member.user_num = '" + this.tbUserNum.Text + "';";
             Comm = new OleDbCommand(sql, Conn);
             myRead = Comm.ExecuteReader();
 
@@ -92,7 +93,7 @@ namespace proj
 
             //lvlOverdue 갱신
             string overdue = "";
-            sql = "SELECT COUNT(*) From Rent WHERE Rent.rent_state = '연체중'";
+            sql = "SELECT COUNT(*) From Rent WHERE Rent.user_num = '" +  this.tbUserNum.Text + "' AND Rent.rent_state = '연체중'";
             Comm = new OleDbCommand(sql, Conn);
             myRead = Comm.ExecuteReader();
             while (myRead.Read())
@@ -169,10 +170,12 @@ namespace proj
                 Comm.ExecuteNonQuery();
 
                 //대출시 조회값 전부 초기화
+                this.tbUserNum.Text = "";
                 this.tbUserName.Text = "";
                 this.tbUserType.Text = "";
                 this.tbUserPhone.Text = "";
                 this.lblOverdue.Text = "0건 연체";
+                this.tbBookNum.Text = "";
                 this.tbBookName.Text = "";
                 this.tbBookSign.Text = "";
                 this.tbBookPublisher.Text = "";
