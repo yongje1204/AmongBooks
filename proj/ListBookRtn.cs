@@ -22,6 +22,7 @@ namespace proj
             InitializeComponent();
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
+            this.tbRtnMng.Text = Login.mng_name;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -149,7 +150,7 @@ namespace proj
             Conn.Open();
             
             //Rent테이블 업데이트
-            string sql = "UPDATE Rent SET Rent.rent_state = '반납완료' WHERE Rent.rent_num = '" + rnt_num + "';";
+            string sql = "UPDATE Rent SET Rent.rent_state = '반납완료', Rent.return_manager = '" + this.tbRtnMng.Text + "' WHERE Rent.rent_num = '" + rnt_num + "';";
             var Comm = new OleDbCommand(sql, Conn);
             int x =Comm.ExecuteNonQuery();
 

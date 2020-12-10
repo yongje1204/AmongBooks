@@ -22,6 +22,7 @@ namespace proj
             InitializeComponent();
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
+            this.tbChkMng.Text = Login.mng_name;
         }
 
         private void ListBookChk_Load(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace proj
             myRead.Close();
            
             //Rent테이블에 Insert
-            sql = "INSERT INTO Rent(rent_num, rent_manager, rent_date, return_date, user_num, book_num, rent_state) VALUES('r" + DateTime.Now.ToString("yyyyMMdd") + "_" + rnt_num + "', " + "'rentManager추가해야됨', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.AddDays(7).ToString("yyyy-MM-dd") + "', '" + this.tbUserNum.Text + "', '" + this.tbBookNum.Text + "', '대출중');";
+            sql = "INSERT INTO Rent(rent_num, rent_manager, rent_date, return_date, user_num, book_num, rent_state) VALUES('r" + DateTime.Now.ToString("yyyyMMdd") + "_" + rnt_num + "', '" + this.tbChkMng.Text + "', '" + DateTime.Now.ToString("yyyy-MM-dd") + "', '" + DateTime.Now.AddDays(7).ToString("yyyy-MM-dd") + "', '" + this.tbUserNum.Text + "', '" + this.tbBookNum.Text + "', '대출중');";
             Comm = new OleDbCommand(sql, Conn);
             int x = Comm.ExecuteNonQuery();
 
