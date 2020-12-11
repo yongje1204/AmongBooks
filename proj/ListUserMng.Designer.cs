@@ -63,17 +63,18 @@
             this.lblUserType_Cre = new System.Windows.Forms.Label();
             this.lblUserAddr_Cre = new System.Windows.Forms.Label();
             this.tpModify = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rbMale_Mod = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblUserPhone2_Mod = new System.Windows.Forms.Label();
             this.lblUserPhone1_Mod = new System.Windows.Forms.Label();
             this.tbUserNum_Mod = new System.Windows.Forms.TextBox();
             this.lblUserNum_Mod = new System.Windows.Forms.Label();
             this.lblUserBirth_Mod = new System.Windows.Forms.Label();
             this.lblUserGender_Mod = new System.Windows.Forms.Label();
-            this.cbUserType_Mod = new System.Windows.Forms.ComboBox();
             this.cbUserBirth3_Mod = new System.Windows.Forms.ComboBox();
             this.cbUserBirth2_Mod = new System.Windows.Forms.ComboBox();
             this.cbUserBirth1_Mod = new System.Windows.Forms.ComboBox();
-            this.cbUserGender_Mod = new System.Windows.Forms.ComboBox();
             this.btnModify = new System.Windows.Forms.Button();
             this.tbUserAddr_Mod = new System.Windows.Forms.TextBox();
             this.tbUserPhone3_Mod = new System.Windows.Forms.TextBox();
@@ -125,11 +126,16 @@
             this.lblUserPhone_Del = new System.Windows.Forms.Label();
             this.lblUserAddr_Del = new System.Windows.Forms.Label();
             this.btnSearch_Del = new System.Windows.Forms.Button();
+            this.rbFemale_Mod = new System.Windows.Forms.RadioButton();
+            this.rbTypeMem_Mod = new System.Windows.Forms.RadioButton();
+            this.rbTypeEmp_Mod = new System.Windows.Forms.RadioButton();
             this.tcUserMng.SuspendLayout();
             this.tpCreate.SuspendLayout();
             this.gbUserType_Cre.SuspendLayout();
             this.gbUserSex_Cre.SuspendLayout();
             this.tpModify.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tpDelete.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -656,17 +662,17 @@
             // 
             this.tpModify.BackgroundImage = global::proj.Properties.Resources._900x600;
             this.tpModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tpModify.Controls.Add(this.groupBox2);
+            this.tpModify.Controls.Add(this.groupBox1);
             this.tpModify.Controls.Add(this.lblUserPhone2_Mod);
             this.tpModify.Controls.Add(this.lblUserPhone1_Mod);
             this.tpModify.Controls.Add(this.tbUserNum_Mod);
             this.tpModify.Controls.Add(this.lblUserNum_Mod);
             this.tpModify.Controls.Add(this.lblUserBirth_Mod);
             this.tpModify.Controls.Add(this.lblUserGender_Mod);
-            this.tpModify.Controls.Add(this.cbUserType_Mod);
             this.tpModify.Controls.Add(this.cbUserBirth3_Mod);
             this.tpModify.Controls.Add(this.cbUserBirth2_Mod);
             this.tpModify.Controls.Add(this.cbUserBirth1_Mod);
-            this.tpModify.Controls.Add(this.cbUserGender_Mod);
             this.tpModify.Controls.Add(this.btnModify);
             this.tpModify.Controls.Add(this.tbUserAddr_Mod);
             this.tpModify.Controls.Add(this.tbUserPhone3_Mod);
@@ -693,11 +699,43 @@
             this.tpModify.Text = "회원수정";
             this.tpModify.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rbFemale_Mod);
+            this.groupBox2.Controls.Add(this.rbMale_Mod);
+            this.groupBox2.Location = new System.Drawing.Point(257, 168);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(224, 33);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            // 
+            // rbMale_Mod
+            // 
+            this.rbMale_Mod.AutoSize = true;
+            this.rbMale_Mod.Checked = true;
+            this.rbMale_Mod.Location = new System.Drawing.Point(43, 11);
+            this.rbMale_Mod.Name = "rbMale_Mod";
+            this.rbMale_Mod.Size = new System.Drawing.Size(47, 16);
+            this.rbMale_Mod.TabIndex = 0;
+            this.rbMale_Mod.TabStop = true;
+            this.rbMale_Mod.Text = "남자";
+            this.rbMale_Mod.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbTypeMem_Mod);
+            this.groupBox1.Controls.Add(this.rbTypeEmp_Mod);
+            this.groupBox1.Location = new System.Drawing.Point(257, 279);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 27);
+            this.groupBox1.TabIndex = 180;
+            this.groupBox1.TabStop = false;
+            // 
             // lblUserPhone2_Mod
             // 
             this.lblUserPhone2_Mod.AutoSize = true;
             this.lblUserPhone2_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone2_Mod.Location = new System.Drawing.Point(397, 233);
+            this.lblUserPhone2_Mod.Location = new System.Drawing.Point(398, 236);
             this.lblUserPhone2_Mod.Name = "lblUserPhone2_Mod";
             this.lblUserPhone2_Mod.Size = new System.Drawing.Size(11, 12);
             this.lblUserPhone2_Mod.TabIndex = 179;
@@ -707,7 +745,7 @@
             // 
             this.lblUserPhone1_Mod.AutoSize = true;
             this.lblUserPhone1_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone1_Mod.Location = new System.Drawing.Point(312, 233);
+            this.lblUserPhone1_Mod.Location = new System.Drawing.Point(313, 236);
             this.lblUserPhone1_Mod.Name = "lblUserPhone1_Mod";
             this.lblUserPhone1_Mod.Size = new System.Drawing.Size(11, 12);
             this.lblUserPhone1_Mod.TabIndex = 178;
@@ -735,7 +773,7 @@
             // 
             this.lblUserBirth_Mod.AutoSize = true;
             this.lblUserBirth_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth_Mod.Location = new System.Drawing.Point(196, 207);
+            this.lblUserBirth_Mod.Location = new System.Drawing.Point(197, 210);
             this.lblUserBirth_Mod.Name = "lblUserBirth_Mod";
             this.lblUserBirth_Mod.Size = new System.Drawing.Size(53, 12);
             this.lblUserBirth_Mod.TabIndex = 176;
@@ -745,22 +783,11 @@
             // 
             this.lblUserGender_Mod.AutoSize = true;
             this.lblUserGender_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserGender_Mod.Location = new System.Drawing.Point(199, 180);
+            this.lblUserGender_Mod.Location = new System.Drawing.Point(200, 183);
             this.lblUserGender_Mod.Name = "lblUserGender_Mod";
             this.lblUserGender_Mod.Size = new System.Drawing.Size(45, 12);
             this.lblUserGender_Mod.TabIndex = 175;
             this.lblUserGender_Mod.Text = "성    별";
-            // 
-            // cbUserType_Mod
-            // 
-            this.cbUserType_Mod.FormattingEnabled = true;
-            this.cbUserType_Mod.Items.AddRange(new object[] {
-            "일반회원",
-            "직원"});
-            this.cbUserType_Mod.Location = new System.Drawing.Point(256, 283);
-            this.cbUserType_Mod.Name = "cbUserType_Mod";
-            this.cbUserType_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbUserType_Mod.TabIndex = 160;
             // 
             // cbUserBirth3_Mod
             // 
@@ -797,7 +824,7 @@
             "29",
             "30",
             "31"});
-            this.cbUserBirth3_Mod.Location = new System.Drawing.Point(424, 203);
+            this.cbUserBirth3_Mod.Location = new System.Drawing.Point(425, 206);
             this.cbUserBirth3_Mod.Name = "cbUserBirth3_Mod";
             this.cbUserBirth3_Mod.Size = new System.Drawing.Size(52, 20);
             this.cbUserBirth3_Mod.TabIndex = 154;
@@ -818,7 +845,7 @@
             "10",
             "11",
             "12"});
-            this.cbUserBirth2_Mod.Location = new System.Drawing.Point(349, 203);
+            this.cbUserBirth2_Mod.Location = new System.Drawing.Point(350, 206);
             this.cbUserBirth2_Mod.Name = "cbUserBirth2_Mod";
             this.cbUserBirth2_Mod.Size = new System.Drawing.Size(52, 20);
             this.cbUserBirth2_Mod.TabIndex = 153;
@@ -948,21 +975,10 @@
             "1902",
             "1901",
             "1900"});
-            this.cbUserBirth1_Mod.Location = new System.Drawing.Point(256, 203);
+            this.cbUserBirth1_Mod.Location = new System.Drawing.Point(257, 206);
             this.cbUserBirth1_Mod.Name = "cbUserBirth1_Mod";
             this.cbUserBirth1_Mod.Size = new System.Drawing.Size(70, 20);
             this.cbUserBirth1_Mod.TabIndex = 152;
-            // 
-            // cbUserGender_Mod
-            // 
-            this.cbUserGender_Mod.FormattingEnabled = true;
-            this.cbUserGender_Mod.Items.AddRange(new object[] {
-            "여자",
-            "남자"});
-            this.cbUserGender_Mod.Location = new System.Drawing.Point(256, 177);
-            this.cbUserGender_Mod.Name = "cbUserGender_Mod";
-            this.cbUserGender_Mod.Size = new System.Drawing.Size(100, 20);
-            this.cbUserGender_Mod.TabIndex = 151;
             // 
             // btnModify
             // 
@@ -976,42 +992,42 @@
             // 
             // tbUserAddr_Mod
             // 
-            this.tbUserAddr_Mod.Location = new System.Drawing.Point(256, 256);
+            this.tbUserAddr_Mod.Location = new System.Drawing.Point(257, 259);
             this.tbUserAddr_Mod.Name = "tbUserAddr_Mod";
             this.tbUserAddr_Mod.Size = new System.Drawing.Size(225, 21);
             this.tbUserAddr_Mod.TabIndex = 158;
             // 
             // tbUserPhone3_Mod
             // 
-            this.tbUserPhone3_Mod.Location = new System.Drawing.Point(413, 229);
+            this.tbUserPhone3_Mod.Location = new System.Drawing.Point(414, 232);
             this.tbUserPhone3_Mod.Name = "tbUserPhone3_Mod";
             this.tbUserPhone3_Mod.Size = new System.Drawing.Size(67, 21);
             this.tbUserPhone3_Mod.TabIndex = 157;
             // 
             // tbUserEmail2_Mod
             // 
-            this.tbUserEmail2_Mod.Location = new System.Drawing.Point(400, 309);
+            this.tbUserEmail2_Mod.Location = new System.Drawing.Point(401, 312);
             this.tbUserEmail2_Mod.Name = "tbUserEmail2_Mod";
             this.tbUserEmail2_Mod.Size = new System.Drawing.Size(81, 21);
             this.tbUserEmail2_Mod.TabIndex = 162;
             // 
             // tbUserPhone2_Mod
             // 
-            this.tbUserPhone2_Mod.Location = new System.Drawing.Point(325, 229);
+            this.tbUserPhone2_Mod.Location = new System.Drawing.Point(326, 232);
             this.tbUserPhone2_Mod.Name = "tbUserPhone2_Mod";
             this.tbUserPhone2_Mod.Size = new System.Drawing.Size(67, 21);
             this.tbUserPhone2_Mod.TabIndex = 156;
             // 
             // tbUserEmail1_Mod
             // 
-            this.tbUserEmail1_Mod.Location = new System.Drawing.Point(256, 309);
+            this.tbUserEmail1_Mod.Location = new System.Drawing.Point(257, 312);
             this.tbUserEmail1_Mod.Name = "tbUserEmail1_Mod";
             this.tbUserEmail1_Mod.Size = new System.Drawing.Size(123, 21);
             this.tbUserEmail1_Mod.TabIndex = 161;
             // 
             // tbUserPhone1_Mod
             // 
-            this.tbUserPhone1_Mod.Location = new System.Drawing.Point(256, 229);
+            this.tbUserPhone1_Mod.Location = new System.Drawing.Point(257, 232);
             this.tbUserPhone1_Mod.Name = "tbUserPhone1_Mod";
             this.tbUserPhone1_Mod.Size = new System.Drawing.Size(53, 21);
             this.tbUserPhone1_Mod.TabIndex = 155;
@@ -1020,7 +1036,7 @@
             // 
             this.lblUserBirth3_Mod.AutoSize = true;
             this.lblUserBirth3_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth3_Mod.Location = new System.Drawing.Point(479, 207);
+            this.lblUserBirth3_Mod.Location = new System.Drawing.Point(480, 210);
             this.lblUserBirth3_Mod.Name = "lblUserBirth3_Mod";
             this.lblUserBirth3_Mod.Size = new System.Drawing.Size(17, 12);
             this.lblUserBirth3_Mod.TabIndex = 169;
@@ -1030,7 +1046,7 @@
             // 
             this.lblUserBirth2_Mod.AutoSize = true;
             this.lblUserBirth2_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth2_Mod.Location = new System.Drawing.Point(404, 206);
+            this.lblUserBirth2_Mod.Location = new System.Drawing.Point(405, 209);
             this.lblUserBirth2_Mod.Name = "lblUserBirth2_Mod";
             this.lblUserBirth2_Mod.Size = new System.Drawing.Size(17, 12);
             this.lblUserBirth2_Mod.TabIndex = 170;
@@ -1040,7 +1056,7 @@
             // 
             this.lblUserEmail1_Mod.AutoSize = true;
             this.lblUserEmail1_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserEmail1_Mod.Location = new System.Drawing.Point(380, 314);
+            this.lblUserEmail1_Mod.Location = new System.Drawing.Point(381, 317);
             this.lblUserEmail1_Mod.Name = "lblUserEmail1_Mod";
             this.lblUserEmail1_Mod.Size = new System.Drawing.Size(17, 12);
             this.lblUserEmail1_Mod.TabIndex = 171;
@@ -1050,7 +1066,7 @@
             // 
             this.lblUserBirth1_Mod.AutoSize = true;
             this.lblUserBirth1_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth1_Mod.Location = new System.Drawing.Point(329, 207);
+            this.lblUserBirth1_Mod.Location = new System.Drawing.Point(330, 210);
             this.lblUserBirth1_Mod.Name = "lblUserBirth1_Mod";
             this.lblUserBirth1_Mod.Size = new System.Drawing.Size(17, 12);
             this.lblUserBirth1_Mod.TabIndex = 172;
@@ -1068,7 +1084,7 @@
             // 
             // tbUserName_Mod
             // 
-            this.tbUserName_Mod.Location = new System.Drawing.Point(256, 150);
+            this.tbUserName_Mod.Location = new System.Drawing.Point(257, 147);
             this.tbUserName_Mod.Name = "tbUserName_Mod";
             this.tbUserName_Mod.Size = new System.Drawing.Size(225, 21);
             this.tbUserName_Mod.TabIndex = 150;
@@ -1077,7 +1093,7 @@
             // 
             this.lblUserEmail_Mod.AutoSize = true;
             this.lblUserEmail_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserEmail_Mod.Location = new System.Drawing.Point(196, 312);
+            this.lblUserEmail_Mod.Location = new System.Drawing.Point(197, 315);
             this.lblUserEmail_Mod.Name = "lblUserEmail_Mod";
             this.lblUserEmail_Mod.Size = new System.Drawing.Size(49, 12);
             this.lblUserEmail_Mod.TabIndex = 167;
@@ -1087,7 +1103,7 @@
             // 
             this.lblUserPhone_Mod.AutoSize = true;
             this.lblUserPhone_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone_Mod.Location = new System.Drawing.Point(196, 232);
+            this.lblUserPhone_Mod.Location = new System.Drawing.Point(197, 235);
             this.lblUserPhone_Mod.Name = "lblUserPhone_Mod";
             this.lblUserPhone_Mod.Size = new System.Drawing.Size(49, 12);
             this.lblUserPhone_Mod.TabIndex = 168;
@@ -1097,7 +1113,7 @@
             // 
             this.lblUserType_Mod.AutoSize = true;
             this.lblUserType_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserType_Mod.Location = new System.Drawing.Point(196, 286);
+            this.lblUserType_Mod.Location = new System.Drawing.Point(197, 289);
             this.lblUserType_Mod.Name = "lblUserType_Mod";
             this.lblUserType_Mod.Size = new System.Drawing.Size(53, 12);
             this.lblUserType_Mod.TabIndex = 166;
@@ -1107,7 +1123,7 @@
             // 
             this.lblUserAddr_Mod.AutoSize = true;
             this.lblUserAddr_Mod.ForeColor = System.Drawing.Color.White;
-            this.lblUserAddr_Mod.Location = new System.Drawing.Point(198, 259);
+            this.lblUserAddr_Mod.Location = new System.Drawing.Point(199, 262);
             this.lblUserAddr_Mod.Name = "lblUserAddr_Mod";
             this.lblUserAddr_Mod.Size = new System.Drawing.Size(45, 12);
             this.lblUserAddr_Mod.TabIndex = 165;
@@ -1117,7 +1133,7 @@
             // 
             this.btnSearch_Mod.BackColor = System.Drawing.Color.White;
             this.btnSearch_Mod.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch_Mod.Location = new System.Drawing.Point(314, 114);
+            this.btnSearch_Mod.Location = new System.Drawing.Point(327, 114);
             this.btnSearch_Mod.Name = "btnSearch_Mod";
             this.btnSearch_Mod.Size = new System.Drawing.Size(75, 23);
             this.btnSearch_Mod.TabIndex = 149;
@@ -1606,6 +1622,38 @@
             this.btnSearch_Del.Text = "검색";
             this.btnSearch_Del.UseVisualStyleBackColor = false;
             // 
+            // rbFemale_Mod
+            // 
+            this.rbFemale_Mod.AutoSize = true;
+            this.rbFemale_Mod.Location = new System.Drawing.Point(126, 11);
+            this.rbFemale_Mod.Name = "rbFemale_Mod";
+            this.rbFemale_Mod.Size = new System.Drawing.Size(47, 16);
+            this.rbFemale_Mod.TabIndex = 181;
+            this.rbFemale_Mod.Text = "여자";
+            this.rbFemale_Mod.UseVisualStyleBackColor = true;
+            // 
+            // rbTypeMem_Mod
+            // 
+            this.rbTypeMem_Mod.AutoSize = true;
+            this.rbTypeMem_Mod.Checked = true;
+            this.rbTypeMem_Mod.Location = new System.Drawing.Point(37, 8);
+            this.rbTypeMem_Mod.Name = "rbTypeMem_Mod";
+            this.rbTypeMem_Mod.Size = new System.Drawing.Size(75, 16);
+            this.rbTypeMem_Mod.TabIndex = 182;
+            this.rbTypeMem_Mod.TabStop = true;
+            this.rbTypeMem_Mod.Text = "일반 회원";
+            this.rbTypeMem_Mod.UseVisualStyleBackColor = true;
+            // 
+            // rbTypeEmp_Mod
+            // 
+            this.rbTypeEmp_Mod.AutoSize = true;
+            this.rbTypeEmp_Mod.Location = new System.Drawing.Point(126, 8);
+            this.rbTypeEmp_Mod.Name = "rbTypeEmp_Mod";
+            this.rbTypeEmp_Mod.Size = new System.Drawing.Size(47, 16);
+            this.rbTypeEmp_Mod.TabIndex = 183;
+            this.rbTypeEmp_Mod.Text = "직원";
+            this.rbTypeEmp_Mod.UseVisualStyleBackColor = true;
+            // 
             // ListUserMng
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1629,6 +1677,10 @@
             this.gbUserSex_Cre.PerformLayout();
             this.tpModify.ResumeLayout(false);
             this.tpModify.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tpDelete.ResumeLayout(false);
             this.tpDelete.PerformLayout();
             this.ResumeLayout(false);
@@ -1673,11 +1725,9 @@
         private System.Windows.Forms.Label lblUserNum_Mod;
         private System.Windows.Forms.Label lblUserBirth_Mod;
         private System.Windows.Forms.Label lblUserGender_Mod;
-        private System.Windows.Forms.ComboBox cbUserType_Mod;
         private System.Windows.Forms.ComboBox cbUserBirth3_Mod;
         private System.Windows.Forms.ComboBox cbUserBirth2_Mod;
         private System.Windows.Forms.ComboBox cbUserBirth1_Mod;
-        private System.Windows.Forms.ComboBox cbUserGender_Mod;
         private System.Windows.Forms.Button btnModify;
         private System.Windows.Forms.TextBox tbUserAddr_Mod;
         private System.Windows.Forms.TextBox tbUserPhone3_Mod;
@@ -1734,5 +1784,11 @@
         private System.Windows.Forms.RadioButton rbTypeMem_Cre;
         private System.Windows.Forms.GroupBox gbUserSex_Cre;
         private System.Windows.Forms.GroupBox gbUserType_Cre;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton rbMale_Mod;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbFemale_Mod;
+        private System.Windows.Forms.RadioButton rbTypeMem_Mod;
+        private System.Windows.Forms.RadioButton rbTypeEmp_Mod;
     }
 }

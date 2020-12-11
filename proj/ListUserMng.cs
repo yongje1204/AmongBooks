@@ -14,8 +14,8 @@ namespace proj
 {
     public partial class ListUserMng : Form
     {
-       
-        
+        private string StrSQL = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=AmongBooks.accdb;Mode=ReadWrite"; //데이터베이스 연결 문자열
+
         public ListUserMng()
         {
             InitializeComponent();
@@ -23,14 +23,32 @@ namespace proj
             this.BackColor = Color.Transparent;
 
             Usernum_Cnt();
+            var Conn = new OleDbConnection(StrSQL);
+            Conn.Open();
+
+            string sql = "SELECT count(*) FROM member WHERE (user_num LIKE 'u" + DateTime.Now.ToString("yyyyMMdd") + "_%%%');";
+            var Comm = new OleDbCommand(sql, Conn);
+            var myRead = Comm.ExecuteReader();
+            while (myRead.Read())
+            {
+                string user_reg_date = DateTime.Now.ToString("yyyyMMdd");
+                string user_cnt = (Convert.ToInt32(myRead[0]) + 1).ToString().PadLeft(3, '0');
+
+                tbUserNum_Cre.Text = "u" + user_reg_date + "_" + user_cnt;
+
+                
+            }
+            myRead.Close();
+
 
         }
 
-        private string StrSQL = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=AmongBooks.accdb;Mode=ReadWrite"; //데이터베이스 연결 문자열
+        
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
             string gender, user_type,birth,phone,email;
+
 
             if (tbUserName_Cre.Text != "" && tbUserPhone1_Cre.Text != "" && tbUserPhone2_Cre.Text != ""
                 && tbUserPhone3_Cre.Text != "")
@@ -76,7 +94,7 @@ namespace proj
                 {
                     MessageBox.Show("정상적으로 회원이 등록되었습니다.", "알림",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    cnt++;
+                    
                     Controll_Clear();
                     Usernum_Cnt();
 
@@ -118,5 +136,6 @@ namespace proj
             tbUserNum_Cre.Text = "u" + user_reg_date + "_" + user_cnt;
 
         }
+
     }
 }
