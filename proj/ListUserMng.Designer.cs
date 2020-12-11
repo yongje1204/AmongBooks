@@ -96,25 +96,20 @@
             this.tpDelete = new System.Windows.Forms.TabPage();
             this.lvBookList = new System.Windows.Forms.ListView();
             this.chNo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chRentNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chBookNum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chBookName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chSymbol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chRentType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chRtnDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblUserPhone2_Del = new System.Windows.Forms.Label();
             this.lblUserPhone1_Del = new System.Windows.Forms.Label();
             this.tbUserNum_Del = new System.Windows.Forms.TextBox();
             this.lblUserNum_Del = new System.Windows.Forms.Label();
             this.lblUserBirth_Del = new System.Windows.Forms.Label();
-            this.lblUserGender_Del = new System.Windows.Forms.Label();
             this.cbUserBirth3_Del = new System.Windows.Forms.ComboBox();
             this.cbUserBirth2_Del = new System.Windows.Forms.ComboBox();
             this.cbUserBirth1_Del = new System.Windows.Forms.ComboBox();
-            this.cbUserGender_Del = new System.Windows.Forms.ComboBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.tbUserAddr_Del = new System.Windows.Forms.TextBox();
             this.tbUserPhone3_Del = new System.Windows.Forms.TextBox();
             this.tbUserPhone2_Del = new System.Windows.Forms.TextBox();
             this.tbUserPhone1_Del = new System.Windows.Forms.TextBox();
@@ -124,7 +119,6 @@
             this.lblUserName_Del = new System.Windows.Forms.Label();
             this.tbUserName_Del = new System.Windows.Forms.TextBox();
             this.lblUserPhone_Del = new System.Windows.Forms.Label();
-            this.lblUserAddr_Del = new System.Windows.Forms.Label();
             this.btnSearch_Del = new System.Windows.Forms.Button();
             this.rbFemale_Mod = new System.Windows.Forms.RadioButton();
             this.rbTypeMem_Mod = new System.Windows.Forms.RadioButton();
@@ -757,6 +751,8 @@
             this.tbUserNum_Mod.Name = "tbUserNum_Mod";
             this.tbUserNum_Mod.Size = new System.Drawing.Size(225, 21);
             this.tbUserNum_Mod.TabIndex = 164;
+            this.tbUserNum_Mod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbUserNum_Mod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUserNum_Mod_KeyDown);
             // 
             // lblUserNum_Mod
             // 
@@ -989,6 +985,7 @@
             this.btnModify.TabIndex = 163;
             this.btnModify.Text = "회원수정";
             this.btnModify.UseVisualStyleBackColor = false;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
             // 
             // tbUserAddr_Mod
             // 
@@ -1139,6 +1136,7 @@
             this.btnSearch_Mod.TabIndex = 149;
             this.btnSearch_Mod.Text = "검색";
             this.btnSearch_Mod.UseVisualStyleBackColor = false;
+            this.btnSearch_Mod.Click += new System.EventHandler(this.btnSearch_Mod_Click);
             // 
             // tpDelete
             // 
@@ -1150,13 +1148,10 @@
             this.tpDelete.Controls.Add(this.tbUserNum_Del);
             this.tpDelete.Controls.Add(this.lblUserNum_Del);
             this.tpDelete.Controls.Add(this.lblUserBirth_Del);
-            this.tpDelete.Controls.Add(this.lblUserGender_Del);
             this.tpDelete.Controls.Add(this.cbUserBirth3_Del);
             this.tpDelete.Controls.Add(this.cbUserBirth2_Del);
             this.tpDelete.Controls.Add(this.cbUserBirth1_Del);
-            this.tpDelete.Controls.Add(this.cbUserGender_Del);
             this.tpDelete.Controls.Add(this.btnDelete);
-            this.tpDelete.Controls.Add(this.tbUserAddr_Del);
             this.tpDelete.Controls.Add(this.tbUserPhone3_Del);
             this.tpDelete.Controls.Add(this.tbUserPhone2_Del);
             this.tpDelete.Controls.Add(this.tbUserPhone1_Del);
@@ -1166,7 +1161,6 @@
             this.tpDelete.Controls.Add(this.lblUserName_Del);
             this.tpDelete.Controls.Add(this.tbUserName_Del);
             this.tpDelete.Controls.Add(this.lblUserPhone_Del);
-            this.tpDelete.Controls.Add(this.lblUserAddr_Del);
             this.tpDelete.Controls.Add(this.btnSearch_Del);
             this.tpDelete.Location = new System.Drawing.Point(4, 22);
             this.tpDelete.Name = "tpDelete";
@@ -1180,19 +1174,17 @@
             // 
             this.lvBookList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNo,
-            this.chState,
+            this.chRentNum,
             this.chBookNum,
-            this.chBookName,
-            this.chSymbol,
+            this.chRentType,
             this.chDate,
-            this.chRtnDate,
-            this.chType});
+            this.chRtnDate});
             this.lvBookList.FullRowSelect = true;
             this.lvBookList.GridLines = true;
             this.lvBookList.HideSelection = false;
-            this.lvBookList.Location = new System.Drawing.Point(-5, 284);
+            this.lvBookList.Location = new System.Drawing.Point(86, 271);
             this.lvBookList.Name = "lvBookList";
-            this.lvBookList.Size = new System.Drawing.Size(706, 149);
+            this.lvBookList.Size = new System.Drawing.Size(555, 149);
             this.lvBookList.TabIndex = 180;
             this.lvBookList.UseCompatibleStateImageBehavior = false;
             this.lvBookList.View = System.Windows.Forms.View.Details;
@@ -1202,25 +1194,20 @@
             this.chNo.Text = "No";
             this.chNo.Width = 50;
             // 
-            // chState
+            // chRentNum
             // 
-            this.chState.Text = "상태";
-            this.chState.Width = 80;
+            this.chRentNum.Text = "대출번호";
+            this.chRentNum.Width = 100;
             // 
             // chBookNum
             // 
-            this.chBookNum.Text = "자료번호";
-            this.chBookNum.Width = 100;
+            this.chBookNum.Text = "도서 등록번호";
+            this.chBookNum.Width = 160;
             // 
-            // chBookName
+            // chRentType
             // 
-            this.chBookName.Text = "자료명";
-            this.chBookName.Width = 160;
-            // 
-            // chSymbol
-            // 
-            this.chSymbol.Text = "청구기호";
-            this.chSymbol.Width = 80;
+            this.chRentType.Text = "대출 상태";
+            this.chRentType.Width = 80;
             // 
             // chDate
             // 
@@ -1232,16 +1219,11 @@
             this.chRtnDate.Text = "반납예정일";
             this.chRtnDate.Width = 80;
             // 
-            // chType
-            // 
-            this.chType.Text = "대출유형";
-            this.chType.Width = 70;
-            // 
             // lblUserPhone2_Del
             // 
             this.lblUserPhone2_Del.AutoSize = true;
             this.lblUserPhone2_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone2_Del.Location = new System.Drawing.Point(397, 193);
+            this.lblUserPhone2_Del.Location = new System.Drawing.Point(401, 216);
             this.lblUserPhone2_Del.Name = "lblUserPhone2_Del";
             this.lblUserPhone2_Del.Size = new System.Drawing.Size(11, 12);
             this.lblUserPhone2_Del.TabIndex = 179;
@@ -1251,7 +1233,7 @@
             // 
             this.lblUserPhone1_Del.AutoSize = true;
             this.lblUserPhone1_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone1_Del.Location = new System.Drawing.Point(312, 193);
+            this.lblUserPhone1_Del.Location = new System.Drawing.Point(316, 216);
             this.lblUserPhone1_Del.Name = "lblUserPhone1_Del";
             this.lblUserPhone1_Del.Size = new System.Drawing.Size(11, 12);
             this.lblUserPhone1_Del.TabIndex = 178;
@@ -1259,17 +1241,19 @@
             // 
             // tbUserNum_Del
             // 
-            this.tbUserNum_Del.Location = new System.Drawing.Point(256, 47);
+            this.tbUserNum_Del.Location = new System.Drawing.Point(260, 96);
             this.tbUserNum_Del.Name = "tbUserNum_Del";
             this.tbUserNum_Del.Size = new System.Drawing.Size(225, 21);
             this.tbUserNum_Del.TabIndex = 164;
+            this.tbUserNum_Del.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbUserNum_Del.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUserNum_Del_KeyDown);
             // 
             // lblUserNum_Del
             // 
             this.lblUserNum_Del.AutoSize = true;
             this.lblUserNum_Del.BackColor = System.Drawing.Color.Transparent;
             this.lblUserNum_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserNum_Del.Location = new System.Drawing.Point(196, 50);
+            this.lblUserNum_Del.Location = new System.Drawing.Point(200, 99);
             this.lblUserNum_Del.Name = "lblUserNum_Del";
             this.lblUserNum_Del.Size = new System.Drawing.Size(53, 12);
             this.lblUserNum_Del.TabIndex = 177;
@@ -1279,21 +1263,11 @@
             // 
             this.lblUserBirth_Del.AutoSize = true;
             this.lblUserBirth_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth_Del.Location = new System.Drawing.Point(196, 167);
+            this.lblUserBirth_Del.Location = new System.Drawing.Point(200, 190);
             this.lblUserBirth_Del.Name = "lblUserBirth_Del";
             this.lblUserBirth_Del.Size = new System.Drawing.Size(53, 12);
             this.lblUserBirth_Del.TabIndex = 176;
             this.lblUserBirth_Del.Text = "생년월일";
-            // 
-            // lblUserGender_Del
-            // 
-            this.lblUserGender_Del.AutoSize = true;
-            this.lblUserGender_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserGender_Del.Location = new System.Drawing.Point(199, 140);
-            this.lblUserGender_Del.Name = "lblUserGender_Del";
-            this.lblUserGender_Del.Size = new System.Drawing.Size(45, 12);
-            this.lblUserGender_Del.TabIndex = 175;
-            this.lblUserGender_Del.Text = "성    별";
             // 
             // cbUserBirth3_Del
             // 
@@ -1331,7 +1305,7 @@
             "29",
             "30",
             "31"});
-            this.cbUserBirth3_Del.Location = new System.Drawing.Point(424, 163);
+            this.cbUserBirth3_Del.Location = new System.Drawing.Point(428, 186);
             this.cbUserBirth3_Del.Name = "cbUserBirth3_Del";
             this.cbUserBirth3_Del.Size = new System.Drawing.Size(52, 20);
             this.cbUserBirth3_Del.TabIndex = 154;
@@ -1353,7 +1327,7 @@
             "10",
             "11",
             "12"});
-            this.cbUserBirth2_Del.Location = new System.Drawing.Point(349, 163);
+            this.cbUserBirth2_Del.Location = new System.Drawing.Point(353, 186);
             this.cbUserBirth2_Del.Name = "cbUserBirth2_Del";
             this.cbUserBirth2_Del.Size = new System.Drawing.Size(52, 20);
             this.cbUserBirth2_Del.TabIndex = 153;
@@ -1484,22 +1458,10 @@
             "1902",
             "1901",
             "1900"});
-            this.cbUserBirth1_Del.Location = new System.Drawing.Point(256, 163);
+            this.cbUserBirth1_Del.Location = new System.Drawing.Point(260, 186);
             this.cbUserBirth1_Del.Name = "cbUserBirth1_Del";
             this.cbUserBirth1_Del.Size = new System.Drawing.Size(70, 20);
             this.cbUserBirth1_Del.TabIndex = 152;
-            // 
-            // cbUserGender_Del
-            // 
-            this.cbUserGender_Del.Enabled = false;
-            this.cbUserGender_Del.FormattingEnabled = true;
-            this.cbUserGender_Del.Items.AddRange(new object[] {
-            "여자",
-            "남자"});
-            this.cbUserGender_Del.Location = new System.Drawing.Point(256, 137);
-            this.cbUserGender_Del.Name = "cbUserGender_Del";
-            this.cbUserGender_Del.Size = new System.Drawing.Size(100, 20);
-            this.cbUserGender_Del.TabIndex = 151;
             // 
             // btnDelete
             // 
@@ -1510,18 +1472,11 @@
             this.btnDelete.TabIndex = 163;
             this.btnDelete.Text = "회원탈퇴";
             this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // tbUserAddr_Del
-            // 
-            this.tbUserAddr_Del.Location = new System.Drawing.Point(256, 216);
-            this.tbUserAddr_Del.Name = "tbUserAddr_Del";
-            this.tbUserAddr_Del.ReadOnly = true;
-            this.tbUserAddr_Del.Size = new System.Drawing.Size(225, 21);
-            this.tbUserAddr_Del.TabIndex = 158;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbUserPhone3_Del
             // 
-            this.tbUserPhone3_Del.Location = new System.Drawing.Point(413, 189);
+            this.tbUserPhone3_Del.Location = new System.Drawing.Point(417, 212);
             this.tbUserPhone3_Del.Name = "tbUserPhone3_Del";
             this.tbUserPhone3_Del.ReadOnly = true;
             this.tbUserPhone3_Del.Size = new System.Drawing.Size(67, 21);
@@ -1529,7 +1484,7 @@
             // 
             // tbUserPhone2_Del
             // 
-            this.tbUserPhone2_Del.Location = new System.Drawing.Point(325, 189);
+            this.tbUserPhone2_Del.Location = new System.Drawing.Point(329, 212);
             this.tbUserPhone2_Del.Name = "tbUserPhone2_Del";
             this.tbUserPhone2_Del.ReadOnly = true;
             this.tbUserPhone2_Del.Size = new System.Drawing.Size(67, 21);
@@ -1537,7 +1492,7 @@
             // 
             // tbUserPhone1_Del
             // 
-            this.tbUserPhone1_Del.Location = new System.Drawing.Point(256, 189);
+            this.tbUserPhone1_Del.Location = new System.Drawing.Point(260, 212);
             this.tbUserPhone1_Del.Name = "tbUserPhone1_Del";
             this.tbUserPhone1_Del.ReadOnly = true;
             this.tbUserPhone1_Del.Size = new System.Drawing.Size(53, 21);
@@ -1547,7 +1502,7 @@
             // 
             this.lblUserBirth3_Del.AutoSize = true;
             this.lblUserBirth3_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth3_Del.Location = new System.Drawing.Point(479, 167);
+            this.lblUserBirth3_Del.Location = new System.Drawing.Point(483, 190);
             this.lblUserBirth3_Del.Name = "lblUserBirth3_Del";
             this.lblUserBirth3_Del.Size = new System.Drawing.Size(17, 12);
             this.lblUserBirth3_Del.TabIndex = 169;
@@ -1557,7 +1512,7 @@
             // 
             this.lblUserBirth2_Del.AutoSize = true;
             this.lblUserBirth2_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth2_Del.Location = new System.Drawing.Point(404, 166);
+            this.lblUserBirth2_Del.Location = new System.Drawing.Point(408, 189);
             this.lblUserBirth2_Del.Name = "lblUserBirth2_Del";
             this.lblUserBirth2_Del.Size = new System.Drawing.Size(17, 12);
             this.lblUserBirth2_Del.TabIndex = 170;
@@ -1567,7 +1522,7 @@
             // 
             this.lblUserBirth1_Del.AutoSize = true;
             this.lblUserBirth1_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserBirth1_Del.Location = new System.Drawing.Point(329, 167);
+            this.lblUserBirth1_Del.Location = new System.Drawing.Point(333, 190);
             this.lblUserBirth1_Del.Name = "lblUserBirth1_Del";
             this.lblUserBirth1_Del.Size = new System.Drawing.Size(17, 12);
             this.lblUserBirth1_Del.TabIndex = 172;
@@ -1577,7 +1532,7 @@
             // 
             this.lblUserName_Del.AutoSize = true;
             this.lblUserName_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserName_Del.Location = new System.Drawing.Point(200, 113);
+            this.lblUserName_Del.Location = new System.Drawing.Point(204, 162);
             this.lblUserName_Del.Name = "lblUserName_Del";
             this.lblUserName_Del.Size = new System.Drawing.Size(45, 12);
             this.lblUserName_Del.TabIndex = 173;
@@ -1585,7 +1540,7 @@
             // 
             // tbUserName_Del
             // 
-            this.tbUserName_Del.Location = new System.Drawing.Point(256, 110);
+            this.tbUserName_Del.Location = new System.Drawing.Point(260, 159);
             this.tbUserName_Del.Name = "tbUserName_Del";
             this.tbUserName_Del.ReadOnly = true;
             this.tbUserName_Del.Size = new System.Drawing.Size(225, 21);
@@ -1595,32 +1550,23 @@
             // 
             this.lblUserPhone_Del.AutoSize = true;
             this.lblUserPhone_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserPhone_Del.Location = new System.Drawing.Point(196, 192);
+            this.lblUserPhone_Del.Location = new System.Drawing.Point(200, 215);
             this.lblUserPhone_Del.Name = "lblUserPhone_Del";
             this.lblUserPhone_Del.Size = new System.Drawing.Size(49, 12);
             this.lblUserPhone_Del.TabIndex = 168;
             this.lblUserPhone_Del.Text = "휴 대 폰";
             // 
-            // lblUserAddr_Del
-            // 
-            this.lblUserAddr_Del.AutoSize = true;
-            this.lblUserAddr_Del.ForeColor = System.Drawing.Color.White;
-            this.lblUserAddr_Del.Location = new System.Drawing.Point(198, 219);
-            this.lblUserAddr_Del.Name = "lblUserAddr_Del";
-            this.lblUserAddr_Del.Size = new System.Drawing.Size(45, 12);
-            this.lblUserAddr_Del.TabIndex = 165;
-            this.lblUserAddr_Del.Text = "주    소";
-            // 
             // btnSearch_Del
             // 
             this.btnSearch_Del.BackColor = System.Drawing.Color.White;
             this.btnSearch_Del.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch_Del.Location = new System.Drawing.Point(314, 74);
+            this.btnSearch_Del.Location = new System.Drawing.Point(318, 123);
             this.btnSearch_Del.Name = "btnSearch_Del";
             this.btnSearch_Del.Size = new System.Drawing.Size(75, 23);
             this.btnSearch_Del.TabIndex = 149;
             this.btnSearch_Del.Text = "검색";
             this.btnSearch_Del.UseVisualStyleBackColor = false;
+            this.btnSearch_Del.Click += new System.EventHandler(this.btnSearch_Del_Click);
             // 
             // rbFemale_Mod
             // 
@@ -1751,13 +1697,10 @@
         private System.Windows.Forms.TextBox tbUserNum_Del;
         private System.Windows.Forms.Label lblUserNum_Del;
         private System.Windows.Forms.Label lblUserBirth_Del;
-        private System.Windows.Forms.Label lblUserGender_Del;
         private System.Windows.Forms.ComboBox cbUserBirth3_Del;
         private System.Windows.Forms.ComboBox cbUserBirth2_Del;
         private System.Windows.Forms.ComboBox cbUserBirth1_Del;
-        private System.Windows.Forms.ComboBox cbUserGender_Del;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox tbUserAddr_Del;
         private System.Windows.Forms.TextBox tbUserPhone3_Del;
         private System.Windows.Forms.TextBox tbUserPhone2_Del;
         private System.Windows.Forms.TextBox tbUserPhone1_Del;
@@ -1767,17 +1710,14 @@
         private System.Windows.Forms.Label lblUserName_Del;
         private System.Windows.Forms.TextBox tbUserName_Del;
         private System.Windows.Forms.Label lblUserPhone_Del;
-        private System.Windows.Forms.Label lblUserAddr_Del;
         private System.Windows.Forms.Button btnSearch_Del;
         private System.Windows.Forms.ListView lvBookList;
         private System.Windows.Forms.ColumnHeader chNo;
-        private System.Windows.Forms.ColumnHeader chState;
+        private System.Windows.Forms.ColumnHeader chRentNum;
         private System.Windows.Forms.ColumnHeader chBookNum;
-        private System.Windows.Forms.ColumnHeader chBookName;
-        private System.Windows.Forms.ColumnHeader chSymbol;
+        private System.Windows.Forms.ColumnHeader chRentType;
         private System.Windows.Forms.ColumnHeader chDate;
         private System.Windows.Forms.ColumnHeader chRtnDate;
-        private System.Windows.Forms.ColumnHeader chType;
         private System.Windows.Forms.RadioButton rbFemale_Cre;
         private System.Windows.Forms.RadioButton rbMale_Cre;
         private System.Windows.Forms.RadioButton rbTypeEmp_Cre;
