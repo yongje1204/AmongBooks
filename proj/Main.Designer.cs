@@ -76,6 +76,7 @@ namespace proj
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "LogOut";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnBookMng
             // 
