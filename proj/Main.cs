@@ -137,7 +137,20 @@ namespace proj
             Application.Exit();
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dlr = MessageBox.Show("로그아웃 하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            switch (dlr)
+            {
+                case DialogResult.Yes:
+                    this.Hide();
+                    Login login = new Login();
+                    login.Show();
+                    break;
+                case DialogResult.No:
+                    break;
 
-
+            }
+        }
     }
 }
