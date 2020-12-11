@@ -24,13 +24,6 @@ namespace proj
 
         private string StrSQL = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=AmongBooks.accdb;Mode=ReadWrite"; //데이터베이스 연결 문자열
 
-
-
-        private void ListBookSearch_Load(object sender, EventArgs e)
-        {
-            this.cbBookLanguage.SelectedIndex = this.cbBookGenre.SelectedIndex = this.cbSearchType.SelectedIndex = 0;
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             this.listView1.Items.Clear();

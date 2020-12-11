@@ -185,7 +185,7 @@ namespace proj
                         {
                             MessageBox.Show("정상적으로 회원이 탈퇴되었습니다.", "알림",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            lvBookList.Clear();
+                            lvBookList.Items.Clear();
                             tbUserNum_Del.Clear();
                             tbUserName_Del.Clear();
                             cbUserBirth1_Del.SelectedIndex = 0;
@@ -346,6 +346,8 @@ namespace proj
                     MessageBox.Show("정상적으로 회원정보가 수정되었습니다.", "알림",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    
+                    tbUserNum_Mod.Clear();
                     tbUserName_Mod.Clear();
                     tbUserPhone1_Mod.Clear();
                     tbUserPhone2_Mod.Clear();
