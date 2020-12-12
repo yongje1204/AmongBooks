@@ -49,6 +49,7 @@ namespace proj
             listshow(i);
         }
 
+        //리스트 패널에서 클릭시 다른 폼 Hide, 누른 패널만 Show
         private void listshow(int i)
         {
             switch (i)

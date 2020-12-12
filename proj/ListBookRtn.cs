@@ -32,7 +32,7 @@ namespace proj
             var Conn = new OleDbConnection(StrSQL);
             Conn.Open();
 
-            //도서 정보 조회
+            //tbBookNum 검색
             string sql = "SELECT Book.book_name, Book.book_auth, Book.book_pub, Book.book_callsign, Book.book_state FROM Book WHERE Book.book_num = \"" + this.tbBookNum.Text + "\";";
             var Comm = new OleDbCommand(sql, Conn);
             var myRead = Comm.ExecuteReader();
@@ -91,7 +91,7 @@ namespace proj
                     this.lvBookList.Items.Add(new ListViewItem(new string[] { myRead[0].ToString(), myRead[1].ToString(), myRead[2].ToString(), myRead[3].ToString(), myRead[4].ToString(), myRead[5].ToString(), myRead[6].ToString() }));
                 }
 
-                //lvlOverdue 갱신
+                //연체 레이블 갱신
                 string overdue = "";
                 sql = "SELECT COUNT(*) From Rent WHERE Rent.user_num = '" + this.tbUserNum.Text + "' AND Rent.rent_state = '연체중'";
                 Comm = new OleDbCommand(sql, Conn);
@@ -162,7 +162,7 @@ namespace proj
 
             if (x == 1 && y == 1)
             {
-                MessageBox.Show("정상적으로 데이터가 저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("정상적으로 반납이 완료되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 //반납시 조회값 전부 초기화
@@ -182,7 +182,7 @@ namespace proj
             }
             else
             {
-                MessageBox.Show("정상적으로 데이터가 저장되지 않았습니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("정상적으로 반납이 완료되지 않았습니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Conn.Close();

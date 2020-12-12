@@ -168,7 +168,7 @@ namespace proj
 
             if (x == 1 && y == 1)
             {
-                MessageBox.Show("정상적으로 데이터가 저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("정상적으로 대출이 완료되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 //대출시 조회값 전부 초기화
@@ -188,7 +188,7 @@ namespace proj
             }
             else
             {
-                MessageBox.Show("정상적으로 데이터가 저장되지 않았습니다.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("정상적으로 대출이 완료되지 않았습니다..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             Conn.Close();

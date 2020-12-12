@@ -26,13 +26,12 @@ namespace proj
 
         private void ListBookMng_Load(object sender, EventArgs e)
         {
+            //컨트롤 값 초기화
             this.cbBookGenre_Cre.SelectedIndex = this.cbBookLanguage_Cre.SelectedIndex = this.cbBookPbMonth_Cre.SelectedIndex = this.cbBookGetType_Cre.SelectedIndex = 0;
             this.cbBookPbYear_Cre.SelectedItem = DateTime.Now.ToString("yyyy");
             this.cbBookPbMonth_Cre.SelectedItem = DateTime.Now.ToString("MM");
             this.cbBookPbDay_Cre.SelectedItem = DateTime.Now.ToString("dd");
-
             this.cbBookGenre_Mod.SelectedIndex = this.cbBookLanguage_Mod.SelectedIndex = this.cbBookGetType_Mod.SelectedIndex = 0;
-
             this.cbBookGenre_Del.SelectedIndex = this.cbBookLanguage_Del.SelectedIndex = this.cbBookGetType_Del.SelectedIndex = 0;
         }
 
@@ -83,6 +82,7 @@ namespace proj
             var Conn = new OleDbConnection(StrSQL);
             Conn.Open();
             
+            //tbBookNum 검색, 검색 값 주입
             string sql = "SELECT * FROM Book WHERE Book.book_num = '" + tbBookNum_Mod.Text + "';";
             var Comm = new OleDbCommand(sql, Conn);
             var myRead = Comm.ExecuteReader();
@@ -107,16 +107,18 @@ namespace proj
                 this.cbBookLanguage_Mod.SelectedItem = myRead[7].ToString();
                 this.cbBookGetType_Mod.SelectedItem = myRead[12].ToString();
 
+                //대출중인 자료인 경우 수정x
                 if (this.tbBookState_Mod.Text == "대출중")
                 {
                     MessageBox.Show("자료가 대출중일 경우 수정할 수 없습니다..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    //검색 완료 후 컨트롤 활성화
+                    //대출중이지 않은 자료 검색 후 컨트롤 활성화
                     this.tbBookName_Mod.Enabled = this.tbBookSign_Mod.Enabled = this.tbBookPublisher_Mod.Enabled = this.tbBookSymbol_Mod.Enabled = this.cbBookPbYear_Mod.Enabled = this.cbBookPbMonth_Mod.Enabled = this.cbBookPbDay_Mod.Enabled = this.tbBookVol_Mod.Enabled = this.tbBookCopy_Mod.Enabled = this.tbBookOriPri_Mod.Enabled = this.tbBookGetPri_Mod.Enabled = this.cbBookGenre_Mod.Enabled = this.cbBookLanguage_Mod.Enabled = this.cbBookGetType_Mod.Enabled = true;
                 }
             }
+            //자료 검색 실패
             else if (myRead.Read() == false)
             {
                 this.tbBookName_Mod.Text = "검색 결과 없음";
@@ -161,10 +163,10 @@ namespace proj
                     MessageBox.Show("자료가 대출중일 경우 수정할 수 없습니다..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-                else
-                {
-                    MessageBox.Show("수정할 자료를 검색해주세요.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            else
+            { 
+                MessageBox.Show("수정할 자료를 검색해주세요.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         //tbBookNum_Mod 수정 시도시 조회한 값 초기화
@@ -185,6 +187,7 @@ namespace proj
             var Conn = new OleDbConnection(StrSQL);
             Conn.Open();
 
+            //tbBookNum 검색, 검색 값 주입
             string sql = "SELECT * FROM Book WHERE Book.book_num = '" + tbBookNum_Del.Text + "';";
             var Comm = new OleDbCommand(sql, Conn);
             var myRead = Comm.ExecuteReader();
