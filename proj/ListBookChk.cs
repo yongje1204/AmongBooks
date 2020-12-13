@@ -22,7 +22,7 @@ namespace proj
             InitializeComponent();
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
-            this.tbChkMng.Text = Login.mng_name;
+            this.tbChkMng.Text = Login.mng_id;
         }
 
         private void ListBookChk_Load(object sender, EventArgs e)

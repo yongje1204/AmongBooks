@@ -22,7 +22,7 @@ namespace proj
             InitializeComponent();
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             this.BackColor = Color.Transparent;
-            this.tbRtnMng.Text = Login.mng_name;
+            this.tbRtnMng.Text = Login.mng_id;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
